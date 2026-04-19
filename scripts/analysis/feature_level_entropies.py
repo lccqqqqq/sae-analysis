@@ -218,10 +218,8 @@ def main():
     vocab_size = unembed_w.shape[0]
 
     # Load + tokenize corpus
-    corpus_path = Path("wikitext-2-train.txt")
-    if not corpus_path.exists():
-        print(f"[ERROR] {corpus_path} not found"); sys.exit(1)
-    tokens = tokenizer(corpus_path.read_text(encoding="utf-8"),
+    from data_loader import load_wikitext_train_text
+    tokens = tokenizer(load_wikitext_train_text(),
                        return_tensors="pt")["input_ids"][0]
     print(f"[INFO] corpus tokens: {tokens.shape[0]:,}", flush=True)
 

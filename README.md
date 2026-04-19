@@ -45,10 +45,9 @@ Each figure has a dedicated generation script in `scripts/figures/` that saves d
 uv venv .venv && source .venv/bin/activate
 uv pip install . torch torchvision torchaudio
 uv pip install transformers accelerate einops datasets tqdm numpy matplotlib scipy
-python scripts/utils/download_data.py   # downloads WikiText-2
 ```
 
-Pretrained SAEs download on first use via `huggingface_hub` (cached under `~/.cache/huggingface/hub/`) — no separate setup step.
+Pretrained SAEs and WikiText-2 download on first use via HuggingFace (cached under `~/.cache/huggingface/`) — no separate setup step.
 
 ### Generate figures from pre-computed data
 

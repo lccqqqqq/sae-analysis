@@ -193,13 +193,8 @@ def main(preset_name="pythia-70m", layer_idx=3, sparsity_file=None,
         leading_features = set(candidate_indices.tolist())
     print(f"[INFO] Selected {len(leading_features)} leading features (freq > {MIN_FREQ:.1%})")
 
-    DATA_FILE = Path("wikitext-2-train.txt")
-    if not DATA_FILE.exists():
-        print("[ERROR] wikitext-2-train.txt not found.")
-        sys.exit(1)
-    print(f"[INFO] Loading data from {DATA_FILE}...")
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        text = f.read()
+    from data_loader import load_wikitext_train_text
+    text = load_wikitext_train_text()
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]
     total_tokens = tokens.shape[0]
     print(f"[INFO] Total tokens: {total_tokens}")

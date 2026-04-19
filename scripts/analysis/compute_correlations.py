@@ -4,9 +4,10 @@ from pathlib import Path
 from collections import Counter
 import sys
 
+from data_loader import load_wikitext_train_text
+
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
-DATA_FILE = Path("wikitext-2-train.txt")
 MIN_UNIQUE_TOKENS = 300
 
 def main(site=None):
@@ -48,14 +49,7 @@ def main(site=None):
     print(f"Loading tokenizer {MODEL_NAME}...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     
-    if not DATA_FILE.exists():
-        print(f"Error: {DATA_FILE} not found. Cannot compute global token counts.")
-        return
-        
-    print(f"Loading and tokenizing {DATA_FILE}...")
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        text = f.read()
-        
+    text = load_wikitext_train_text()
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]
     
     # Slice to the same length as used in feature_sparsity.py

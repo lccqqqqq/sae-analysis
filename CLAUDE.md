@@ -14,15 +14,12 @@ For the full paper agent persona, figure reproduction guide, and extension ideas
 uv venv .venv && source .venv/bin/activate
 uv pip install . torch torchvision torchaudio
 uv pip install transformers accelerate einops datasets tqdm numpy matplotlib scipy
-python scripts/utils/download_data.py          # WikiText-2 corpus
 ```
 
-External data:
+External data (all auto-downloaded on first use, cached under `~/.cache/huggingface/`):
 
-- `wikitext-2-train.txt` / `wikitext-2-test.txt` (repo root).
-- Pretrained SAEs: **auto-downloaded on first use** via `huggingface_hub` from
-  `saprmarks/pythia-70m-deduped-saes` (Pythia) and the respective HF releases
-  for the other presets. Cached under `~/.cache/huggingface/hub/`.
+- WikiText-2 corpus — loaded via `datasets.load_dataset("wikitext", "wikitext-2-raw-v1")` inside `scripts/analysis/data_loader.load_wikitext_train_text()`; every script that needs the corpus calls that helper.
+- Pretrained SAEs — `saprmarks/pythia-70m-deduped-saes` (Pythia) and the respective HF releases for the other presets, via `scripts/analysis/sae_adapters.load_sae()`.
 
 All analysis scripts must be run from the **repo root**. Scripts in `scripts/analysis/` import each other (`compare_entropies.py` imports from `feature_token_influence.py`), so the working directory matters.
 

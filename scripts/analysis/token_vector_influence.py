@@ -138,12 +138,8 @@ def main(preset_name="pythia-70m", layer_idx=3, output_file=None,
     print(f"\n[INFO] Processing preset={preset.name} site={site}")
     model, tokenizer = load_model(preset, DEVICE)
 
-    DATA_FILE = Path("wikitext-2-train.txt")
-    if not DATA_FILE.exists():
-        print("[ERROR] wikitext-2-train.txt not found.")
-        sys.exit(1)
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        text = f.read()
+    from data_loader import load_wikitext_train_text
+    text = load_wikitext_train_text()
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]
     total_tokens = tokens.shape[0]
 

@@ -9,6 +9,7 @@ import csv
 
 from presets import get_preset
 from sae_adapters import load_sae
+from data_loader import load_wikitext_train_text
 
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
@@ -48,16 +49,7 @@ def main(site=None):
     n_latent = sae_bundle.n_latent
     
     # 2. Prepare Data
-    DATA_FILE = Path("wikitext-2-train.txt")
-    if DATA_FILE.exists():
-        print(f"[INFO] Loading data from {DATA_FILE}...")
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            text = f.read()
-    else:
-        print("[WARN] wikitext-2-train.txt not found, using dummy text.")
-        text = """
-        Quantum mechanics is a fundamental theory in physics that describes the behavior of nature at and below the scale of atoms. 
-        """ * 50
+    text = load_wikitext_train_text()
 
     print(f"[INFO] Tokenizing text...")
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0] # [Seq]

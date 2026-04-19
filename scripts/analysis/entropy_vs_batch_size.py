@@ -316,14 +316,8 @@ def main(site=None, max_batch_size=None, min_batch_size=None, step=None, random_
         f"[INFO] Will process all {n_latent} features (filtered by activation threshold per batch)")
 
     # 2. Load data
-    DATA_FILE = Path("wikitext-2-train.txt")
-    if not DATA_FILE.exists():
-        print("[ERROR] wikitext-2-train.txt not found.")
-        sys.exit(1)
-
-    print(f"[INFO] Loading data from {DATA_FILE}...")
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        text = f.read()
+    from data_loader import load_wikitext_train_text
+    text = load_wikitext_train_text()
 
     print(f"[INFO] Tokenizing text...")
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]

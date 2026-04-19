@@ -164,11 +164,8 @@ def main(
     print(f"[INFO] Loading SAE weights for {len(layers)} layers...", flush=True)
     saes = load_all_saes(preset, layers)
 
-    DATA_FILE = Path("wikitext-2-train.txt")
-    if not DATA_FILE.exists():
-        print("[ERROR] wikitext-2-train.txt not found."); sys.exit(1)
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        text = f.read()
+    from data_loader import load_wikitext_train_text
+    text = load_wikitext_train_text()
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]
     total_tokens = tokens.shape[0]
     print(f"[INFO] Total tokens: {total_tokens}", flush=True)

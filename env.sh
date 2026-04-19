@@ -1,6 +1,6 @@
 #!/bin/bash -l
 echo =========================================================   
-echo Job submitted  date = Sun 19 Apr 06:19:22 BST 2026      
+echo Job submitted  date = Sun 19 Apr 06:11:58 BST 2026      
 date_start=`date +%s`
 echo $SLURM_JOB_NUM_NODES nodes \( $SLURM_CPUS_ON_NODE processes per node \)        
 echo $SLURM_JOB_NUM_NODES hosts used: $SLURM_JOB_NODELIST      
@@ -15,7 +15,7 @@ echo
 ulimit -l unlimited
 
 export OMP_NUM_THEADS=1
- nice -n 10 /usr/bin/python3 scripts/analysis/feature_token_influence.py --preset pythia-70m --layer 5
+ nice -n 10 /usr/bin/env PYTHONUNBUFFERED=1 /usr/bin/python3 scripts/analysis/entropy_vs_batch_size.py --site resid_out_layer3 --random-seed 0
   echo ---------------                                           
   echo Job output ends                                           
 

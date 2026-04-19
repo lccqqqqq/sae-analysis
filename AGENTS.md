@@ -65,7 +65,7 @@ scripts/
 │   ├── submit_entropy_bench.sh
 │   └── run_llama3_8b.sh
 └── utils/
-    ├── download_data.py                 — download WikiText-2 via HuggingFace datasets
+    ├── 
     ├── strip_notebook_outputs.py
     ├── generate_cleanup_changelog.py    — regenerate CLEANUP_CHANGELOG.md from to_*.txt
     ├── to_delete.txt                    — inputs for the cleanup changelog
@@ -95,7 +95,7 @@ supplementary/
 
 | Resource | Description | Download |
 |---|---|---|
-| WikiText-2 | ~1M-token text corpus used for all analyses | `python scripts/utils/download_data.py` |
+| WikiText-2 | ~1M-token text corpus used for all analyses | Auto-loaded via `datasets.load_dataset("wikitext", "wikitext-2-raw-v1")` on first use (cached under `~/.cache/huggingface/datasets/`) |
 | Pythia-70m-deduped | 6-layer transformer, d_model=512 | Auto-downloaded by HuggingFace `transformers` on first run |
 | Pretrained SAEs | 32,768-feature SAEs for each of 6 residual stream layers | Auto-downloaded from `saprmarks/pythia-70m-deduped-saes` on first `load_sae(...)` call (cached under `~/.cache/huggingface/hub/`) |
 
@@ -116,15 +116,11 @@ Read `paper/paper.tex` for the full mathematical formalism, experimental setup, 
 
 **Setup** (one time):
 ```bash
-# 1. Install dependencies
 uv venv .venv && source .venv/bin/activate && uv pip install .
 uv pip install torch torchvision torchaudio transformers accelerate einops datasets tqdm numpy matplotlib scipy
-
-# 2. Download WikiText-2
-python scripts/utils/download_data.py
 ```
 
-Pretrained SAEs download on first `load_sae(...)` call — no manual step.
+WikiText-2 and pretrained SAEs both auto-download from HuggingFace on first use — no manual step.
 
 **Stage 1 — Generate sparsity statistics** (needed for Figs 1, 2, 8, and as input to later stages):
 ```bash
