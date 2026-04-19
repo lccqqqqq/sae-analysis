@@ -39,7 +39,9 @@ THRESHOLD = 0.2
 
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+DEVICE = "cuda" if torch.cuda.is_available() else (
+    "mps" if torch.backends.mps.is_available() else "cpu"
+)
 MAX_BATCH_SIZE = 128  # Size of the large batch to start with
 MIN_BATCH_SIZE = 8    # Minimum sub-batch size
 BATCH_SIZE_STEP = 8   # Step size for sub-batch sizes
