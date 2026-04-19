@@ -176,6 +176,10 @@ venv_win/
 # NFS silly-rename stub left by an active editor session; self-cleans.
 sae-analysis-v1/
 
+# Cluster job output logs and smoke-verification artefacts
+out/
+data/smoke_verify/
+
 # Dataset text files (download with scripts/utils/download_data.py)
 wikitext-2-train.txt
 wikitext-2-test.txt
