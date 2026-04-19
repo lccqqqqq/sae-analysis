@@ -179,15 +179,19 @@ venv_win/
 # NFS silly-rename stub left by an active editor session; self-cleans.
 sae-analysis-v1/
 
-# Cluster job output logs and smoke-verification artefacts
+# Cluster job output logs
 out/
-data/smoke_verify/
 
-# Dataset text files (download with scripts/utils/download_data.py)
-wikitext-2-train.txt
-wikitext-2-test.txt
+# addqueue-generated per-job wrapper scripts
+env.sh
+python3.sh
 
-# Generated analysis artifacts
+# All generated analysis outputs (produced by scripts/analysis/*) land under
+# data/<preset>/; gitignore the whole directory so nothing slips through.
+data/
+
+# Pre-cleanup top-level data files (kept here for historical robustness
+# against git-clean even though data/ already covers them).
 correlation_matrix*.pt
 entropy_comparison_*.pt
 entropy_plots_*/
