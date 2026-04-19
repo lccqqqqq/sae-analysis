@@ -398,7 +398,9 @@ def main(site=None, max_batch_size=None, min_batch_size=None, step=None, random_
     print(f"  Saved plot: {plot_path}")
 
     # 7. Save data
-    output_file = Path(f"entropy_vs_batch_size_{site}_{unique_id}.pt")
+    out_dir = Path("data") / preset.name
+    out_dir.mkdir(parents=True, exist_ok=True)
+    output_file = out_dir / f"entropy_vs_batch_size_{site}_{unique_id}.pt"
 
     # Convert numpy arrays to lists for serialization
     serializable_results = {}

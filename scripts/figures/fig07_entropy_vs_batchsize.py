@@ -28,7 +28,7 @@ N_LEGEND = 10  # Number of features to show in legend
 
 
 def find_latest():
-    pattern = str(ROOT / f"entropy_vs_batch_size_{SITE}_*.pt")
+    pattern = str(ROOT / f"data/pythia-70m/entropy_vs_batch_size_{SITE}_*.pt")
     files = glob.glob(pattern)
     if not files:
         raise FileNotFoundError(

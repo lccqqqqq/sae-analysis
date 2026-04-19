@@ -18,6 +18,7 @@ DEVICE = "cuda" if torch.cuda.is_available() else (
 )
 THRESHOLD = 1.0
 SAMPLE_TEXT_LEN = 2000 # Number of tokens to process
+OUT_DIR = Path("data") / "pythia-70m"
 
 
 # --- Main Analysis ---
@@ -173,14 +174,15 @@ def main(site=None):
     plt.ylabel("Count of Features (Log Scale)")
     plt.grid(True, which="both", ls="-", alpha=0.2)
     
-    out_file = f"sparsity_histogram_{site}.png"
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_file = OUT_DIR / f"sparsity_histogram_{site}.png"
     plt.savefig(out_file)
     plt.close()  # Close figure to free memory
     print(f"[INFO] Histogram saved to {out_file}")
 
     # Save Data
     print("\n[INFO] Saving data to files...")
-    
+
     # 1. Save as PyTorch tensor dictionary (easy for notebooks)
     data = {
         "feature_counts": feature_counts.cpu(),
@@ -190,13 +192,13 @@ def main(site=None):
         "site": site,  # Include site in data
         "feature_token_counts": feature_token_counts # List of Counters
     }
-    pt_file = f"feature_sparsity_data_{site}.pt"
+    pt_file = OUT_DIR / f"feature_sparsity_data_{site}.pt"
     torch.save(data, pt_file)
     print(f"[INFO] Saved '{pt_file}'")
-    
+
     # 2. Save as CSV (readable)
     # Columns: feature_idx, count, frequency, top_tokens
-    csv_file = f"feature_sparsity_{site}.csv"
+    csv_file = OUT_DIR / f"feature_sparsity_{site}.csv"
     with open(csv_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["feature_idx", "count", "frequency", "top_tokens"])

@@ -9,6 +9,7 @@ from data_loader import load_wikitext_train_text
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
 MIN_UNIQUE_TOKENS = 300
+OUT_DIR = Path("data") / "pythia-70m"
 
 def main(site=None):
     """
@@ -21,8 +22,9 @@ def main(site=None):
     if site is None:
         site = "resid_out_layer0"
     
-    pt_file = Path(f"feature_sparsity_data_{site}.pt")
-    output_file = Path(f"correlation_matrix_{site}.pt")
+    pt_file = OUT_DIR / f"feature_sparsity_data_{site}.pt"
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    output_file = OUT_DIR / f"correlation_matrix_{site}.pt"
     
     if not pt_file.exists():
         print(f"Error: {pt_file} not found.")

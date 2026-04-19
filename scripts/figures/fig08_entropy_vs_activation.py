@@ -23,8 +23,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SITE = "resid_out_layer5"
-INFLUENCE_FILE = ROOT / f"feature_token_influence_{SITE}.pt"
-SPARSITY_FILE = ROOT / f"feature_sparsity_data_{SITE}.pt"
+INFLUENCE_FILE = ROOT / f"data/pythia-70m/feature_token_influence_{SITE}.pt"
+SPARSITY_FILE = ROOT / f"data/pythia-70m/feature_sparsity_data_{SITE}.pt"
 OUT_FILE = ROOT / "paper/figures/entropy_vs_activation.png"
 
 

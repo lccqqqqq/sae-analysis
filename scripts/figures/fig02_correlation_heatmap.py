@@ -19,7 +19,7 @@ import numpy as np
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_FILE = ROOT / "correlation_matrix_resid_out_layer3.pt"
+DATA_FILE = ROOT / "data/pythia-70m/correlation_matrix_resid_out_layer3.pt"
 OUT_FILE = ROOT / "paper/figures/correlation_heatmap.png"
 
 N_FEATURES = 100  # Show top-N leading features in the heatmap

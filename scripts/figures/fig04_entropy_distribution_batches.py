@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_FILE = ROOT / "feature_token_influence_resid_out_layer3.pt"
+DATA_FILE = ROOT / "data/pythia-70m/feature_token_influence_resid_out_layer3.pt"
 OUT_FILE = ROOT / "paper/figures/entropy_distribution_batches.png"
 
 N_FEATURES = 6  # Number of top features to show

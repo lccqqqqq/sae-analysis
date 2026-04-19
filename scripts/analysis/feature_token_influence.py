@@ -168,10 +168,9 @@ def main(preset_name="pythia-70m", layer_idx=3, sparsity_file=None,
     print(f"[INFO] SAE: arch={sae.arch} n_latent={sae.n_latent} source={sae.source}")
 
     # Leading features: top-frequency set from feature_sparsity_data_<site>.pt.
+    OUT_DIR = Path("data") / preset.name
     if sparsity_file is None:
-        sparsity_file = Path(f"feature_sparsity_data_{site}.pt")
-        if not sparsity_file.exists():
-            sparsity_file = Path("feature_sparsity_data.pt")
+        sparsity_file = OUT_DIR / f"feature_sparsity_data_{site}.pt"
 
     if not Path(sparsity_file).exists():
         print(f"[ERROR] {sparsity_file} not found. Run feature_sparsity.py first.")
@@ -200,9 +199,10 @@ def main(preset_name="pythia-70m", layer_idx=3, sparsity_file=None,
     print(f"[INFO] Total tokens: {total_tokens}")
 
     if checkpoint_file is None:
-        checkpoint_file = Path(f"feature_token_influence_{site}_checkpoint.pt")
+        checkpoint_file = OUT_DIR / f"feature_token_influence_{site}_checkpoint.pt"
     else:
         checkpoint_file = Path(checkpoint_file)
+    checkpoint_file.parent.mkdir(parents=True, exist_ok=True)
 
     influence_data = defaultdict(list)
     start_idx = 0
@@ -265,8 +265,10 @@ def main(preset_name="pythia-70m", layer_idx=3, sparsity_file=None,
         },
     }
     if output_file is None:
-        output_file = Path(f"feature_token_influence_{site}.pt")
-    torch.save(output_data, Path(output_file))
+        output_file = OUT_DIR / f"feature_token_influence_{site}.pt"
+    output_file = Path(output_file)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    torch.save(output_data, output_file)
     print(f"[INFO] Saved results to {output_file}")
 
     if checkpoint_file.exists():

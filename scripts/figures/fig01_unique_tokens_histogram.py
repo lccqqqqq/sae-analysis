@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_FILE = ROOT / "feature_sparsity_data_resid_out_layer0.pt"
+DATA_FILE = ROOT / "data/pythia-70m/feature_sparsity_data_resid_out_layer0.pt"
 OUT_FILE = ROOT / "paper/figures/unique_tokens_histogram.png"
 
 

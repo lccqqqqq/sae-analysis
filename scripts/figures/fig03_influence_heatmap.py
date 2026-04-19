@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_FILE = ROOT / "feature_token_influence_resid_out_layer3.pt"
+DATA_FILE = ROOT / "data/pythia-70m/feature_token_influence_resid_out_layer3.pt"
 OUT_FILE = ROOT / "paper/figures/influence_heatmap_0.png"
 
 FEATURE_IDX = 531  # Feature shown in the paper
