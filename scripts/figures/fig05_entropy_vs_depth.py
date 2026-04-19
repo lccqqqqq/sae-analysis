@@ -23,7 +23,7 @@ from pathlib import Path
 from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT_FILE = ROOT / "plots/entropy_vs_depth.png"
+OUT_FILE = ROOT / "paper/figures/entropy_vs_depth.png"
 
 LAYERS = [0, 1, 2, 3, 4, 5]
 N_TOP_AVG = 20   # Features used for the blue average line
