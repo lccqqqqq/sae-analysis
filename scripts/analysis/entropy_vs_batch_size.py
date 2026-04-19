@@ -14,9 +14,10 @@ from token_vector_influence import (
     process_batch_with_token_influence
 )
 from feature_token_influence import (
-    load_sae, get_sae_weights, get_feature_activations,
     process_batch_with_influence
 )
+from presets import get_preset
+from sae_adapters import load_sae
 import torch
 import torch.nn.functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -83,8 +84,8 @@ def normalize_influence(influence_distribution):
 
 
 def compute_entropy_for_sub_batch(
-    model, tokenizer, sae_weights, sub_batch_tokens, layer_idx,
-    all_features, site
+    model, tokenizer, sae_bundle, sub_batch_tokens, layer_idx,
+    all_features, site, preset,
 ):
     """
     Compute feature entropies for a sub-batch.
@@ -107,8 +108,8 @@ def compute_entropy_for_sub_batch(
     """
     # Compute feature influences
     feature_influences = process_batch_with_influence(
-        model, tokenizer, sae_weights, sub_batch_tokens, layer_idx,
-        all_features, THRESHOLD
+        model, sae_bundle, sub_batch_tokens, layer_idx,
+        all_features, THRESHOLD, preset,
     )
 
     # Get activations for the last token position
@@ -128,8 +129,7 @@ def compute_entropy_for_sub_batch(
         with torch.no_grad():
             _ = model(input_ids)
         resid = activations[0]  # [1, seq_len, d_model]
-        feats = get_feature_activations(
-            resid, sae_weights)  # [1, seq_len, n_latent]
+        feats = sae_bundle.encode(resid)  # [1, seq_len, n_latent]
         last_pos_feats = feats[0, -1, :].cpu().numpy()  # [n_latent]
 
         # Store activations only for active features
@@ -297,31 +297,20 @@ def main(site=None, max_batch_size=None, min_batch_size=None, step=None, random_
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     unique_id = timestamp
 
-    base_dir = Path("dictionaries/pythia-70m-deduped") / site
-
     print(f"\n{'='*60}")
     print(f"[INFO] Studying entropy vs batch size for {site}")
     print(f"{'='*60}")
 
-    # 1. Setup
-    run_dir = None
-    for p in base_dir.iterdir():
-        if p.is_dir() and (p / "ae.pt").exists():
-            run_dir = p
-            break
-    if not run_dir:
-        raise FileNotFoundError(f"No run directory found in {base_dir}")
+    preset = get_preset("pythia-70m")
+    layer_idx = int(site.rsplit("layer", 1)[-1])
 
     print("[INFO] Loading Model...")
     model = AutoModelForCausalLM.from_pretrained(MODEL_NAME).to(DEVICE)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     d_model = model.config.hidden_size
 
-    sae_sd = load_sae(run_dir)
-    sae_weights = get_sae_weights(sae_sd, d_model)
-
-    # Get total number of features
-    n_latent = sae_weights["dec_w"].shape[1]
+    sae_bundle = load_sae(preset, layer_idx, DEVICE)
+    n_latent = sae_bundle.n_latent
     all_features = set(range(n_latent))
     print(
         f"[INFO] Will process all {n_latent} features (filtered by activation threshold per batch)")
@@ -382,8 +371,8 @@ def main(site=None, max_batch_size=None, min_batch_size=None, step=None, random_
 
         try:
             result = compute_entropy_for_sub_batch(
-                model, tokenizer, sae_weights, sub_batch, layer_idx,
-                all_features, site
+                model, tokenizer, sae_bundle, sub_batch, layer_idx,
+                all_features, site, preset,
             )
 
             results_by_batch_size[batch_size] = result

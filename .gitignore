@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Older version
+sae-analysis-v1/
+
 # Distribution / packaging
 .Python
 build/

@@ -7,6 +7,9 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import csv
 
+from presets import get_preset
+from sae_adapters import load_sae
+
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
 DEVICE = "cuda" if torch.cuda.is_available() else (
@@ -14,48 +17,6 @@ DEVICE = "cuda" if torch.cuda.is_available() else (
 )
 THRESHOLD = 1.0
 SAMPLE_TEXT_LEN = 2000 # Number of tokens to process
-
-# --- Helper Functions (Copied from sae_visualizer.py for standalone usage) ---
-def load_sae(run_dir):
-    path = run_dir / "ae.pt"
-    if not path.exists():
-        raise FileNotFoundError(f"No ae.pt found in {run_dir}")
-    print(f"[INFO] Loading SAE from {path}")
-    return torch.load(path, map_location="cpu")
-
-def get_sae_weights(sd, d_model):
-    dec_w = None
-    for k, v in sd.items():
-        if "decoder.weight" in k or "dec.weight" in k:
-            dec_w = v
-            break
-    if dec_w is None:
-        for v in sd.values():
-            if v.ndim == 2 and (v.shape[0] == d_model or v.shape[1] == d_model):
-                dec_w = v
-                break
-    if dec_w is None: raise ValueError("Could not find decoder weights")
-    if dec_w.shape[0] != d_model: dec_w = dec_w.T
-    
-    enc_w = sd.get("encoder.weight")
-    enc_b = sd.get("encoder.bias")
-    if enc_w is None: enc_w = dec_w.T
-    else:
-        if enc_w.shape[1] == d_model: enc_w = enc_w.T
-    
-    if enc_b is None: enc_b = torch.zeros(dec_w.shape[1])
-    
-    return {
-        "enc_w": enc_w.to(DEVICE),
-        "enc_b": enc_b.to(DEVICE),
-        "dec_w": dec_w.to(DEVICE)
-    }
-
-def get_feature_activations(resid, sae_weights):
-    x = resid
-    enc_w = sae_weights["enc_w"]
-    enc_b = sae_weights["enc_b"]
-    return F.relu(torch.matmul(x, enc_w) + enc_b)
 
 
 # --- Main Analysis ---
@@ -70,30 +31,21 @@ def main(site=None):
     # Use provided site or default
     if site is None:
         site = "resid_out_layer3"
-    
-    base_dir = Path("dictionaries/pythia-70m-deduped") / site
-    
-    # 1. Setup
-    run_dir = None
-    for p in base_dir.iterdir():
-        if p.is_dir() and (p / "ae.pt").exists():
-            run_dir = p
-            break
-    if not run_dir: 
-        raise FileNotFoundError(f"No run directory found in {base_dir}")
 
     print(f"\n{'='*60}")
     print(f"[INFO] Processing {site}")
     print(f"{'='*60}")
 
+    preset = get_preset("pythia-70m")
+    layer_idx = int(site.rsplit("layer", 1)[-1])
+
     print("[INFO] Loading Model...")
     model = AutoModelForCausalLM.from_pretrained(MODEL_NAME).to(DEVICE)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     d_model = model.config.hidden_size
-    
-    sae_sd = load_sae(run_dir)
-    sae_weights = get_sae_weights(sae_sd, d_model)
-    n_latent = sae_weights["dec_w"].shape[1]
+
+    sae_bundle = load_sae(preset, layer_idx, DEVICE)
+    n_latent = sae_bundle.n_latent
     
     # 2. Prepare Data
     DATA_FILE = Path("wikitext-2-train.txt")
@@ -126,7 +78,6 @@ def main(site=None):
     feature_counts = torch.zeros(n_latent, device=DEVICE)
     feature_token_counts = [Counter() for _ in range(n_latent)] # List of Counters
     
-    layer_idx = int(site.rsplit("layer", 1)[-1])
     layer = model.gpt_neox.layers[layer_idx]
     
     print(f"[INFO] Computing feature activations (Threshold > {THRESHOLD})...")
@@ -150,7 +101,7 @@ def main(site=None):
             model(chunk)
             
         resid = activations[0] # [1, Chunk, d_model]
-        feats = get_feature_activations(resid, sae_weights) # [1, Chunk, n_latent]
+        feats = sae_bundle.encode(resid) # [1, Chunk, n_latent]
         
         # Count
         active_mask = (feats > THRESHOLD) # [1, Chunk, n_latent]

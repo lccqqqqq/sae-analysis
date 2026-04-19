@@ -1,19 +1,80 @@
 # sae-analysis cleanup changelog — 2026-04-19
 
-## Summary
+## Executive summary
 
-This document records the file-by-file justification for the one-shot
-repository simplification performed on the `cleanup` branch. The cleanup
-collapses a two-tree structure (flat legacy top-level + `sae-analysis-v1/`
-subdir with reorganized `scripts/` and the paper draft) into a single
-clean root, removes a vendored SAE-training library that the analysis
-pipeline does not import, and parks exploratory-but-maybe-useful code
-in `deprecated/` rather than deleting it outright.
+**Before.** The repo carried two parallel trees: (1) a flat legacy top level
+with ~28 iteration-named Python files, four near-duplicate `feature_analysis*`
+notebooks, stale `.pt` artefacts, and a vendored SAE-training library
+(`dictionary_learning/`) pulled in from Marks–Karvonen–Mueller's upstream; and
+(2) a reorganised `sae-analysis-v1/` subdirectory containing the paper draft,
+canonical figure scripts, the reworked `scripts/{analysis,figures,cluster,
+utils}/` layout, and its own `.git` pointing at a different HuggingFace-style
+fork. The vendored SAE-training library was never imported by the analysis
+pipeline — its only dependents were two end-to-end tests that exercised the
+library itself. Pretrained SAE weights were downloaded via a one-off shell
+script into a local 2.4 GB `dictionaries/` tree despite every *other* model
+preset (GPT-2, Gemma, Llama, Qwen) already using on-the-fly HuggingFace
+downloads.
 
-- **Pre-cleanup snapshot branch:** `origin/pre-cleanup-snapshot` at `a49db4d` (full working-tree state before any deletion).
-- **Local tarball backup:** `/mnt/users/clin/sae-analysis-backup-20260416.tar.gz` (includes SAE weights and experiment `.pt` files that are gitignored).
-- **Files deleted:** 81 (≈ 72.7 MB).
-- **Files moved to `deprecated/`:** 15 (≈ 609.7 KB).
+**After.** A single clean root that matches what the paper actually needs:
+`scripts/{analysis,figures,cluster,utils}/`, `paper/`, `slides/`, `notes/`,
+`supplementary/`, `deprecated/`, `notebooks/`, `data/`. The vendored library
+and its tests are gone. Exploratory code that isn't referenced by the paper
+is parked in `deprecated/` rather than deleted outright, so it stays
+retrievable if the research direction it supports is revived. SAE weights
+auto-download from HuggingFace on first `load_sae()` call, matching the other
+presets. A dedicated `CLEANUP_CHANGELOG.md` (this file) records per-file
+justification for every removed or moved path.
+
+**Scope by category.**
+
+| Category | What was touched | Count |
+|---|---|---|
+| Vendored library | `dictionary_learning/` (and collateral: `tests/`, `.github/workflows/build.yml`) | removed |
+| Duplicate top-level scripts | 28 flat `*.py` files at root superseded by v1's organised versions | removed |
+| Near-duplicate notebooks | `feature_analysis{,_backup,_v4}.ipynb` superseded by `feature_analysis_cleaned.ipynb` | removed |
+| Superseded plotting variants | 5× `analyze_feature_token_influence_*.py` + 8 older `plot_*` scripts replaced by `scripts/figures/fig0{1..8}_*.py` | removed |
+| Stale outputs at tree roots | `correlation_matrix.pt`, `feature_sparsity_data.pt`, `feature_sparsity.csv`, six root-level `entropy_comparison_*.pt` dated `20260414_053350`, three legacy PNGs | removed |
+| Redundant metadata at top-level | `CLAUDE.md`, `README.md`, `note.md`, `pyproject.toml`, `.gitignore`, `LICENSE`, `CHANGELOG.md`, `pretrained_dictionary_downloader.sh`, `wikitext-2-{train,test}.txt` (v1 versions are canonical) | replaced |
+| Off-pipeline analysis code | `feature_location_analysis.py`, `fetch_neuronpedia_interp.py`, `scripts/inspect/*` (6 demo scripts), `plot_feature_level_vs_entropy.py`, `plot_level_correlation_summary.py`, `regenerate_batch_plots{,_quality}.py`, `create_minimal_notebook.py`, `fix_notebook.py`, `out/` (20 SLURM logs) | moved to `deprecated/` |
+| Pretrained SAE weight source | local `dictionaries/` tree (2.4 GB) + `pretrained_dictionary_downloader.sh` | replaced by HF auto-download |
+
+Totals: **81 files deleted (~73 MB), 15 paths moved to `deprecated/` (~610 KB)**, plus the 2.4 GB local `dictionaries/` directory (gitignored, not counted in the deleted-files figure).
+
+**What was verified before handing over.**
+- Imports: `presets`, `model_adapters`, `sae_adapters` load cleanly from the new tree.
+- Binary loads: SAE weights (32,768 features × 512 dims) load via the HF-download path; existing `entropy_comparison_*.pt` outputs still deserialize.
+- Figure reproduction from existing data: `fig05_entropy_vs_depth.py` and `fig06_entropy_multilayer_histograms.py` (the paper's two headline figures) regenerate cleanly. fig01–04, fig07, fig08 need stage-1/3/5 pipeline outputs that were never generated under the current naming convention — independent of this cleanup, documented as a pipeline-run TODO.
+- End-to-end pipeline on the cluster (Phase 6 smoke tests): `compare_entropies_multi_layer.py --num-batches 5 --layers 0..5` → 2m40s on RTX 4090; `feature_sparsity.py` → 6m54s on RTX 4090; `feature_token_influence.py --layer {3,5} --max-batches 50` → <2 min each on H200. All four succeeded.
+
+**Bug found during verification (now fixed).** `feature_sparsity.py` and `entropy_vs_batch_size.py` had `DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"` — no CUDA branch — so on the Oxford cluster they silently defaulted to CPU, turning a 10-minute GPU job into an 18+ minute CPU job before the smoke-test was killed. Both now use the standard `cuda → mps → cpu` dispatch that the other analysis scripts already used.
+
+**Post-cleanup follow-up in the same branch.**
+- Pythia SAE loading migrated to HuggingFace auto-download (`saprmarks/pythia-70m-deduped-saes` archive, cached under `~/.cache/huggingface/hub/`). The local `dictionaries/` tree and `pretrained_dictionary_downloader.sh` are gone. `feature_sparsity.py` and `entropy_vs_batch_size.py` were migrated off their hardcoded local paths onto the shared `sae_adapters.load_sae()` adapter (the latter had *also* been internally broken for a while — its call to `process_batch_with_influence` used the pre-adapter signature; fixed at the same time).
+- `env.sh` at repo root (a one-off SLURM wrapper for a `qwen2` sweep whose name collided with the `env.sh`-is-sourceable convention) renamed to `scripts/cluster/run_qwen2_entropy_sweep.sh`.
+- Phase-6 smoke-test artefacts left at the repo root (`feature_sparsity_data_*.pt`, `feature_sparsity_*.csv`, `feature_token_influence_*.pt`, `sparsity_histogram_*.png` — all gitignored) deleted from disk.
+
+**Rollback.**
+- `origin/pre-cleanup-snapshot` at `a49db4d` is the complete pre-cleanup working tree, captured before any deletion.
+- Local tarballs: `/mnt/users/clin/sae-analysis-backup-20260416.tar.gz` (3.1 GB, pre-cleanup) and `/mnt/users/clin/sae-analysis-pre-reset-20260419_0544.tar.gz` (3.1 GB, intermediate state captured before an unrelated `git reset`). Either recovers everything the snapshot branch cannot (i.e., the `dictionaries/` weights and experiment `.pt` files that are gitignored).
+
+---
+
+## Appendix: per-file audit
+
+The remainder of this document lists every deleted or moved path with its
+size, original module docstring (or an explicitly-labelled inferred summary
+when the source had no docstring), provenance commit, reason code, and
+replacement. It is intended for auditing, not reading.
+
+Reason codes: `VENDORED` (third-party library, not imported) / `SUPERSEDED`
+(canonical replacement exists) / `DUPLICATE` (near-identical copy of another
+kept file) / `STALE-OUTPUT` (regenerable data artefact) / `REDUNDANT-COPY`
+(same file now at a different canonical path) / `OFF-PIPELINE` (exploratory,
+parked in `deprecated/`) / `DEMO` (standalone sandbox, parked) / `RESCUE-UTIL`
+(utility whose target is also being removed) / `DEPENDS-ON-VENDORED` (tests
+or CI that only exercise the vendored library) / `TYPO-ARTIFACT` (accidental
+one-off file).
 
 ## Deletions
 
