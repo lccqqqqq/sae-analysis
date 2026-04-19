@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /mnt/users/clin/workspace/sae-analysis -maxdepth 2 -type f -exec ls -lh {} \\\\;)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(find *)",
+      "Bash(grep -E \"\\\\.py$\")",
+      "Bash([ ! -f \"/mnt/users/clin/workspace/sae-analysis/$f\" ])",
+      "Bash(grep -E '\\\\.\\(py|ipynb\\)$')",
+      "Bash(xargs du *)",
+      "Bash(grep '\\\\.py$')",
+      "Bash(xargs -n1 basename)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git -C /mnt/users/clin/workspace/sae-analysis log --oneline -10)",
+      "Bash(git -C /mnt/users/clin/workspace/sae-analysis/sae-analysis-v1 log --oneline -20)",
+      "Bash(git -C /mnt/users/clin/workspace/sae-analysis/sae-analysis-v1 status)",
+      "Bash(git -C /mnt/users/clin/workspace/sae-analysis/sae-analysis-v1 branch -avv)"
+    ]
+  }
+}
