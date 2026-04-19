@@ -1,0 +1,53 @@
+# path | REASON-CODE | replacement (optional)
+#
+# Each row describes a file that will be MOVED to sae-analysis-v1/deprecated/
+# (preserving its relative path under scripts/, etc.). The file is preserved
+# in case the research direction it supports is revived later.
+#
+# Paths are relative to the repo root.
+
+# ============================================================================
+# Off-pipeline analysis scripts — not referenced by the current paper but
+# self-contained and potentially useful for future investigations.
+# ============================================================================
+sae-analysis-v1/scripts/analysis/feature_location_analysis.py|OFF-PIPELINE|
+sae-analysis-v1/scripts/analysis/fetch_neuronpedia_interp.py|OFF-PIPELINE|
+
+# ============================================================================
+# Standalone prompt-level demos from the earliest commits of the project.
+# Useful for eyeballing SAE behaviour on a single prompt; not part of the
+# paper pipeline.
+# ============================================================================
+sae-analysis-v1/scripts/inspect/logit_lens.py|DEMO|
+sae-analysis-v1/scripts/inspect/sae_test.py|DEMO|
+sae-analysis-v1/scripts/inspect/sae_test_with_prompt.py|DEMO|
+sae-analysis-v1/scripts/inspect/sae_visualizer.py|DEMO|
+sae-analysis-v1/scripts/inspect/test_generation.py|DEMO|
+sae-analysis-v1/scripts/inspect/test_lm_infer.py|DEMO|
+
+# ============================================================================
+# Side investigation correlating H_vocab / H_logit with influence entropy.
+# Documented in notes/feature_level_vs_entropy.md but not in the paper.
+# ============================================================================
+sae-analysis-v1/scripts/plotting/plot_feature_level_vs_entropy.py|OFF-PIPELINE|
+sae-analysis-v1/scripts/plotting/plot_level_correlation_summary.py|OFF-PIPELINE|
+
+# ============================================================================
+# Ad-hoc batch-level replotters — kept in case a reviewer asks to re-examine
+# specific batches.
+# ============================================================================
+sae-analysis-v1/scripts/plotting/regenerate_batch_plots.py|OFF-PIPELINE|
+sae-analysis-v1/scripts/plotting/regenerate_batch_plots_quality.py|OFF-PIPELINE|
+
+# ============================================================================
+# Notebook rescue utilities — the heavy feature_analysis.ipynb they target is
+# being deleted, so their immediate use case is gone, but keeping them is cheap.
+# ============================================================================
+sae-analysis-v1/scripts/utils/create_minimal_notebook.py|RESCUE-UTIL|
+sae-analysis-v1/scripts/utils/fix_notebook.py|RESCUE-UTIL|
+
+# ============================================================================
+# SLURM job logs from past cluster runs. Not code, but a record of how the
+# paper's results were produced.
+# ============================================================================
+sae-analysis-v1/out|OFF-PIPELINE|

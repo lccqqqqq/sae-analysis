@@ -1,0 +1,139 @@
+# path | REASON-CODE | replacement (optional)
+#
+# Each row describes a file that will be deleted during the cleanup.
+# Paths are relative to the repo root (/mnt/users/clin/workspace/sae-analysis).
+# The changelog generator extracts the docstring / leading comment from each
+# listed path BEFORE deletion happens, so these lists must be finalized
+# before Phase 2 / Phase 3 run.
+
+# ============================================================================
+# Vendored SAE training library — not imported by the analysis pipeline.
+# ============================================================================
+sae-analysis-v1/dictionary_learning|VENDORED|use torch.load on the pretrained ae.pt files instead
+dictionary_learning|VENDORED|use torch.load on the pretrained ae.pt files instead
+
+# ============================================================================
+# Tests and CI that only exist to exercise the vendored library.
+# ============================================================================
+sae-analysis-v1/tests/test_end_to_end.py|DEPENDS-ON-VENDORED|
+sae-analysis-v1/tests/test_pytorch_end_to_end.py|DEPENDS-ON-VENDORED|
+sae-analysis-v1/tests/unit/test_dictionary.py|DEPENDS-ON-VENDORED|
+sae-analysis-v1/.github/workflows/build.yml|DEPENDS-ON-VENDORED|
+tests/test_end_to_end.py|DEPENDS-ON-VENDORED|
+tests/test_pytorch_end_to_end.py|DEPENDS-ON-VENDORED|
+tests/unit/test_dictionary.py|DEPENDS-ON-VENDORED|
+.github/workflows/build.yml|DEPENDS-ON-VENDORED|
+
+# ============================================================================
+# Stale .pt files at the v1 root — superseded by timestamped versions under data/.
+# ============================================================================
+sae-analysis-v1/entropy_comparison_resid_out_layer0_20260414_053350.pt|STALE-OUTPUT|sae-analysis-v1/data/pythia-70m/20260414_053350/entropy_comparison_resid_out_layer0.pt
+sae-analysis-v1/entropy_comparison_resid_out_layer1_20260414_053350.pt|STALE-OUTPUT|sae-analysis-v1/data/pythia-70m/20260414_053350/entropy_comparison_resid_out_layer1.pt
+sae-analysis-v1/entropy_comparison_resid_out_layer2_20260414_053350.pt|STALE-OUTPUT|sae-analysis-v1/data/pythia-70m/20260414_053350/entropy_comparison_resid_out_layer2.pt
+sae-analysis-v1/entropy_comparison_resid_out_layer3_20260414_053350.pt|STALE-OUTPUT|sae-analysis-v1/data/pythia-70m/20260414_053350/entropy_comparison_resid_out_layer3.pt
+sae-analysis-v1/entropy_comparison_resid_out_layer4_20260414_053350.pt|STALE-OUTPUT|sae-analysis-v1/data/pythia-70m/20260414_053350/entropy_comparison_resid_out_layer4.pt
+sae-analysis-v1/entropy_comparison_resid_out_layer5_20260414_053350.pt|STALE-OUTPUT|sae-analysis-v1/data/pythia-70m/20260414_053350/entropy_comparison_resid_out_layer5.pt
+
+# ============================================================================
+# Heavy duplicate notebook with embedded stale outputs — keep only the cleaned one.
+# ============================================================================
+sae-analysis-v1/notebooks/feature_analysis.ipynb|DUPLICATE|sae-analysis-v1/notebooks/feature_analysis_cleaned.ipynb
+
+# ============================================================================
+# Typo filename — one-off shell script with a double .sh.sh extension.
+# ============================================================================
+sae-analysis-v1/run_llama3_8b.sh.sh|TYPO-ARTIFACT|
+
+# ============================================================================
+# Five variants of the analyze_feature_token_influence script — all superseded
+# by the canonical figure scripts in scripts/figures/.
+# ============================================================================
+sae-analysis-v1/scripts/plotting/analyze_feature_token_influence.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig03_influence_heatmap.py
+sae-analysis-v1/scripts/plotting/analyze_feature_token_influence_simple.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig03_influence_heatmap.py
+sae-analysis-v1/scripts/plotting/analyze_feature_token_influence_notebook.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig03_influence_heatmap.py
+sae-analysis-v1/scripts/plotting/analyze_feature_token_influence_final.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig04_entropy_distribution_batches.py
+sae-analysis-v1/scripts/plotting/analyze_feature_token_influence_with_batches.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig04_entropy_distribution_batches.py
+
+# ============================================================================
+# Earlier plot scripts that have been canonicalized into scripts/figures/.
+# ============================================================================
+sae-analysis-v1/scripts/plotting/plot_entropy_vs_depth.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig05_entropy_vs_depth.py
+sae-analysis-v1/scripts/plotting/plot_entropy_vs_depth_preset.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig05_entropy_vs_depth_preset.py
+sae-analysis-v1/scripts/plotting/plot_entropy_vs_depth_comparison.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig05_entropy_vs_depth.py
+sae-analysis-v1/scripts/plotting/notebook_entropy_vs_depth.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig05_entropy_vs_depth.py
+sae-analysis-v1/scripts/plotting/plot_entropy_vs_batch_size_notebook.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig07_entropy_vs_batchsize.py
+sae-analysis-v1/scripts/plotting/plot_entropy_vs_activation.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig08_entropy_vs_activation.py
+sae-analysis-v1/scripts/plotting/plot_feature_entropy_histogram.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig06_entropy_multilayer_histograms.py
+sae-analysis-v1/scripts/plotting/plot_all_features_entropy_histogram.py|SUPERSEDED|sae-analysis-v1/scripts/figures/fig04_entropy_distribution_batches.py
+
+# ============================================================================
+# Top-level legacy scripts — redundant copies of (usually newer) v1 versions.
+# After v1 is promoted to root, these will live at scripts/analysis/, scripts/figures/, etc.
+# ============================================================================
+feature_sparsity.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/feature_sparsity.py
+feature_token_influence.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/feature_token_influence.py
+token_vector_influence.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/token_vector_influence.py
+compare_entropies.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/compare_entropies.py
+compare_entropies_multi_layer.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/compare_entropies_multi_layer.py
+compute_correlations.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/compute_correlations.py
+entropy_vs_batch_size.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/entropy_vs_batch_size.py
+feature_location_analysis.py|REDUNDANT-COPY|sae-analysis-v1/scripts/analysis/feature_location_analysis.py (moved to deprecated/)
+sae_test.py|REDUNDANT-COPY|sae-analysis-v1/scripts/inspect/sae_test.py (moved to deprecated/)
+sae_test_with_prompt.py|REDUNDANT-COPY|sae-analysis-v1/scripts/inspect/sae_test_with_prompt.py (moved to deprecated/)
+sae_visualizer.py|REDUNDANT-COPY|sae-analysis-v1/scripts/inspect/sae_visualizer.py (moved to deprecated/)
+logit_lens.py|REDUNDANT-COPY|sae-analysis-v1/scripts/inspect/logit_lens.py (moved to deprecated/)
+test_generation.py|REDUNDANT-COPY|sae-analysis-v1/scripts/inspect/test_generation.py (moved to deprecated/)
+test_lm_infer.py|REDUNDANT-COPY|sae-analysis-v1/scripts/inspect/test_lm_infer.py (moved to deprecated/)
+create_minimal_notebook.py|REDUNDANT-COPY|sae-analysis-v1/scripts/utils/create_minimal_notebook.py (moved to deprecated/)
+fix_notebook.py|REDUNDANT-COPY|sae-analysis-v1/scripts/utils/fix_notebook.py (moved to deprecated/)
+strip_notebook_outputs.py|REDUNDANT-COPY|sae-analysis-v1/scripts/utils/strip_notebook_outputs.py
+analyze_feature_token_influence.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig03_influence_heatmap.py
+analyze_feature_token_influence_simple.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig03_influence_heatmap.py
+analyze_feature_token_influence_notebook.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig03_influence_heatmap.py
+analyze_feature_token_influence_final.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig04_entropy_distribution_batches.py
+analyze_feature_token_influence_with_batches.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig04_entropy_distribution_batches.py
+plot_entropy_vs_depth.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig05_entropy_vs_depth.py
+notebook_entropy_vs_depth.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig05_entropy_vs_depth.py
+plot_entropy_vs_batch_size_notebook.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig07_entropy_vs_batchsize.py
+plot_entropy_vs_activation.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig08_entropy_vs_activation.py
+plot_feature_entropy_histogram.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig06_entropy_multilayer_histograms.py
+plot_all_features_entropy_histogram.py|REDUNDANT-COPY|sae-analysis-v1/scripts/figures/fig04_entropy_distribution_batches.py
+
+# ============================================================================
+# Top-level legacy notebooks — v1's feature_analysis_cleaned.ipynb is the canonical one.
+# ============================================================================
+feature_analysis.ipynb|DUPLICATE|sae-analysis-v1/notebooks/feature_analysis_cleaned.ipynb
+feature_analysis_backup.ipynb|DUPLICATE|sae-analysis-v1/notebooks/feature_analysis_cleaned.ipynb
+feature_analysis_v4.ipynb|DUPLICATE|sae-analysis-v1/notebooks/feature_analysis_cleaned.ipynb
+feature_analysis_cleaned.ipynb|REDUNDANT-COPY|sae-analysis-v1/notebooks/feature_analysis_cleaned.ipynb
+
+# ============================================================================
+# Top-level stale .pt / .csv / .png artifacts — superseded by timestamped outputs under v1/data/.
+# ============================================================================
+correlation_matrix.pt|STALE-OUTPUT|regenerable via scripts/analysis/compute_correlations.py
+feature_sparsity_data.pt|STALE-OUTPUT|regenerable via scripts/analysis/feature_sparsity.py
+feature_sparsity.csv|STALE-OUTPUT|regenerable via scripts/analysis/feature_sparsity.py
+logits_comparison_layer3_feature3339.png|STALE-OUTPUT|regenerable via sae_test_with_prompt.py (deprecated)
+sae_heatmap.png|STALE-OUTPUT|regenerable via sae_visualizer.py (deprecated)
+sparsity_histogram.png|STALE-OUTPUT|regenerable via scripts/figures/fig01_unique_tokens_histogram.py
+
+# ============================================================================
+# Top-level directories replaced by their v1 counterparts.
+# ============================================================================
+dictionaries|REDUNDANT-COPY|sae-analysis-v1/dictionaries (2.4 GB of pretrained SAEs, gitignored, regenerable via pretrained_dictionary_downloader.sh)
+
+# ============================================================================
+# Top-level duplicate config / metadata files — v1 has newer versions that
+# will take their place.
+# ============================================================================
+README.md|REDUNDANT-COPY|sae-analysis-v1/README.md (publication landing page)
+CLAUDE.md|REDUNDANT-COPY|sae-analysis-v1/CLAUDE.md (describes the reorganized layout)
+CHANGELOG.md|REDUNDANT-COPY|sae-analysis-v1/CHANGELOG.md
+LICENSE|REDUNDANT-COPY|sae-analysis-v1/LICENSE
+.gitignore|REDUNDANT-COPY|sae-analysis-v1/.gitignore (more comprehensive)
+pyproject.toml|REDUNDANT-COPY|sae-analysis-v1/pyproject.toml (will be updated in Phase 5 to add missing runtime deps from top-level)
+note.md|REDUNDANT-COPY|sae-analysis-v1/note.md (byte-identical)
+pretrained_dictionary_downloader.sh|REDUNDANT-COPY|sae-analysis-v1/pretrained_dictionary_downloader.sh
+wikitext-2-train.txt|REDUNDANT-COPY|sae-analysis-v1/wikitext-2-train.txt
+wikitext-2-test.txt|REDUNDANT-COPY|sae-analysis-v1/wikitext-2-test.txt
+.claude|REDUNDANT-COPY|sae-analysis-v1/.claude (per-project Claude config)
