@@ -67,35 +67,29 @@ class SAEBundle:
         raise ValueError(f"Unknown SAE architecture: {self.arch!r}")
 
 
-# --- Loader 1: dictionary_learning (.pt state dict with encoder/decoder) -----
+# --- Loader 1: dictionary_learning (.pt state dict from zipped HF release) --
 
 def _load_dictionary_learning(
     preset: Preset, layer_idx: int, device: str
 ) -> SAEBundle:
-    path_template = preset.sae_path_template
-    if path_template is None:
+    if not (preset.sae_release and preset.sae_release_filename and preset.sae_path_template):
         raise ValueError(
-            f"Preset {preset.name!r} has sae_loader=dictionary_learning but "
-            "no sae_path_template."
+            f"Preset {preset.name!r} uses dictionary_learning loader but "
+            "is missing sae_release / sae_release_filename / sae_path_template."
         )
-    path_str = path_template.format(L=layer_idx)
-    # Template may point at either the ae.pt file directly or its parent dir.
-    path = Path(path_str)
-    if path.is_dir():
-        path = path / "ae.pt"
+
+    from huggingface_hub import hf_hub_download
+    import zipfile
+
+    zip_path = Path(hf_hub_download(
+        repo_id=preset.sae_release, filename=preset.sae_release_filename,
+    ))
+    extract_root = zip_path.parent / "extracted"
+    path = extract_root / preset.sae_path_template.format(L=layer_idx)
     if not path.exists():
-        # Try the saprmarks layout: a wildcard subdir under the site dir.
-        parent = Path(path_str).parent if not Path(path_str).is_dir() else Path(path_str)
-        match = None
-        for p in parent.iterdir() if parent.exists() else []:
-            if p.is_dir() and (p / "ae.pt").exists():
-                match = p / "ae.pt"
-                break
-        if match is None:
-            raise FileNotFoundError(
-                f"No SAE weights found at {path} (or as */ae.pt under {parent})"
-            )
-        path = match
+        print(f"[INFO] Extracting {zip_path.name} -> {extract_root}", flush=True)
+        with zipfile.ZipFile(zip_path) as zf:
+            zf.extractall(extract_root)
 
     print(f"[INFO] Loading dictionary_learning SAE from {path}", flush=True)
     sd = torch.load(path, map_location="cpu")

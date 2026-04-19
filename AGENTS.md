@@ -97,7 +97,7 @@ supplementary/
 |---|---|---|
 | WikiText-2 | ~1M-token text corpus used for all analyses | `python scripts/utils/download_data.py` |
 | Pythia-70m-deduped | 6-layer transformer, d_model=512 | Auto-downloaded by HuggingFace `transformers` on first run |
-| Pretrained SAEs | 32,768-feature SAEs for each of 6 residual stream layers | `./pretrained_dictionary_downloader.sh` → `dictionaries/pythia-70m-deduped/resid_out_layer{0..5}/ae.pt` |
+| Pretrained SAEs | 32,768-feature SAEs for each of 6 residual stream layers | Auto-downloaded from `saprmarks/pythia-70m-deduped-saes` on first `load_sae(...)` call (cached under `~/.cache/huggingface/hub/`) |
 
 ## What You Can Do
 
@@ -122,10 +122,9 @@ uv pip install torch torchvision torchaudio transformers accelerate einops datas
 
 # 2. Download WikiText-2
 python scripts/utils/download_data.py
-
-# 3. Download pretrained SAEs
-./pretrained_dictionary_downloader.sh
 ```
+
+Pretrained SAEs download on first `load_sae(...)` call — no manual step.
 
 **Stage 1 — Generate sparsity statistics** (needed for Figs 1, 2, 8, and as input to later stages):
 ```bash

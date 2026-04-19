@@ -27,8 +27,9 @@ class Preset:
     # SAE source
     sae_loader: str           # "dictionary_learning" | "sae_lens" | "sparsify"
     sae_arch: str             # "relu" | "jumprelu" | "topk"
-    sae_path_template: Optional[str] = None   # for dictionary_learning (uses {L})
-    sae_release: Optional[str] = None         # for sae_lens
+    sae_path_template: Optional[str] = None   # for dictionary_learning: path within the extracted zip (uses {L})
+    sae_release: Optional[str] = None         # HF repo id (sae_lens and dictionary_learning)
+    sae_release_filename: Optional[str] = None  # for dictionary_learning: zip filename inside the HF repo
     sae_hook_template: Optional[str] = None   # for sae_lens (uses {L})
     sae_repo: Optional[str] = None            # for sparsify
     # Analysis defaults
@@ -38,7 +39,9 @@ class Preset:
 
 
 PRESETS: dict[str, Preset] = {
-    # Current baseline: Pythia-70m + saprmarks dictionary_learning SAEs
+    # Current baseline: Pythia-70m + saprmarks dictionary_learning SAEs.
+    # Weights auto-download from saprmarks/pythia-70m-deduped-saes on first use
+    # (archive unpacks under the HF cache).
     "pythia-70m": Preset(
         name="pythia-70m",
         model_id="EleutherAI/pythia-70m-deduped",
@@ -47,6 +50,8 @@ PRESETS: dict[str, Preset] = {
         layer_path="gpt_neox.layers",
         sae_loader="dictionary_learning",
         sae_arch="relu",
+        sae_release="saprmarks/pythia-70m-deduped-saes",
+        sae_release_filename="dictionaries_pythia-70m-deduped_10.zip",
         sae_path_template="dictionaries/pythia-70m-deduped/resid_out_layer{L}/10_32768/ae.pt",
         threshold=0.2,
         site_template="resid_out_layer{L}",

@@ -15,13 +15,14 @@ uv venv .venv && source .venv/bin/activate
 uv pip install . torch torchvision torchaudio
 uv pip install transformers accelerate einops datasets tqdm numpy matplotlib scipy
 python scripts/utils/download_data.py          # WikiText-2 corpus
-./pretrained_dictionary_downloader.sh           # pretrained SAEs (~2.5 GB)
 ```
 
-External data lands in:
+External data:
 
-- `wikitext-2-train.txt` / `wikitext-2-test.txt` (repo root)
-- `dictionaries/pythia-70m-deduped/resid_out_layer{0..5}/10_32768/ae.pt`
+- `wikitext-2-train.txt` / `wikitext-2-test.txt` (repo root).
+- Pretrained SAEs: **auto-downloaded on first use** via `huggingface_hub` from
+  `saprmarks/pythia-70m-deduped-saes` (Pythia) and the respective HF releases
+  for the other presets. Cached under `~/.cache/huggingface/hub/`.
 
 All analysis scripts must be run from the **repo root**. Scripts in `scripts/analysis/` import each other (`compare_entropies.py` imports from `feature_token_influence.py`), so the working directory matters.
 

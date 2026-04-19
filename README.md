@@ -45,9 +45,10 @@ Each figure has a dedicated generation script in `scripts/figures/` that saves d
 uv venv .venv && source .venv/bin/activate
 uv pip install . torch torchvision torchaudio
 uv pip install transformers accelerate einops datasets tqdm numpy matplotlib scipy
-./pretrained_dictionary_downloader.sh   # downloads pretrained SAEs (~2.5 GB)
 python scripts/utils/download_data.py   # downloads WikiText-2
 ```
+
+Pretrained SAEs download on first use via `huggingface_hub` (cached under `~/.cache/huggingface/hub/`) — no separate setup step.
 
 ### Generate figures from pre-computed data
 
@@ -91,8 +92,8 @@ scripts/
 └── utils/              ← data download, changelog, notebook utilities
 deprecated/             ← parked code not used by the paper (see CLEANUP_CHANGELOG.md)
 notebooks/              ← Jupyter notebooks for exploratory analysis
-dictionaries/           ← pretrained SAE weights (gitignored; download via
-                          pretrained_dictionary_downloader.sh)
+                          (pretrained SAE weights auto-download from HuggingFace
+                          on first use into ~/.cache/huggingface/hub/)
 ```
 
 ## Citation
