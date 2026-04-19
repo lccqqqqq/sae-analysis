@@ -50,48 +50,38 @@ scripts/
 ├── figures/           — ONE SCRIPT PER PAPER FIGURE (fig01_*.py … fig08_*.py)
 │                        Each saves directly to paper/figures/. See scripts/figures/README.md.
 ├── analysis/          — core data-producing scripts (run these first)
-│   ├── feature_sparsity.py           — stage 1: per-feature activation statistics
-│   ├── compute_correlations.py       — stage 2a: feature correlation matrix
-│   ├── feature_location_analysis.py  — stage 2b: average activation position per feature
-│   ├── feature_token_influence.py    — stage 3: Jacobian-based influence for top features
-│   ├── token_vector_influence.py     — stage 3b: baseline Jacobian for full token vector
-│   ├── compare_entropies.py          — stage 4: single-layer entropy comparison
+│   ├── feature_sparsity.py              — stage 1: per-feature activation statistics
+│   ├── compute_correlations.py          — stage 2a: feature correlation matrix
+│   ├── feature_token_influence.py       — stage 3: Jacobian-based influence for top features
+│   ├── token_vector_influence.py        — stage 3b: baseline Jacobian for full token vector
+│   ├── compare_entropies.py             — stage 4: single-layer entropy comparison
 │   ├── compare_entropies_multi_layer.py — stage 4 (efficient): all layers in one pass
-│   └── entropy_vs_batch_size.py      — stage 5: context-length sensitivity study
-├── plotting/          — figure generation from saved .pt data
-│   ├── plot_entropy_vs_depth.py      — Fig 5: entropy vs layer depth (needs all-layer data)
-│   ├── plot_entropy_vs_batch_size_notebook.py — Fig 7: entropy vs context length
-│   ├── plot_entropy_vs_activation.py — Fig 8: entropy vs activation probability
-│   ├── plot_all_features_entropy_histogram.py — Fig 4: entropy distribution per feature
-│   ├── plot_feature_entropy_histogram.py — single-feature entropy histogram
-│   ├── analyze_feature_token_influence.py       — influence heatmap (Fig 3 style)
-│   ├── analyze_feature_token_influence_final.py — refined heatmap analysis
-│   ├── analyze_feature_token_influence_simple.py
-│   ├── analyze_feature_token_influence_notebook.py
-│   ├── analyze_feature_token_influence_with_batches.py
-│   └── notebook_entropy_vs_depth.py  — notebook version of depth plot
-├── inspect/           — standalone model/SAE inspection demos
-│   ├── sae_test.py           — inject a decoded feature, inspect logit changes
-│   ├── sae_test_with_prompt.py — prompt-driven feature activation demo
-│   ├── sae_visualizer.py     — vocabulary projection / activation visualizer
-│   ├── logit_lens.py         — per-layer token prediction via logit lens
-│   ├── test_generation.py    — LM generation sanity check
-│   └── test_lm_infer.py      — LM inference sanity check
+│   ├── entropy_vs_batch_size.py         — stage 5: context-length sensitivity study
+│   ├── feature_level_entropies.py       — per-feature vocabulary/logit entropies
+│   ├── presets.py                       — model + SAE configuration registry
+│   ├── model_adapters.py                — embedding / layer hook / DummyEmbed helpers
+│   └── sae_adapters.py                  — uniform SAE loader across libraries
+├── cluster/           — SLURM submit scripts
+│   ├── submit_entropy_bench.sh
+│   └── run_llama3_8b.sh
 └── utils/
-    ├── download_data.py       — download WikiText-2 via HuggingFace datasets
+    ├── download_data.py                 — download WikiText-2 via HuggingFace datasets
     ├── strip_notebook_outputs.py
-    ├── fix_notebook.py
-    └── create_minimal_notebook.py
+    ├── generate_cleanup_changelog.py    — regenerate CLEANUP_CHANGELOG.md from to_*.txt
+    ├── to_delete.txt                    — inputs for the cleanup changelog
+    └── to_deprecate.txt
+
+deprecated/            — parked code not used by the paper; kept for future revival.
+                         Mirrors the original scripts/ layout. See CLEANUP_CHANGELOG.md.
+├── scripts/analysis/  — feature_location_analysis.py, fetch_neuronpedia_interp.py
+├── scripts/inspect/   — 6 standalone SAE/LM demos (sae_test, logit_lens, etc.)
+├── scripts/plotting/  — 4 correlation-analysis and batch-replotting scripts
+├── scripts/utils/     — create_minimal_notebook.py, fix_notebook.py
+└── out/               — 20 archived SLURM job logs
 
 notebooks/
-├── feature_analysis.ipynb         — full exploratory analysis (outputs embedded)
-├── feature_analysis_cleaned.ipynb — clean version (outputs stripped)
+├── feature_analysis_cleaned.ipynb — exploratory analysis (outputs stripped)
 └── README.md
-
-dictionary_learning/  — SAE library by Marks, Karvonen & Mueller
-                        (https://github.com/saprmarks/dictionary_learning)
-
-tests/                — unit and end-to-end tests for the dictionary_learning library
 
 supplementary/
 ├── know-how.md       — methodology decisions and tacit knowledge (why squared L2,

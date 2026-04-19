@@ -87,11 +87,12 @@ paper/                  ← LaTeX source and figures (ground truth)
 scripts/
 ├── figures/            ← one script per paper figure (fig01–fig08)
 ├── analysis/           ← data-producing scripts (run these first)
-├── plotting/           ← exploratory plotting utilities
-├── inspect/            ← standalone model/SAE demos
-└── utils/              ← data download and notebook utilities
+├── cluster/            ← SLURM submit scripts
+└── utils/              ← data download, changelog, notebook utilities
+deprecated/             ← parked code not used by the paper (see CLEANUP_CHANGELOG.md)
 notebooks/              ← Jupyter notebooks for exploratory analysis
-dictionary_learning/    ← SAE library (Marks, Karvonen & Mueller)
+dictionaries/           ← pretrained SAE weights (gitignored; download via
+                          pretrained_dictionary_downloader.sh)
 ```
 
 ## Citation
