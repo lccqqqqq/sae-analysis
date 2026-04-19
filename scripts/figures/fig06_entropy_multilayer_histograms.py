@@ -27,7 +27,7 @@ LAYERS = [0, 1, 2, 3, 4]
 
 
 def find_latest(layer):
-    pattern = str(ROOT / f"entropy_comparison_resid_out_layer{layer}_*.pt")
+    pattern = str(ROOT / "data" / f"entropy_comparison_resid_out_layer{layer}_*.pt")
     files = glob.glob(pattern)
     if not files:
         raise FileNotFoundError(f"No entropy_comparison file for layer {layer}. "
