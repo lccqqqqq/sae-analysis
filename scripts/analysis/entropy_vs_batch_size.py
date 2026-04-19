@@ -389,8 +389,9 @@ def main(site=None, max_batch_size=None, min_batch_size=None, step=None, random_
 
     # 6. Create plot
     print(f"\n[INFO] Creating plot...")
-    plots_dir = Path(f"entropy_vs_batch_size_{site}_{unique_id}")
-    plots_dir.mkdir(exist_ok=True)
+    out_dir = Path("data") / preset.name
+    plots_dir = out_dir / f"entropy_vs_batch_size_{site}_{unique_id}"
+    plots_dir.mkdir(parents=True, exist_ok=True)
     print(f"[INFO] Plots directory: {plots_dir}")
 
     plot_path = plot_entropy_vs_batch_size(
