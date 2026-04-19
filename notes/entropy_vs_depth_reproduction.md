@@ -4,26 +4,21 @@ This plot shows the **mean entropy (bits) of each leading SAE feature** as a lin
 
 ## Scripts that produce this plot
 
-Two scripts produce this plot — they're essentially the same code:
+After the April 2026 cleanup, the canonical script is `scripts/figures/fig05_entropy_vs_depth.py` (and its preset-aware companion `fig05_entropy_vs_depth_preset.py`). The earlier `plot_entropy_vs_depth.py` / `notebook_entropy_vs_depth.py` duplicates were superseded — see `CLEANUP_CHANGELOG.md`.
 
-| Script | Use case |
-|---|---|
-| `plot_entropy_vs_depth.py` | Standalone `.py` (tries to open a window) |
-| `notebook_entropy_vs_depth.py` | Copy-paste into a Jupyter cell (`plt.show()` renders inline) |
-
-Both auto-discover the most recent `entropy_comparison_resid_out_layer<N>_*.pt` per layer via glob.
+The canonical script auto-discovers the most recent `entropy_comparison_resid_out_layer<N>_*.pt` per layer via glob.
 
 ## How to reproduce
 
+Run from the repo root.
+
 ### Step 1 — Generate the data
 
-No `.pt` files exist yet. Run:
-
 ```bash
-python compare_entropies_multi_layer.py --layers 0 1 2 3 4 5 --num-batches 10
+python scripts/analysis/compare_entropies_multi_layer.py --layers 0 1 2 3 4 5 --num-batches 10
 ```
 
-This runs all 6 layers in one pass, producing 6 files:
+This runs all 6 layers in one pass, producing 6 files under `data/`:
 - `entropy_comparison_resid_out_layer0_<timestamp>.pt`
 - `entropy_comparison_resid_out_layer1_<timestamp>.pt`
 - … through layer 5
@@ -33,12 +28,10 @@ Each file contains per-batch `feature_entropies` (dict of feature_idx → H in b
 ### Step 2 — Plot entropy vs depth
 
 ```bash
-python plot_entropy_vs_depth.py
+python scripts/figures/fig05_entropy_vs_depth.py
 ```
 
-Or paste `notebook_entropy_vs_depth.py` into a Jupyter cell for inline rendering.
-
-The plot shows the top-10 features (ranked by activation, appearing in ≥2 layers) with entropy on the y-axis and layer on the x-axis.
+The plot shows the top-10 features (ranked by activation, appearing in ≥2 layers) with entropy on the y-axis and layer on the x-axis, and is written to `paper/figures/entropy_vs_depth.png`.
 
 ## What the plot shows vs what the per-batch PNGs show
 

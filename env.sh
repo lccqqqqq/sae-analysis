@@ -15,7 +15,7 @@ echo
 ulimit -l unlimited
 
 export OMP_NUM_THEADS=1
- nice -n 10 /usr/bin/env PYTHONUNBUFFERED=1 PYTHONPATH=/mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/scripts/analysis: stdbuf -oL -eL /usr/bin/python3 /mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/scripts/analysis/compare_entropies_multi_layer.py --preset qwen2-0.5b --layers 0 1 2 3 4 5 6 7 8 9 10 11 --num-batches 50 --random-seed 0 --log-every 1 --heartbeat-interval 30 --output-dir /mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/data
+ nice -n 10 /usr/bin/env PYTHONUNBUFFERED=1 PYTHONPATH=/mnt/users/clin/workspace/sae-analysis/scripts/analysis: stdbuf -oL -eL /usr/bin/python3 /mnt/users/clin/workspace/sae-analysis/scripts/analysis/compare_entropies_multi_layer.py --preset qwen2-0.5b --layers 0 1 2 3 4 5 6 7 8 9 10 11 --num-batches 50 --random-seed 0 --log-every 1 --heartbeat-interval 30 --output-dir /mnt/users/clin/workspace/sae-analysis/data
   echo ---------------                                           
   echo Job output ends                                           
 
