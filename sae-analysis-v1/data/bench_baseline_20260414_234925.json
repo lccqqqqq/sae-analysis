@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260414_234925",
+  "host": "gpu01",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.7.0+cu126",
+  "cuda_available": true,
+  "layers": [
+    0,
+    3,
+    5
+  ],
+  "num_batches": 3,
+  "batch_size": 64,
+  "threshold": 0.2,
+  "random_batches": true,
+  "random_seed": 0,
+  "total_elapsed_s": 37.101112365722656,
+  "mean_batch_s": 12.366329352060953,
+  "std_batch_s": 3.634476997194444,
+  "per_batch_s": [
+    10.43761944770813,
+    9.204645872116089,
+    17.456722736358643
+  ],
+  "peak_gpu_mem_gib": 0.9094853401184082,
+  "output_files": {
+    "0": "/mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/data/entropy_comparison_resid_out_layer0_20260414_234925.pt",
+    "3": "/mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/data/entropy_comparison_resid_out_layer3_20260414_234925.pt",
+    "5": "/mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/data/entropy_comparison_resid_out_layer5_20260414_234925.pt"
+  }
+}

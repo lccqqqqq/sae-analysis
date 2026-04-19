@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260415_063012",
+  "host": "gpu08",
+  "device": "cuda",
+  "gpu_name": "NVIDIA RTX 6000 Ada Generation",
+  "torch_version": "2.7.0+cu126",
+  "cuda_available": true,
+  "preset": "gemma-2-2b",
+  "layers": [
+    0,
+    12,
+    25
+  ],
+  "num_batches": 3,
+  "batch_size": 64,
+  "threshold": 0.0,
+  "random_batches": true,
+  "random_seed": 0,
+  "total_elapsed_s": 496.71888184547424,
+  "mean_batch_s": 165.5710031191508,
+  "std_batch_s": 4.606523515410559,
+  "peak_gpu_mem_gib": 21.842287063598633,
+  "output_files": {
+    "0": "entropy_comparison_resid_layer0.pt",
+    "12": "entropy_comparison_resid_layer12.pt",
+    "25": "entropy_comparison_resid_layer25.pt"
+  }
+}

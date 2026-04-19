@@ -1,0 +1,40 @@
+{
+  "timestamp": "20260415_072743",
+  "host": "gpu02",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.7.0+cu126",
+  "cuda_available": true,
+  "preset": "llama-3.2-1b",
+  "layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "num_batches": 50,
+  "batch_size": 64,
+  "threshold": 0.0,
+  "random_batches": true,
+  "random_seed": 0,
+  "total_elapsed_s": 7093.19256901741,
+  "mean_batch_s": 141.86281614780427,
+  "std_batch_s": 0.6129867955173068,
+  "peak_gpu_mem_gib": 11.315127849578857,
+  "output_files": {
+    "0": "entropy_comparison_resid_layer0.pt",
+    "1": "entropy_comparison_resid_layer1.pt",
+    "2": "entropy_comparison_resid_layer2.pt",
+    "3": "entropy_comparison_resid_layer3.pt",
+    "4": "entropy_comparison_resid_layer4.pt",
+    "5": "entropy_comparison_resid_layer5.pt",
+    "6": "entropy_comparison_resid_layer6.pt",
+    "7": "entropy_comparison_resid_layer7.pt",
+    "8": "entropy_comparison_resid_layer8.pt"
+  }
+}

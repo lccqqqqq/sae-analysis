@@ -1,0 +1,21 @@
+{
+  "preset": "gemma-2-2b",
+  "model_id": "google/gemma-2-2b",
+  "sae_loader": "sae_lens",
+  "sae_arch": "jumprelu",
+  "layers": [
+    0,
+    12,
+    25
+  ],
+  "threshold": 0.0,
+  "num_batches": 3,
+  "batch_size": 64,
+  "random_batches": true,
+  "random_seed": 0,
+  "timestamp": "20260415_063012",
+  "host": "gpu08",
+  "device": "cuda",
+  "gpu_name": "NVIDIA RTX 6000 Ada Generation",
+  "torch_version": "2.7.0+cu126"
+}

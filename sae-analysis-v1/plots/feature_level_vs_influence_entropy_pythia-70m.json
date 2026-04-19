@@ -1,0 +1,106 @@
+{
+  "config": {
+    "preset": "pythia-70m",
+    "model_id": "EleutherAI/pythia-70m-deduped",
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "threshold": 1.0,
+    "batch_size": 64,
+    "min_count": 20,
+    "timestamp": "20260415_062947",
+    "vocab_size": 50304,
+    "corpus_tokens": 2408076
+  },
+  "per_layer": [
+    {
+      "layer": 0,
+      "n_features_overlap_vocab": 168,
+      "n_features_overlap_logit": 241,
+      "pearson_H_feat_vs_H_vocab": 0.5874585509300232,
+      "spearman_H_feat_vs_H_vocab": 0.5466708104068243,
+      "pearson_p_H_vocab": 5.748936727338468e-17,
+      "pearson_H_feat_vs_H_logit": 0.09758969396352768,
+      "spearman_H_feat_vs_H_logit": 0.0914022098655781,
+      "pearson_p_H_logit": 0.13085699931577627,
+      "mean_H_feat": 1.7126587629318237,
+      "mean_H_vocab": 0.8682999610900879,
+      "mean_H_logit": 15.61765193939209
+    },
+    {
+      "layer": 1,
+      "n_features_overlap_vocab": 215,
+      "n_features_overlap_logit": 337,
+      "pearson_H_feat_vs_H_vocab": 0.49814754724502563,
+      "spearman_H_feat_vs_H_vocab": 0.4220920308041307,
+      "pearson_p_H_vocab": 6.948249267829014e-15,
+      "pearson_H_feat_vs_H_logit": 0.04997783154249191,
+      "spearman_H_feat_vs_H_logit": 0.09754168089479952,
+      "pearson_p_H_logit": 0.36038389763194134,
+      "mean_H_feat": 2.5078821182250977,
+      "mean_H_vocab": 1.375983476638794,
+      "mean_H_logit": 15.617677688598633
+    },
+    {
+      "layer": 2,
+      "n_features_overlap_vocab": 731,
+      "n_features_overlap_logit": 1210,
+      "pearson_H_feat_vs_H_vocab": 0.113534115254879,
+      "spearman_H_feat_vs_H_vocab": -0.033871768968201946,
+      "pearson_p_H_vocab": 0.002109860561018507,
+      "pearson_H_feat_vs_H_logit": 0.16930142045021057,
+      "spearman_H_feat_vs_H_logit": 0.15801570997137168,
+      "pearson_p_H_logit": 3.1059281799730103e-09,
+      "mean_H_feat": 3.263700246810913,
+      "mean_H_vocab": 2.766432523727417,
+      "mean_H_logit": 15.617700576782227
+    },
+    {
+      "layer": 3,
+      "n_features_overlap_vocab": 622,
+      "n_features_overlap_logit": 719,
+      "pearson_H_feat_vs_H_vocab": 0.2256598174571991,
+      "spearman_H_feat_vs_H_vocab": 0.0687863415228337,
+      "pearson_p_H_vocab": 1.2690974624654887e-08,
+      "pearson_H_feat_vs_H_logit": 0.07022625207901001,
+      "spearman_H_feat_vs_H_logit": 0.09101375619854511,
+      "pearson_p_H_logit": 0.05982151692308936,
+      "mean_H_feat": 3.506478786468506,
+      "mean_H_vocab": 3.1879916191101074,
+      "mean_H_logit": 15.617696762084961
+    },
+    {
+      "layer": 4,
+      "n_features_overlap_vocab": 538,
+      "n_features_overlap_logit": 583,
+      "pearson_H_feat_vs_H_vocab": 0.10377302765846252,
+      "spearman_H_feat_vs_H_vocab": 0.052110078197309874,
+      "pearson_p_H_vocab": 0.016044441433377667,
+      "pearson_H_feat_vs_H_logit": -0.06628251075744629,
+      "spearman_H_feat_vs_H_logit": -0.06790404495586193,
+      "pearson_p_H_logit": 0.10987818046884679,
+      "mean_H_feat": 3.7202553749084473,
+      "mean_H_vocab": 3.1611502170562744,
+      "mean_H_logit": 15.617668151855469
+    },
+    {
+      "layer": 5,
+      "n_features_overlap_vocab": 6641,
+      "n_features_overlap_logit": 8891,
+      "pearson_H_feat_vs_H_vocab": 0.06791039556264877,
+      "spearman_H_feat_vs_H_vocab": 0.08667858850323014,
+      "pearson_p_H_vocab": 3.0328415463579314e-08,
+      "pearson_H_feat_vs_H_logit": 0.024029936641454697,
+      "spearman_H_feat_vs_H_logit": -0.10723332263742849,
+      "pearson_p_H_logit": 0.023461074175480684,
+      "mean_H_feat": 3.879279613494873,
+      "mean_H_vocab": 5.874603271484375,
+      "mean_H_logit": 15.613503456115723
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/entropy_comparison_*.pt)",
+      "Bash(ls /mnt/users/clin/workspace/sae-analysis/sae-analysis-v1/feature_sparsity_data_*.pt)",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(addqueue:*)",
+      "Bash(q:*)",
+      "Bash(mv entropy_comparison_*.pt data/)",
+      "Bash(mv entropy_plots_resid_out_layer*/ plots/)",
+      "Bash(xargs -I:*)"
+    ]
+  }
+}

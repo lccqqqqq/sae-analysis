@@ -1,0 +1,856 @@
+layer,feat_idx,description,explanation_model,type,max_act_approx,frac_nonzero,top_pos_tokens,top_neg_tokens
+0,922,terms related to climate change and environmental issues,gpt-4o-mini,oai_token-act-pair,0.863,0.03113492329915364," 2020, azine, schemas, naire, sworth","                     , č
+        , 
+                                                                ,  ,                                     "
+0,3633, hierarchical and structured information related to courses or educational content,gpt-4o-mini,oai_token-act-pair,0.753,0.02992153167724609,")\\, ?), '];, }\\, ).\","», Ĳ, ħ, ¹, Ľ"
+0,4258, details related to product specifications and features,gpt-4o-mini,oai_token-act-pair,0.758,0.06431039174397786,"½, ľ, ĻĤ, Īĺ, ĺ","bian, bee, velope, ENTIAL, combe"
+0,6036, expressions of desire or intention,gpt-4o-mini,oai_token-act-pair,2.07,0.002428372701009115,"hift, mith, creen, manship, ided"," covers, ungs,  senses,  prepares,  presses"
+0,8744, references to family or community involvement,gpt-4o-mini,oai_token-act-pair,1.286,0.06679217020670573,"
+
+    ,                                                                      , 
+
+     ,                                                                                                                                 ,                                                                          ","piece, ipro, amming, aked, ationally"
+0,13467,"the word ""try"" in various contexts",gpt-4o-mini,oai_token-act-pair,5.927,0.0003611246744791667,"cket, erals, mates, bels, gery","AP, upon, CSF, CMC, GN"
+0,16476,expressions of personal experiences and opinions related to emotional and physical challenges,gpt-4o-mini,oai_token-act-pair,0.842,0.2975832621256511," calm,  bang,  dry,  taste, ************************","Ŀ,  alia, £, onomy, ÏģÎŃ"
+0,18282,"information related to API requests and their structural components, including statuses and query parameters",gpt-4o-mini,oai_token-act-pair,2.53,0.164709726969401,"nier, iere,  Nacional,  assists, acea","´, 
+                               , 
+            
+           , č
+                   ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 "
+0,19199,specific software-related inquiries or guidance requests,gpt-4o-mini,oai_token-act-pair,3.988,0.0005861918131510416,"ĥ½,  
+     , <|outofrange|>, 
+                                              , 
+                            ","ont, ons, ag, ject, Ã¢t"
+0,21955," programming terminology, particularly related to data types and structures",gpt-4o-mini,oai_token-act-pair,1.092,0.004470189412434896,"*](#,  racist, ãĤĩ,  Fashion, /-/","cels, hole, determined, ontally, holes"
+0,25630, references to attempts or endeavors related to various actions or activities,gpt-4o-mini,oai_token-act-pair,5.244,0.0006125768025716146,"manship, ace, have, hoe, hip","CSF, ynes, kte, jours, ÄŁ"
+0,27693, mentions of specific companies or organizations involved in affiliate advertising,gpt-4o-mini,oai_token-act-pair,1.029,0.01486937204996745," Ã¨, stein, liche,  (,, bp"," precedent, iating, ities, iary, upon"
+0,29237,"numerical values and metrics, often relating to financial or statistical data",gpt-4o-mini,oai_token-act-pair,0.499,0.09946409861246745," doubt, idin, igo, ising, ISA","ĻĤ, Ģ, Į, 
+
+                   , 
+
+            "
+0,31061,specific terms related to skin conditions and immunological markers,gpt-4o-mini,oai_token-act-pair,0.845,0.03584988911946615,"naire,  poses, ensis,  (âĢľ, endi"," nothing,  damned,  toast,  harmless,  fuckin"
+1,47, specific programming elements related to graphical user interface design,gpt-4o-mini,oai_token-act-pair,1.492,0.01261711120605469,"ript,  Redistributions,  attendant,  Anthrop, :`"," definitive, orio,  definite,  general,  site"
+1,615, references to different types of roadways,gpt-4o-mini,oai_token-act-pair,4.427,0.001194636027018229,"ĭ, walks, pool, gos, ista"," resignation, >$,  morning,  poisoning, urity"
+1,714, phrases indicating user reviews and customer experiences,gpt-4o-mini,oai_token-act-pair,1.93,0.01825968424479167," reviewers,  Reviews,  rating,  reviews,  Rating"," citizenship,  reservoir,  transportation,  reservoirs, ovsk"
+1,827,"concepts related to cause and effect, particularly in biological and ecological contexts",gpt-4o-mini,oai_token-act-pair,1.898,0.01495933532714844,"aken,  compartment, orphous, {}{, akov","'s, ello, liche, bare, ¹"
+1,868,"references to musical works, including songs and albums",gpt-4o-mini,oai_token-act-pair,2.783,0.0147552490234375," music,  songs,  album,  bass,  lyrics","¼, Ĥ, essen,  preventive, schemas"
+1,1147, legal and political terminology related to the judicial process,gpt-4o-mini,oai_token-act-pair,0.54,0.04008229573567709,"|$, |}, |}\,  girls, \%$","Īĺ, Ń, ¬,             
+ ,                                                                           "
+1,1265,terms related to mathematical proofs and conditions,gpt-4o-mini,oai_token-act-pair,1.433,0.01207733154296875," classical,  generalized,  phenomenological,  conject,  intuition","», ousel,  iPhone, ului,  MLS"
+1,1539," information related to medical and insurance matters, particularly surrounding accidents and their financial implications",gpt-4o-mini,oai_token-act-pair,1.917,0.04641246795654297," purpose,  spokesperson,  ktÃ³,  epit,  emphasis","ĥ½, £, į, ¦, ĳ"
+1,2166, patterns and structural elements in code or technical documentation,gpt-4o-mini,oai_token-act-pair,5.106,0.05978902180989584,"¦, "";, ients, °, ¢","""}](#, !),, ,), )~,  mechanic"
+1,2173,cohesive and repetitive elements in lists or sequences,gpt-4o-mini,oai_token-act-pair,4.296,0.009445826212565104," forth, rogens,  vice,  its,  consequent","ĸ, ģ, ĻĤ, Ĺ, £"
+1,2461, elements related to public relations and marketing activities,gpt-4o-mini,oai_token-act-pair,2.056,0.01245594024658203,"except,  short,  ""âĻª, yc,  Wings","amycin,  bets, Ä±z, à±ģ, Ģ"
+1,3060, steps and instructions related to tasks or processes,gpt-4o-mini,oai_token-act-pair,0.495,0.02721436818440755,"ging, pping, iring, ushing,  morning","
+ĉĉĉ   , 
+
+            ,          ,  
+         , 
+                                       "
+1,3151, references to financial aspects and consequences in discussions about economic policies,gpt-4o-mini,oai_token-act-pair,1.543,0.05879751841227213," forward,  slack, gered, soever,  open",")$., )];,  Worth, 
+ĉ
+, }}}$."
+1,3392,elements related to holiday celebrations and emotions associated with family gatherings,gpt-4o-mini,oai_token-act-pair,0.644,0.03649298350016276," percent,  goal, chez, ester, lando","Ļª, ĳ, ĨĴ,          , 
+
+   "
+1,3626, sporting events scores and player statistics,gpt-4o-mini,oai_token-act-pair,2.861,0.04886182149251302," players,  midfielder,  offseason,  finale,  tournament","."");, "");, ."").,  "");, ).]("
+1,3856," unique or titular phrases and names, particularly in a cultural or artistic context",gpt-4o-mini,oai_token-act-pair,2.052,0.03544775644938151,"emos, erto, `,, vier, ""}](#","ologies, ·, )^[@, noreply, )</"
+1,4219,"repetitive mentions of the term ""constant""",gpt-4o-mini,oai_token-act-pair,5.547,0.001722017923990885,"itud,  updating,  variables,  utf,  renewal","oard, thems, mit, nt, orent"
+1,4592,"references to the pronoun ""her.""",gpt-4o-mini,oai_token-act-pair,5.647,0.003396034240722656," own, cules, oku, itage, bage","ordin, ably,  him, enter, ĸ"
+1,4681,elements related to feelings and expressions of emotion,gpt-4o-mini,oai_token-act-pair,3.507,0.01235866546630859,"ķ, Ŀ, ĩ, gets, ¥","riber, itum,  objection,  novo, ement"
+1,4867, concepts related to funding and financial agreements,gpt-4o-mini,oai_token-act-pair,0.543,0.04318936665852865," [$,  morning,  !==,  Your,  pregnant","velopment, ¾, IFIC, \]\].,  logo"
+1,4886,references to the public or community involvement in various contexts,gpt-4o-mini,oai_token-act-pair,1.762,0.01418081919352213,"biamo, onent, oste, asio,  itself","¾, ¿½, ĻĤ, Ļ,    
+"
+1,4898,"terms related to programming and software development, particularly in PHP and SQL contexts",gpt-4o-mini,oai_token-act-pair,1.181,0.04154555002848307,"ului, iere, nier, #., agna","ĥ½, ķ, ĳ, ľĵ, ´"
+1,5440,references to roles or titles in a professional or sports context,gpt-4o-mini,oai_token-act-pair,2.547,0.009327570597330729,"liness, ship, azine, ships,  spirits","ĥ½, », ¬, Ĳ, Ĵ"
+1,5465,specific details and numerical information related to education and community services,gpt-4o-mini,oai_token-act-pair,1.114,0.01724020640055339,"yards, lords, »¿,  Stadium,  receives","rogenic, ogen, idth,  Fourier, ARGET"
+1,5564, specific words and phrases related to communication,gpt-4o-mini,oai_token-act-pair,5.541,0.0009403228759765625,"sworth, ball, smith, tagged, press","ĥ½, ĨĴ, ı, ³, ¬"
+1,6157," the repetition of the word ""can"" in various contexts",gpt-4o-mini,oai_token-act-pair,5.905,0.003096580505371094,"'t, vas,  optionally, cels, ubicin","¡, ¢, Ŀ, Ľ, »¿"
+1,6306,references to musical compositions,gpt-4o-mini,oai_token-act-pair,5.811,0.0005737940470377604,"al, ally, ality, hemat, etal","³, ĥ½, ¼, ĵ, ĸ´"
+1,6590,references to specific counties and their related information,gpt-4o-mini,oai_token-act-pair,6.81,0.0007308324178059896,"way, view,  Clerk, ways, fal","ĥ½,  sexes, ·¸, omycin, ģ"
+1,6719,references to specific individuals in the context of achievement or recognition,gpt-4o-mini,oai_token-act-pair,0.959,0.01783466339111328,"yers, neys, ura,  solicit,  bloc","ĻĤ,                                       , č
+        , 
+
+                                         , č
+      "
+1,6986," instances of the word ""on"" in various contexts",gpt-4o-mini,oai_token-act-pair,2.966,0.005422274271647136," behalf, shore, yx, cology, look"," Pradesh, burg, ©, ķ,  beyond"
+1,7277, expressions of frustration in attempts to understand or accomplish something,gpt-4o-mini,oai_token-act-pair,0.992,0.03150463104248047,"ľĵ, ĻĤ, ¥, Ĳ, ĨĴ","doms, dom, iverse, ardless, ader"
+1,7308,terms related to legal proceedings and jury decisions,gpt-4o-mini,oai_token-act-pair,6.799,0.003098805745442708," verdict,  awarded,  overhaul, ceedings, piece","aceae, ](#, \., ](, )](#"
+1,7589, gerunds or words ending in 'ing',gpt-4o-mini,oai_token-act-pair,3.397,0.002924601236979167,"roup, tons, à±į, haus, naire"," finding,  {},  using,  deriving,  sleeping"
+1,7637," the repetition of the word ""stay.""",gpt-4o-mini,oai_token-act-pair,6.417,0.001364707946777344," behind, olu,  UTC, ubot, UTC","ľ, ½, ĵ, Ķ, ŀ"
+1,7669,"words related to the character ""Puss in Boots"" from the Shrek universe",gpt-4o-mini,oai_token-act-pair,5.534,0.001063982645670573,"±, ¥, ŀ, Ĵ, ¢",">/,  usually,  kg,  follow,  morning"
+1,7697, references to specific people and organizations within a context of legal or formal announcements,gpt-4o-mini,oai_token-act-pair,0.913,0.03891881306966146," nonetheless, imize, ctomy,  yourselves,  objection","         ,                                                                       ,           
+ , <|outofrange|>, č
+                   "
+1,7705,terms and words associated with definitions and classifications,gpt-4o-mini,oai_token-act-pair,2.996,0.004944483439127604,"ī, ł, ¯, º, Ĥ","%=,  <-, zzles, [:, medium"
+1,8134,specific geographic locations or landmarks,gpt-4o-mini,oai_token-act-pair,1.434,0.01186370849609375,"nement, umab,  Suite, amiento, keit","ĻĤ, ľĵ, ¿½,                ,                 "
+1,8164,"details about sequences, processes, and events taking place over time or steps",gpt-4o-mini,oai_token-act-pair,0.558,0.0319821039835612,""")], ahoma, \])]{}, ""]), )]("," catalogue,  histories, ools,  editions, emporary"
+1,8626, key numerical values and statistical data related to various subjects,gpt-4o-mini,oai_token-act-pair,4.455,0.01066144307454427,"hip, )\], )\]., ev,  parted","ĻĤ, ħ, ĩ, Ħ, Ģ"
+1,8745, technical terms and concepts related to software and programming,gpt-4o-mini,oai_token-act-pair,1.081,0.01796531677246094,"Ļª, »¿, ŀ, ¢,   
+ "," myself,  yourself, ?"", ?âĢĿ, comes"
+1,8928,memories and personal experiences related to change and introspection,gpt-4o-mini,oai_token-act-pair,0.635,0.0543521245320638,"'));,  whatsoever, )).,  anywhere,  violation"," BGCOLOR, alion,  firm, imon, nbsp"
+1,9123, references to notable individuals and their activities,gpt-4o-mini,oai_token-act-pair,2.351,0.009212493896484375," crore,  Kumar, âĢĻ.,  Shah, âĢĻ,"," allergies, ÂĹ,  _, ologically,  fitness"
+1,9581,past tense verbs indicating actions of people,gpt-4o-mini,oai_token-act-pair,2.718,0.005578358968098958,"raid, ĻĤ, inel,  defeat,  detach","minded,  credits, alties, writers, ments"
+1,9587, mentions of sports seasons and related timelines,gpt-4o-mini,oai_token-act-pair,5.653,0.002078374226888021,"ally, al, ality,  finale, lights","ĺ, ĸ´, ĻĤ, ´, ĨĴ"
+1,9806,formal announcements regarding events,gpt-4o-mini,oai_token-act-pair,1.295,0.03660424550374349," organizers,  attendees,  attendance,  inaugural,  cheering","·, «, į, Ń, ¥"
+1,9959, religious or spiritual themes related to human experiences and values,gpt-4o-mini,oai_token-act-pair,1.97,0.0364688237508138,",âĢĶ,  pardon, ,--,  thereto,  conne"," https,  globally,  Netflix,  global,  2019"
+1,10066, names and titles of individuals associated with significant achievements or roles,gpt-4o-mini,oai_token-act-pair,1.55,0.04471492767333984," yourself,  yourselves,  happened,  arises,  fails","Īĺ, Ļª, ĻĤ, ·, <|outofrange|>"
+1,10100, phrases that indicate personal struggles or vulnerabilities,gpt-4o-mini,oai_token-act-pair,1.825,0.02430184682210286," alike,  resultant, then, lando, them"," Acad, naire, Ã©ric,  MÃ©,  mellitus"
+1,10135,references to human rights violations and associated legal or analytical frameworks,gpt-4o-mini,oai_token-act-pair,0.894,0.02357673645019531,"Ļ, ĻĤ, Ļª, »¿, ¾","ighs, omorphisms, born,  latter, ounder"
+1,10155, terms related to optimization and various forms of analysis or processing,gpt-4o-mini,oai_token-act-pair,1.668,0.006641705830891927,"gery, naire, igator, visor, atÃ³"," tired,  clicking, lick,  lingering,  reopen"
+1,10212,words and phrases related to ticket availability and events,gpt-4o-mini,oai_token-act-pair,1.037,0.03549321492513021," itself,  again, keit, ""?, âĢĿ?","idopsis, rench, oxic, uge, googleapis"
+1,10284, numeric values related to ratings or quantities,gpt-4o-mini,oai_token-act-pair,3.538,0.001784642537434896,"teenth, hed, teen, dp, olving"," mistake, oya,  responsibility,  vain, ikov"
+1,10511, chemical compounds and related terminology,gpt-4o-mini,oai_token-act-pair,2.714,0.001480738321940104,"¢, ł, ī, ¶, Ŀ"," pardon,  Word, oyd,  sexually, yll"
+1,10633,words and phrases associated with death and lifelessness,gpt-4o-mini,oai_token-act-pair,6.458,0.001242955525716146,"liest, bolt, lift, minster, weight","ĨĴ, Ĩ,                                                             ,    
+ ,  
+         "
+1,10979,"references to Russia and its political leaders, particularly Vladimir Putin",gpt-4o-mini,oai_token-act-pair,4.419,0.001098314921061198,"oslav,  Federation, works, craft, istan","pless,  gastrointestinal,  colorectal,  digestive,  colitis"
+1,11009,words related to fire and water,gpt-4o-mini,oai_token-act-pair,1.91,0.005261103312174479,"gate, ford, Wire, break, breaker"," vicinity, acial, uding, aying, itting"
+1,11081,actions associated with health and medical processes involving assistance and interventions,gpt-4o-mini,oai_token-act-pair,2.439,0.005608876546223958," them, ulate, ities, erate,  minds","owing, fal, ando, blo, liner"
+1,11098, concepts related to spiritual or emotional transformation and redemption,gpt-4o-mini,oai_token-act-pair,1.848,0.05260435740152995," sin,  nour,  darkness,  alt,  immense","JM, Reviewer, PLIED, ãĤ§, JR"
+1,11440, mentions of specific categories or classes often denoted by identifiers or labels,gpt-4o-mini,oai_token-act-pair,4.966,0.001677195231119792,"acter, less, acillus, ridges, rient","¸, ľĵ, Ĥ, ī, ¡"
+1,11843, words related to grappling or physical contests,gpt-4o-mini,oai_token-act-pair,1.506,0.008396466573079428," aboard,  catches, ization, izing, azine","ĥ½, ī,  ÑĩÑĤÐ¾,                                     ,                                  "
+1,12029,constructions related to transportation infrastructure and efficiency,gpt-4o-mini,oai_token-act-pair,1.249,0.02130413055419922,"ĻĤ, ³, ĳ, Ļ, Ļª","à±į, astro, à±ģ,  depended, etable"
+1,12180,calls to action and links related to downloads or online content,gpt-4o-mini,oai_token-act-pair,1.523,0.02454217274983724," welcome,  Â£,  caption, )</, dated","""}](#, chle,  differently, *^,  ^"
+1,12372," proper nouns, primarily names of places and people",gpt-4o-mini,oai_token-act-pair,1.628,0.01584148406982422," Publications, isiÃ³n, stown,  Motors, pora","""?"",  adults, '?"",  behavior,  grown"
+1,12439,verbs indicating ongoing actions or states in a narrative context,gpt-4o-mini,oai_token-act-pair,2.269,0.01737658182779948,"]>,  turnover,  bright,  successor, dry","¹, Ģ, ¬, ª, Ĵ"
+1,12975, key concepts related to legal proceedings and judicial decisions,gpt-4o-mini,oai_token-act-pair,0.675,0.022308349609375," well,  positively,  *,  fairly,  {}","
+                                     ,                                         , <|outofrange|>, 
+            
+           ,             
+ "
+1,12979,words related to philanthropy,gpt-4o-mini,oai_token-act-pair,1.581,0.005670865376790364,"ains, ics, actic, act, ever"," Future,  slow,  same,   
+,  unders"
+1,12997,numeric values and their relationships or patterns in data,gpt-4o-mini,oai_token-act-pair,1.192,0.01664352416992188,"ousand,  increments, reshold, rive, equal","ily, ivos, ivist,  finance, cler"
+1,13241,"instances of the word ""bride"" and its variations",gpt-4o-mini,oai_token-act-pair,3.988,0.002591451009114583,"ands, ings, ship, hurst, iche","ĨĴ, Īĺ, Ĳ, ķ, ¿½"
+1,13301, legal citations and case references,gpt-4o-mini,oai_token-act-pair,2.152,0.02359867095947266,"»¿,  percentile, wick, century,  Ave","ils, xi, ulos, icos,  immune"
+1,13429,"the word ""so.""",gpt-4o-mini,oai_token-act-pair,7.406,0.002871831258138021,"bject, aring, oths, bbing, vereign"," Sciences, ings, ments, works, egen"
+1,13675, content related to legal matters and court decisions,gpt-4o-mini,oai_token-act-pair,0.953,0.02181466420491536,"ĻĤ, Ĺ, ĳ, ĸ, ²","teenth, uary, ruptcy, ashington, wikipedia"
+1,13808, descriptive phrases related to natural landscapes and geographic features,gpt-4o-mini,oai_token-act-pair,1.427,0.02068773905436198," interior,  adjoining, insula,  nearby,  neighbouring","¦, ķ, ĻĤ, Į, Ĥ"
+1,14142," mentions of ""@"" symbols, likely indicating social media handles or references",gpt-4o-mini,oai_token-act-pair,5.989,0.0008252461751302084,"¼,  vez, ±, gmail,  weekends","ty, ening, arter, irs, anner"
+1,14191,references to the Netherlands and Dutch culture,gpt-4o-mini,oai_token-act-pair,4.992,0.0005769729614257812,"shire, izumab, ief, lace, thems"," enough,  Expect,  UFC,  true,  POSS"
+1,14266, various programming commands and functions,gpt-4o-mini,oai_token-act-pair,0.767,0.02090136210123698,"atively,  decisive, iful,  careful, uppose","ĨĴ, Ĥ¬, ®, Ĵ, ¬"
+1,14407," the word ""that"" in various contexts",gpt-4o-mini,oai_token-act-pair,5.158,0.005093256632486979,"ched, chle, Ĳ, tics, chers"," occupancy,  that, ably,  each,  MERCHANTABILITY"
+1,15004,dates and historical references,gpt-4o-mini,oai_token-act-pair,4.664,0.0008707046508789062,"istic, doch, ental,  anniversary, sburg","¹, ·, Ħ, «, ĻĤ"
+1,15346," terms related to legal and regulatory matters, especially concerning financial crimes and compliance",gpt-4o-mini,oai_token-act-pair,1.799,0.01391728719075521,"estone,  Championships, ista,  Awards, breaker"," closed,  slightest,  unnatural,  '</,  sudden"
+1,15352,expressions of excitement or joy,gpt-4o-mini,oai_token-act-pair,1.539,0.0105899175008138,"nement, tes, naire, bed,  offers","7554,  Show,  Generated, oxic, 
+ĉĉĉĉĉĉĉĉ"
+1,15625,"the definite article ""the"" and its contextual usage",gpt-4o-mini,oai_token-act-pair,5.237,0.004774411519368489,"wers,  latter,  way,  nation, IRS"," posture,  pose, erna,  coordination, ket"
+1,15798,specific names or identifiers related to personal stories and healthcare narratives,gpt-4o-mini,oai_token-act-pair,1.232,0.02034091949462891,"ī, ¯, ģ, ®, Ĭ","cause, Cause, effectiveness, nier,  comeback"
+1,16090,references to race and diversity issues,gpt-4o-mini,oai_token-act-pair,0.573,0.02344322204589844," communities,  community,  thriving,  society,  ecosystem","zzles,  manually,  intervals, hores,  shutter"
+1,16172,specific years or dates mentioned in the text,gpt-4o-mini,oai_token-act-pair,4.162,0.00208123524983724,"uscript,  recipients,   
+, OOGLE, LAST","¹,  
+           ,               , 
+                                                , 
+            
+           "
+1,16271, HTML and other markup tags within content,gpt-4o-mini,oai_token-act-pair,0.635,0.04703044891357422," together, rangle, hibit, together,  girls","sson, ftware, ystems, ities, ius"
+1,16354,"instances of the word ""with.""",gpt-4o-mini,oai_token-act-pair,5.367,0.002347946166992188," regards,  regard,  respect, drawn, ils","ender, criptor, inos, core, iller"
+1,16387,specific names or proper nouns associated with individuals or entities in various contexts,gpt-4o-mini,oai_token-act-pair,1.435,0.03937562306722005,"·, ĻĤ, ©, «, ²","etry, lasses, /., /), osevelt"
+1,16421,"proper nouns, particularly names of individuals and places",gpt-4o-mini,oai_token-act-pair,2.688,0.01636060078938802,"jee, ÅĽci, stadt, asio, wagen","¿½, Ĥ, ĻĤ, ĵ, Ĵ"
+1,16539, terms associated with corporate and financial performance,gpt-4o-mini,oai_token-act-pair,2.401,0.006975809733072917,"»¿,  ones, ĻĤ,  matters, quarters","ene, obl, icol,  electroly,  cm"
+1,16663,"references to noteworthy achievements and contributions in the entertainment industry, particularly in film and music",gpt-4o-mini,oai_token-act-pair,1.385,0.01787058512369792," biography,  artist,  genre,  comedy,  genres","ĥ½, ¯, ±, ¼, »"
+1,16879, elements and structures related to programming or software development,gpt-4o-mini,oai_token-act-pair,1.194,0.01092974344889323," volumes,  accelerator,  volume,  led, NdEx"," smell, áĢº, IRQHandler,  Syndrome, wards"
+1,17422,terms related to sports and competitions,gpt-4o-mini,oai_token-act-pair,1.182,0.02169545491536458,"doms, ahead, liga, yards, shot","¯, ĳ, ¿½, Ļ, ´"
+1,17555, keywords related to events and notable occurrences,gpt-4o-mini,oai_token-act-pair,1.178,0.02661069234212239,"½, ł, ĻĤ, §, ³","stanbul, oint, APTER, ARRANT, tingham"
+1,17590, terms associated with various forms of suffering and their impacts on individuals,gpt-4o-mini,oai_token-act-pair,2.242,0.01440238952636719,"ateur, imum, liest, naire, ially","ĥ½, Ĵ, 
+
+
+   , 
+                                                 ,                "
+1,17638, possessive pronouns and their usage in relation to ownership or belonging,gpt-4o-mini,oai_token-act-pair,3.927,0.005228042602539062," alike, itude, oint,  hardest,  deeper","()));, xspace, ]];, Ãªme, (()"
+1,17796," references to specific organizations, policies, or legal frameworks",gpt-4o-mini,oai_token-act-pair,1.152,0.0439294179280599,"»¿, ĸ, ī, ģ, Ģ"," love,  kidding,  sudden,  hers,  weird"
+1,17991, references to medical treatments or conditions related to respiratory health,gpt-4o-mini,oai_token-act-pair,5.255,0.0009644826253255209,"arium, mith, ¡, clerosis, pire"," preponderance, ocrine, ishes, aisy, ts"
+1,19468,discussions about herbal remedies and their effectiveness,gpt-4o-mini,oai_token-act-pair,1.201,0.02059205373128255,"ĻĤ, Ĥ, Ĺ, °, Ĳ","\]](, ""}](#, á»ĥ, bsd, pgen"
+1,19663,locations and geographical references in the text,gpt-4o-mini,oai_token-act-pair,2.257,0.01161416371663412,"xico, ospace, atto, ansas, ceral","
+                               , č
+        , 
+  
+ ,                                                       , 
+  "
+1,19830, terms and conditions related to agreements and obligations,gpt-4o-mini,oai_token-act-pair,2.202,0.01427523295084635,"ĥ½, ·¸, 
+                             , 
+                                                                ,           
+ "," factors,  policies,  objectives,  keys, ulations"
+1,20118,the act of singing and related musical actions,gpt-4o-mini,oai_token-act-pair,4.444,0.003417015075683594,"lasses,  louder,  loud,  songs,  aloud","amined,  publication, OPLE, CHANTABILITY,  thrombosis"
+1,20423,references to the Italian nationality or culture,gpt-4o-mini,oai_token-act-pair,4.669,0.001736640930175781," Affairs, skins, istan, Functions, women"," varying,  different, lessly,  measurable,  measured"
+1,20431,specific locations or geographical references in relation to contexts or events,gpt-4o-mini,oai_token-act-pair,2.455,0.02913983662923177,"ospace, ureus, xico, aque, xygen"," 
+           ,               , 
+         ,                      , 
+
+               "
+1,20440, punctuation and its frequency,gpt-4o-mini,oai_token-act-pair,4.584,0.001575469970703125,"unnumbered, ¼, ½, ², theless","ies,  therefrom, -âĤ¬,  configuration,  setup"
+1,20483, quantifiable data related to computer programming and file structures,gpt-4o-mini,oai_token-act-pair,1.006,0.01802825927734375,"/.,  \+, aan, /), =âĢĿ"," PBX,  Suit,  SIM, illery,  Box"
+1,20628, words related to regulatory or formal processes,gpt-4o-mini,oai_token-act-pair,2.934,0.008150418599446615,"aneously, itely, estly, cing, ational","Ĵ, ģ, ±, ĭ, Ļ"
+1,20776, the use of dots or omissions in textual content,gpt-4o-mini,oai_token-act-pair,5.611,0.001422564188639323,"¸, ĥ½, Ķ, Ŀ, ¼","nikov, ieri, ingale, yla, àª¾"
+1,21183, URLs and specific data fields in a structured format,gpt-4o-mini,oai_token-act-pair,1.578,0.04079055786132812,"ëĭĪëĭ¤,  Bool,  respectively, respectively, neq","ĨĴ, »¿, Ĵ, ·¸, ĳ"
+1,21374, phrases indicating something that continues to exist or persist over time,gpt-4o-mini,oai_token-act-pair,5.684,0.0009094874064127604,"ders, sembl,  unaffected,  faithfully,  unresolved","Ħ, ª, Ī, Ĵ, ½"
+1,21962,references to significant political figures and their interactions with governmental matters in Russia and Ukraine,gpt-4o-mini,oai_token-act-pair,2.093,0.004922548929850261," Sov, Sov, ŀ,  Minister, kom"," diagnoses,  color, opause,  diagnose, ppings"
+1,22207,connections or relationships among various entities,gpt-4o-mini,oai_token-act-pair,4.735,0.003926595052083333," sexes,  JUD, usterity, /-/,  dice","listed, age, time, linked,  belongs"
+1,22554,technical terminology and references related to software development and data management,gpt-4o-mini,oai_token-act-pair,1.03,0.01449934641520182,"ĻĤ, ģ, ŀ, Ī, £","Ã§Ãµes,  ourselves, clusions, ://,  nature"
+1,23425,instances of specific programming language syntax and constructs,gpt-4o-mini,oai_token-act-pair,1.026,0.0612945556640625,"Ļª, ¦, ¯, ĥ, ½","âĢĿ)., :**]{}, âĢĿ., ""]., )!"
+1,23617," the word ""What"" in various contexts, indicating inquiries or questions",gpt-4o-mini,oai_token-act-pair,6.56,0.001387596130371094," kind,  happened,  toast, soever,  happens","´, ¸, Ģ, yard, rant"
+1,23837, references to locations or places,gpt-4o-mini,oai_token-act-pair,2.598,0.007088661193847656,"eligible,  vivo,  vain, separ, appropri","ment, pieces, isters, isme, heads"
+1,23840,references to specific events or details related to a narrative or report,gpt-4o-mini,oai_token-act-pair,0.63,0.05483690897623698,"ĻĤ, ¿½, Ł, Ĺ, ĸ","rico, buntu, usepackage, ÐµÑģÐº, Ð»ÑĮ"
+1,24381,references to payment or financial transactions,gpt-4o-mini,oai_token-act-pair,6.463,0.001798311869303385,"mium, back, check, own, pal","£, ¿½, Īĺ, Ń, ¨"
+1,24712, programming-related keywords and specific coding functions,gpt-4o-mini,oai_token-act-pair,1.219,0.01848093668619792,"
+                                               , 
+                                                                , <|outofrange|>, 
+                ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ","asted, ights, ised, oses, inking"
+1,24734,quotes or dialogue within the text,gpt-4o-mini,oai_token-act-pair,3.489,0.007800420125325521,"¼, ĭ, ®, ĥ, Ĭ","ologies, ological, omatic, ostat, osal"
+1,25427,references to particular songs and their titles,gpt-4o-mini,oai_token-act-pair,2.289,0.01927344004313151,"!,, !âĢĿ, etica, âĢĻ, break","Ĺ, ¯, ¸, ¡, ·"
+1,25543,negative or contradictory sentiments,gpt-4o-mini,oai_token-act-pair,1.145,0.03092861175537109," alike,  others, oint,  therefrom, urers","ĳ, Ĵ, Ĥ¬, §, ĺ"
+1,25737, statements expressing mixed feelings about a situation,gpt-4o-mini,oai_token-act-pair,3.57,0.08090782165527344,"izen, enties, rio, erto, cis","·, ľ, documentclass, ¯,  respectively"
+1,25962,references to historical events or conditions,gpt-4o-mini,oai_token-act-pair,2.083,0.1125125885009766,"Ļª, ¯, ģ, Ĺ, £","adel, uego, ...](, taire, achus"
+1,26468, descriptors for properties and qualities of items or situations,gpt-4o-mini,oai_token-act-pair,2.016,0.01908938090006511," brackets,  ranging,  ranges,  reflected,  labels","ĥ½, Ĳ, ¢, »,                                                                                                                                                                                                 "
+1,26593, articles and pronouns that indicate specificity,gpt-4o-mini,oai_token-act-pair,1.675,0.009775797526041666,"ermine,  usual, verting, Willi, andum","_."", .'', .'"", .""_, stones"
+1,27181,technical terminology related to programming languages and compiler behavior,gpt-4o-mini,oai_token-act-pair,1.418,0.01061121622721354," (__,  specialization,  binaries,  programmer, !(","³, ¯, Kelly, OPLE, ¦"
+1,27997,numeric values or identifiers related to coding or programming context,gpt-4o-mini,oai_token-act-pair,1.695,0.01467514038085938,"», ¼, ī,                                                                                                                                                                                                                                                                 , 
+  ÂłÂłÂł","izations,  actu, uously, izing, ously"
+1,28283, mentions of specific individuals and their relationships to various contexts,gpt-4o-mini,oai_token-act-pair,2.392,0.03045845031738281,")âĢĵ, ?)., iani, ?),  Ranch","ģ, », Ĥ¬, Ĥ, ĸ"
+1,28483,"instances of the word ""to"" and related phrases that indicate direction or purpose",gpt-4o-mini,oai_token-act-pair,3.206,0.004026412963867188,"¡, °, rapeut, ĥ, ½","ricular,  sake, ieux, ervation,  Reading"
+1,28637, constructs related to programming or software development,gpt-4o-mini,oai_token-act-pair,4.322,0.0557104746500651,"""}](#, !),, )',, )"",, ),","  
+ , 
+
+  ,                           , 
+  
+ , <|outofrange|>"
+1,29204, terms and identifiers related to programming and data structure definitions,gpt-4o-mini,oai_token-act-pair,1.668,0.01299095153808594," Equipment, Marshal,  Engine, etable, eLife","?âĢĿ, ?âĢĻ, ?)., acial, orting"
+1,29206, references to ages and durations,gpt-4o-mini,oai_token-act-pair,3.573,0.006146113077799479,"vance, izumab,  resolution,  resolutions, ured"," Redistributions,  ...),  PCB, org, )|^"
+1,29469, keywords related to veterans and military service,gpt-4o-mini,oai_token-act-pair,0.713,0.04371420542399088,"...](, iginally, .'"", ""];, ,'""","<|outofrange|>, 
+ĉĉ   ,  
+           , <|outofrange|>, 
+                                  "
+1,30077, programming-related terms and concepts,gpt-4o-mini,oai_token-act-pair,2.008,0.04749552408854166," Teams,  Netanyahu,  Suite,  coats, rounded","ħ, ®, ľĵ, ĳ, Ĩ"
+1,30210," words related to ""management"" or entities involved in management activities",gpt-4o-mini,oai_token-act-pair,4.206,0.001786231994628906,"ary, arily, aries, naire, aire"," my, >"";, vet,  *"", ubotu"
+1,30248, names and references to female characters or individuals in various contexts,gpt-4o-mini,oai_token-act-pair,5.799,0.007962544759114584,"enos, icides,  citations,  mentions, aho","¼, ĨĴ, ¿½, ĻĤ, ĵ"
+1,30848,terms related to biochemical processes and molecular biology,gpt-4o-mini,oai_token-act-pair,1.408,0.004173596700032552,"Ļ, £, ī, ļ, ĳ",""")), "")],  favour, ""));, "")."
+1,30999,complexities and nuances in social and economic situations or issues,gpt-4o-mini,oai_token-act-pair,1.319,0.02140522003173828,"{}{, orously, atisfied, affin, HECK","¢, <|outofrange|>, č
+                   , č
+č
+           ,                  "
+1,31205, words that relate to definitions and meanings,gpt-4o-mini,oai_token-act-pair,2.081,0.01367378234863281," interchange,  spoken,  uttered,  coined,  Anglic","ondo, pless, emente, avia, visory"
+1,31728,"repeated or prominent mention of the word ""ley.""",gpt-4o-mini,oai_token-act-pair,4.601,0.001201947530110677,"hurst, wic, wagen, velt, istics",">>, >$, due,  late, ."""""
+1,31925,references to Mexico and related geographical locations,gpt-4o-mini,oai_token-act-pair,5.994,0.000983874003092448," City, City, town, iang,  Valley","ĥ½, ¼, Ħ, ľ, ´"
+1,32314," words related to ""ack"" which may represent a brand or product name",gpt-4o-mini,oai_token-act-pair,4.828,0.001280466715494792,"enzie, starter, gart, owitz, manship"," anaest,  such,  particular, ...',  quiet"
+1,32543,terminology related to technical features or specifications,gpt-4o-mini,oai_token-act-pair,1.582,0.0157928466796875,"ÅĽci, enos, vill, suppl, pora","opause,  thy, >$,  yourself, ?"""
+2,257,"dynamic actions and events involving movement, conflict, or emotional intensity",gpt-4o-mini,oai_token-act-pair,2.498,0.01790301005045573," onto,  down,  upward,  inward,  back","Ŀ, §, ĥ½, Į, Ĩ"
+2,326," occurrences of the term ""word"" and its variations",gpt-4o-mini,oai_token-act-pair,4.77,0.001546859741210938,"sworth, press, tagged, smith, wave","ı,  circumstances, ]>, ational, ubicin"
+2,546," occurrences of the ""@"" symbol, typically indicating mentions or tags in a social media or programming context",gpt-4o-mini,oai_token-act-pair,5.292,0.0008306503295898438,"±, ¼, ¾, Ĳ, ľĵ","inary, ierno, ening, arter, ination"
+2,690,dates and years,gpt-4o-mini,oai_token-act-pair,4.616,0.00135962168375651," anniversary, bed, irected, nikov, acters","ľĵ, 
+                              ,       
+ , 
+           , 
+            
+           "
+2,813, phrases related to commands or directives,gpt-4o-mini,oai_token-act-pair,3.924,0.02742862701416016," listeners,  readers,  subscribers,  customers,  consumers","ther, ket, ium, umab, atur"
+2,826, references to court-related terminology and legal proceedings,gpt-4o-mini,oai_token-act-pair,3.541,0.005177497863769531," martial,  impartial,  justice, ship,  judges","]>, xygen, )](#,  kernels, chy"
+2,1401, quantifiable metrics or statistical figures related to poverty and its impact,gpt-4o-mini,oai_token-act-pair,0.953,0.04027366638183594,"grily, hee,  rate, Ĵ, itely","erty, srep,  entitled, .âĢĻ,  fluoride"
+2,1577,references to security forces and related groups,gpt-4o-mini,oai_token-act-pair,1.405,0.03493626912434896," Orchestra,  Islands,  Gallery,  Revolution,  Gang",":`, ALLY, thood, atches, PING"
+2,1753, words related to cleaning and maintenance processes,gpt-4o-mini,oai_token-act-pair,2.199,0.01401678721110026,"able, backs, ingly, ishly, eners","ĵ, Ĥ, ļ, », Ŀ"
+2,2071, the concept of persistence or continuity over time,gpt-4o-mini,oai_token-act-pair,5.236,0.0007232030232747396," unchanged, ders,  intact,  unresolved,  unaffected","Ħ, Ĵ, ª, ½, ģ"
+2,2141, titles and prominent names related to entertainment and culture,gpt-4o-mini,oai_token-act-pair,3.803,0.01151593526204427,"acious, aste, rooms, '-, ostatic",")</,  {@,  <!--,  <, )^[@"
+2,2203, words or phrases related to recruitment or onboarding processes,gpt-4o-mini,oai_token-act-pair,3.354,0.01134268442789713,"ersion, itious, ÂĴ, lement, ating","../../, ""));, "");, llo, return"
+2,2340, discussions about political qualifications and connections in various contexts,gpt-4o-mini,oai_token-act-pair,1.355,0.03021844228108724,"iciency, ocity,  deficiency, availability, icity","ĻĤ, ¼, Īĺ, Ĭ, 
+
+   "
+2,2593,"references to Russia and its capital, Moscow, along with related geopolitical topics",gpt-4o-mini,oai_token-act-pair,3.878,0.00206915537516276,"ĸ, Ĵ, ¡, ¦, ¤","urable,  gastrointestinal, ories,  colorectal, pless"
+2,2791, punctuation and special characters in the text,gpt-4o-mini,oai_token-act-pair,3.001,0.01532491048177083,"¼, ©, Ĺ, °, ĻĤ","lement,  influence, mente,  thereafter, )\]."
+2,2910, place names and geographical locations,gpt-4o-mini,oai_token-act-pair,2.522,0.006811459859212239,"hurst, ŀ, shire, à±į,           "," such,  \"",  null,  onto,  euros"
+2,2982,"terms related to health services and diagnoses, especially in children",gpt-4o-mini,oai_token-act-pair,1.65,0.03231207529703776," reasoned, note,  commentators, nex,  warn","Ļª, ĭ, ĨĴ, ĥ½, Ĥ¬"
+2,3151, terms related to composite materials,gpt-4o-mini,oai_token-act-pair,2.885,0.002396901448567708,"hemat, oin, HEL, urity, ¿½"," animals,  age,  das, las,  deceased"
+2,3229,names and abbreviations of programming languages and related technologies,gpt-4o-mini,oai_token-act-pair,1.776,0.01277001698811849,"vist,  itself,  Pradesh, ows, nier"," parte, number,  toxic,  alanine,  LHC"
+2,3267," instances of the word ""that.""",gpt-4o-mini,oai_token-act-pair,5.667,0.004594167073567708,"cher,  same, <|outofrange|>, 
+                                                                                                ,  
+       ","iences, ups, rates, avour,  estimates"
+2,3511, conjunctions and related phrases in discussions of multiple topics,gpt-4o-mini,oai_token-act-pair,2.753,0.01126925150553385,"journals,  recommend,  \*\**, iences, etc","à±į, à±ģ, àµį, àª¾, coat"
+2,3556,references to political figures and governance related to national issues,gpt-4o-mini,oai_token-act-pair,2.111,0.03486855824788412," agency,  sanctions, ]:,  government,  protesters","ľĵ, Ļª, ĥ½,                                                                              ,           
+ "
+2,3599, references to specific products or brands in a consumer context,gpt-4o-mini,oai_token-act-pair,1.757,0.02938143412272136,"ingle, wd, omer,  realise,  learns","Ã´le, »¿, ¦, Ŀ, Ń"
+2,3629," occurrences of the word ""it"" and variations of other referring expressions",gpt-4o-mini,oai_token-act-pair,3.426,0.01594924926757812,"Ĺ, Ĭ, Ļª, ĥ, ±","elihood, argin, icity, sectional, prints"
+2,3670, phrases related to personal experience and existential questioning,gpt-4o-mini,oai_token-act-pair,1.619,0.03444321950276693," own,  etc,  outright, etc, ooo","ł, ¦, «, ķ, ĳ"
+2,4339, historical dates and significant events related to American history and political figures,gpt-4o-mini,oai_token-act-pair,4.31,0.0006872812906901041," Ð³Ð¾Ð´, century,  onwards, neum, afx","ages, ions,  involved, lying, eks"
+2,4439, references to historical military conflicts,gpt-4o-mini,oai_token-act-pair,1.713,0.02709388732910156,"ĥ,  servants,  royal,  orn,  Protestant","ensit,  2020,  FDA, âĢĿ,  âĢĿ"
+2,4462," instances of the word ""with.""",gpt-4o-mini,oai_token-act-pair,6.289,0.001816431681315104," 
+     , 
+                              ,        
+ , 
+                             ,                                  ","teen, ISTER, ader, sburg, liness"
+2,4511,references to approaches and recommendations related to problem-solving and decision-making,gpt-4o-mini,oai_token-act-pair,1.293,0.04314390818277995,"\]](, iting, idious,  dealing, anting","ĸ´, ľĵ, »¿, ĻĤ, ¾"
+2,4942,references to academic publications and works by authors,gpt-4o-mini,oai_token-act-pair,1.452,0.01003487904866537," of,  himself, himself, lining,  lev","ľĵ, ypse, ©,  okay, Ķ"
+2,4974, components related to programming structures and functions,gpt-4o-mini,oai_token-act-pair,2.011,0.02136484781901042," </, pp, ()</, à±, ÐµÐ","ĸ´, ĸ, ¸, Ħ, ľĵ"
+2,5390, institutional and operational aspects of education and programs,gpt-4o-mini,oai_token-act-pair,0.964,0.08679040273030598,"Ļª, ĭ, ¿½, ģ, §","()</, emia,  behaviour, ication,  mechanism"
+2,5524," words ending in ""ing"" across various contexts",gpt-4o-mini,oai_token-act-pair,3.514,0.002888361612955729,"redients, roup, uez, bird, ue","ī, Īĺ, ©, Ĥ, 
+                                      "
+2,5640,references to sports seasons and related events,gpt-4o-mini,oai_token-act-pair,4.936,0.00107574462890625," finale,  opener, ally, ality,  ticket","ĺ, ŀ, ı, ´, ĥ"
+2,5796,"references to economic policies and market dynamics, specifically related to the Federal Reserve and its actions",gpt-4o-mini,oai_token-act-pair,2.032,0.0317385991414388," dominates,  deserves,  exists,  spokesperson, blr","¿½, ĻĤ, ĳ, ¼, ³"
+2,6241," instances of the word ""os"" in various contexts",gpt-4o-mini,oai_token-act-pair,4.085,0.001370429992675781,"clerosis, keleton, ynthesis, aurus, creen","){#,  preponderance,  ...), tail, yel"
+2,6373, geographic and location-related information,gpt-4o-mini,oai_token-act-pair,1.847,0.02432982126871745," adjacent,  south,  north,  east,  adjoining","journal, ¶, «, ¦,  dice"
+2,6462,"references to locations and nationalities, particularly those related to Mexico and Spanish-speaking countries",gpt-4o-mini,oai_token-act-pair,3.079,0.002547899881998698,"eland, quez, uego, illo, icans","rings, ophen, ayed, ays, ement"
+2,6691, structured data representations or hierarchical items,gpt-4o-mini,oai_token-act-pair,3.363,0.002659479777018229,"teenth, teen, olving, th, olver","oya,  vain,  mistake, amaz, ikov"
+2,6697, references to legal terms and judgments,gpt-4o-mini,oai_token-act-pair,0.865,0.04186884562174479,"ault, fect, ī, fecture, ert"," respectively,  alike,  Hillary,  participant,  deserve"
+2,6845, references to community programs and initiatives aimed at helping vulnerable populations,gpt-4o-mini,oai_token-act-pair,1.515,0.10455322265625,"anges, rapeut, Inflater, erad, agne","İ, ¹, ¿½, 
+ĉĉĉĉĉ, ĥ½"
+2,7134, sequences of numerical values and patterns,gpt-4o-mini,oai_token-act-pair,1.608,0.02644252777099609,"Ĵ, ·¸, Ĳ, ¤, Ĩ",")];, noreply, )]{}, )]., eton"
+2,7173,keywords related to superheroes and comic book characters,gpt-4o-mini,oai_token-act-pair,2.668,0.02369213104248047,"bones, buntu, enstein, à±į, world","ĥ½, ı, ¯, Ŀ, ħ"
+2,7183,geographical locations and mentions of cities,gpt-4o-mini,oai_token-act-pair,2.68,0.01018555959065755,"iana, fecture,  nowadays, vast, imar","¾, ±,  
+           ,                            , 
+  "
+2,7457,"variations of specific nouns and verbs, particularly in context to objects and actions",gpt-4o-mini,oai_token-act-pair,1.81,0.01968320210774739,"minist, enas, arcin, mand, ish"," Culture,  Clock,  Address,  Store,  Threat"
+2,7495, repeated occurrences of the letter 'B',gpt-4o-mini,oai_token-act-pair,4.04,0.0009867350260416667,"acter, acillus, less, land, rendan","quot, plify, ftware, itivity, ppings"
+2,7807,emotional themes related to experiences of loss and support,gpt-4o-mini,oai_token-act-pair,2.987,0.02315934499104818," etc,  epit, gart,  heck,  ÐºÐ¾ÑĤÐ¾ÑĢ","opic, inals, erto,  !, rophe"
+2,7867, terms related to individuality and personal expression in fashion,gpt-4o-mini,oai_token-act-pair,1.073,0.04282538096110026,"į, Ļª, ĨĴ, İ, Ī"," recommendations,  reviewer, thouse,  editions,  discounts"
+2,8385, numerical identifiers or labels associated with items,gpt-4o-mini,oai_token-act-pair,1.913,0.08743508656819661,"vised,  violated, starter, ressor, conspir","¿½, ĻĤ, ħ, ¦, Ĭ"
+2,8708,terms related to company names and programming references,gpt-4o-mini,oai_token-act-pair,3.251,0.03057448069254557,"Ļ, ¸, ī, «, °","![**, ogether,  ours, efore, .)."
+2,8754, programming language syntax elements and functions,gpt-4o-mini,oai_token-act-pair,1.41,0.03691768646240234,"omitempty, cyst, via, onica, andra"," tales, hood, lications, NER, auer"
+2,9128,references to a specific female individual,gpt-4o-mini,oai_token-act-pair,3.801,0.004693667093912761," herself, pherd, male, pher, athed","ĸ, ordin, ĸ´, ross, ord"
+2,9303, references to food items and their presentation or packaging,gpt-4o-mini,oai_token-act-pair,1.118,0.05089696248372396,"ĥ½, Ĳ, 
+
+   , 
+                                 , 
+
+     "," whichever,  respectively,  Sundays,  accordingly, Äĳ"
+2,9425, mentions of monetary transactions and payments,gpt-4o-mini,oai_token-act-pair,6.184,0.002986590067545573," tribute, mium, pal, offs,  premium","ħ, Ĳ, », ĳ, ¨"
+2,9517, structured programming elements and error codes in technical documentation,gpt-4o-mini,oai_token-act-pair,1.033,0.04590892791748047,"»¿, Ļª, ī, ĻĤ, Ĺ"," Spacewatch,  died, acular,  otherwise,  oath"
+2,9959," occurrences of the word ""constant"" and variations thereof",gpt-4o-mini,oai_token-act-pair,5.061,0.0009438196818033854,"ness, ely, itudes, ially, ise","Ķ, oard, orent, kers, inth"
+2,10443,references to nature and environmental elements,gpt-4o-mini,oai_token-act-pair,1.254,0.04427750905354818,"âĢĿ.,  whilst, âĢĻ., '.,  etc","watson,  âĢĶ,  ÂĹ,  Harbor,  Milwaukee"
+2,10963, concepts related to fitness and exercise benefits,gpt-4o-mini,oai_token-act-pair,3.413,0.0255581537882487," Against,  Arms,  Abuse,  Studies,  Age","», ¶, µ, ¹, ¾"
+2,11144,references to specific counties or geographical locations,gpt-4o-mini,oai_token-act-pair,6.15,0.001111030578613281," Sheriff, wide,  sheriff, ways,  Clerk","ĥ½, <|outofrange|>, 
+                                                                ,           ,                                                                   "
+2,11698, references to procedural or regulatory steps in contexts such as legal or construction processes,gpt-4o-mini,oai_token-act-pair,1.105,0.04358990987141927," respect,  blunt,  how,  basic,  another","Ð°Ñħ, :`, à½, à®¿, à¯"
+2,12849,legal terminologies and processes related to court cases,gpt-4o-mini,oai_token-act-pair,1.324,0.0573571523030599,"Ģ, ļ, ĻĤ, Ĩ, Ħ","IRST, ÑĢÐ¾Ñģ, cco, ftware, ureus"
+2,12935,phrases related to trust and collaboration,gpt-4o-mini,oai_token-act-pair,3.31,0.004344940185546875," respect,  regard,  regards,  utmost,  ease","teen, head, heading, headed, theless"
+2,13520, programming-related syntax elements and symbols,gpt-4o-mini,oai_token-act-pair,2.08,0.01625156402587891,"§, ī, Ĵ, ¾, £","ships, iast, ipel, igent, wards"
+2,14173, expressions of gratitude and appreciation intertwined with themes of romantic longing,gpt-4o-mini,oai_token-act-pair,3.579,0.01721731821695964,"noreply, cludes, egan, ></, Relative","ĥ½, ""}](#, ģ, Ł, rapeut"
+2,14365," occurrences of the word ""the""",gpt-4o-mini,oai_token-act-pair,4.852,0.006246566772460938,"ĨĴ,  
+     ,                                                                           ,                                                                               , 
+
+    ","idades, ""}](#, ulation, ipore, ounce"
+2,14516, phrases related to legal terminology and proceedings,gpt-4o-mini,oai_token-act-pair,1.531,0.08471075693766277,",âĢĶ, :--,  pardon, _;,  occasion"," Netflix,  2020,  ðŁ,  2017,  2018"
+2,14526,specific character sequences related to patterns or transformations in language,gpt-4o-mini,oai_token-act-pair,1.765,0.01792653401692708,"·, į, Į, ĭ, ³"," hereby, GFR, icating, lining, -)"
+2,14569,references to error messages and exception handling within code or documentation,gpt-4o-mini,oai_token-act-pair,0.912,0.0716260274251302,"ľĵ,   
+ , 
+
+                                , 
+                  ,                                                                      ","hood, ights,  dock, pocket, ARS"
+2,14696, references to leadership and management roles in various contexts,gpt-4o-mini,oai_token-act-pair,1.905,0.05352306365966797,"ĺ, Į, Ļ, °,                           ",":`, iverse, itories,  depends, tons"
+2,14750, programming and technical language related to data manipulation and analysis,gpt-4o-mini,oai_token-act-pair,0.974,0.04946390787760416,"ameter,  intended, ceiving, ../../, grams","mate,  mercy, ollah, cke, ±"
+2,14863, words and phrases related to programming and data handling in a specific context,gpt-4o-mini,oai_token-act-pair,1.161,0.04508399963378906,"ĻĤ, ©, ĨĴ, ¼, Ļª"," jurisd,  Rptr,  ]$, oracle, :`"
+2,15337, programming and media-related terminologies,gpt-4o-mini,oai_token-act-pair,0.913,0.04799270629882812,"¿½, º, /#, Ļª, together","**., \].,  };, ilib, ISTER"
+2,15590, legal terms and references related to court opinions and cases,gpt-4o-mini,oai_token-act-pair,0.887,0.03537527720133463,"Ĥ¬, ľ, ², ¡, Ĵ"," we, uum, ivation, atics, ouch"
+2,15768,"repetitive uses of the word ""can"" in various contexts",gpt-4o-mini,oai_token-act-pair,5.771,0.002344767252604167,"'t, vas, zon, terbury, cels","¡, ¢, Ľ, ĻĤ, Ŀ"
+2,16310,occurrences of download and video-related content and their statuses,gpt-4o-mini,oai_token-act-pair,0.866,0.0522162119547526," else,  owners,  females, esides, 
+ĉĉĉ","chitz, neum, dorff, arynge, ignon"
+2,16602,words related to names or identifiers,gpt-4o-mini,oai_token-act-pair,2.426,0.01431560516357422,"estone,  whom, ygon, foot, hurst","   
+,                                              , 
+                                                       , 
+                      ,                   "
+2,16745," concepts related to health, exercise, and physical conditions",gpt-4o-mini,oai_token-act-pair,2.826,0.01807626088460286," alike,  respectively,  industries,  versa,  sectors","»¿, ĻĤ, Ļª, į, ©"
+2,16763, queries related to file manipulation and operating system commands,gpt-4o-mini,oai_token-act-pair,1.124,0.008880615234375,"?"",, ork,  -,  updates, ĨĴ","hesis, coh, indicated,  receipt,  epit"
+2,16916,quoted speech or dialogue,gpt-4o-mini,oai_token-act-pair,3.663,0.004240036010742188," noct, .',  fierce, rceil, substack","orov, imer, unov, \@, pective"
+2,16976,specific names and terms related to various cultural or historical figures and concepts,gpt-4o-mini,oai_token-act-pair,2.141,0.01107629140218099,"aceae, ´, udi, enas, ŀ"," age,  differently, otype, okinetic, OUBLE"
+2,16995,references to spirituality and religious themes,gpt-4o-mini,oai_token-act-pair,1.951,0.04761918385823568," thereof,  respectively, '"",  consequence,  purposes","», Ĵ, ½, Ĥ¬, ¡"
+2,17405," mentions of European countries, particularly France",gpt-4o-mini,oai_token-act-pair,4.026,0.002205848693847656," Today,  Airlines, ICO, ese, ico","¼, ¾, ¹, 
+  , č
+   "
+2,17672,terms related to planning and organization of events or structures,gpt-4o-mini,oai_token-act-pair,1.617,0.01427173614501953,"istics, actory, isms, manager, icense","ī,  ces, ¤, ·¸, 
+ĉ   "
+2,17937,references to specific entities or concepts that are personal and relational,gpt-4o-mini,oai_token-act-pair,3.16,0.01442750295003255,"¦, Ĵ, °, Ĭ, 
+                                     "," missionaries,  Canadians,  natives, abilities,  anyone"
+2,18345,"words related to contextual forms of ""ment"" used in various contexts such as development, orientation, and payment",gpt-4o-mini,oai_token-act-pair,2.995,0.003014246622721354,"ary, ive, arily, enue, orable","Īĺ, ĻĤ, ĸ´, ķ, Ľ"
+2,18482,significant numerical values or equations related to scientific or technical contexts,gpt-4o-mini,oai_token-act-pair,0.856,0.04853343963623047,"ications,  Bras, icates, aceae, eries","¦, Ŀ, °, Ĥ¬, ģ"
+2,18664, specific attributes and features related to products and services,gpt-4o-mini,oai_token-act-pair,0.898,0.04210027058919271," proprietary,  restrictive,  mergers,  jets,  companions","į, ĨĴ, Ł, Į, č
+       "
+2,18777,questions or statements expressing doubt or skepticism,gpt-4o-mini,oai_token-act-pair,1.994,0.05950546264648438," habit, ite,  imagination, ""}](#, \]]{}","documentclass, ľ, ļ, Ŀ, ¦"
+2,18785, technical terms related to electrical engineering and power systems,gpt-4o-mini,oai_token-act-pair,1.175,0.05076058705647787,"noreply, pile,  duplex,  cereb, /)","olf, ľ, ]:,  himself, ighter"
+2,19060," occurrences of the substring ""ack"" within words",gpt-4o-mini,oai_token-act-pair,3.15,0.003473599751790365,"nell, enzie, starter, ney, iewicz"," systematic,  Commonwealth, ""}](#,  such,  anaest"
+2,19095,words related to names and titles,gpt-4o-mini,oai_token-act-pair,4.588,0.003643989562988281,"Į, £, ª, §, °","omenclature, rapeut,  longer,  nicer,  better"
+2,19459, programming language constructs and definitions,gpt-4o-mini,oai_token-act-pair,0.947,0.04923184712727865,"ĻĤ, ħ, Ĳ, 
+
+                                , <|outofrange|>","liness,  invariance, ime, ""}](#, raint"
+2,20493,references to geographical locations,gpt-4o-mini,oai_token-act-pair,0.988,0.0339972178141276,"»¿, Ń, į, Ļª, Ķ","ITED,  hats, Competing, ^âĪĴ/âĪĴ^, itage"
+2,20680," references to individuals, particularly in the context of legal or formal settings",gpt-4o-mini,oai_token-act-pair,4.846,0.00963751475016276," Jr, æ°ı, udeau, hoff, éĥ","otropic,  such, osphere,  EU, ubuntu"
+2,20745, technical terms and concepts related to programming and technology,gpt-4o-mini,oai_token-act-pair,1.639,0.03127797444661459," ÐºÐ¾ÑĤÐ¾ÑĢ,  attention,  true,  Idaho,  _","į, Ļª, ĭ, Ĵ, ¦"
+2,20809,keywords related to programming classes and frameworks,gpt-4o-mini,oai_token-act-pair,1.572,0.04710547129313151,"!_, 
+ĉĉ, 
+
+ĉĉ, "":, nier","´, ®, °,       
+ , 
+  "
+2,21003,"frequently mentioned words related to size, importance, or ranking",gpt-4o-mini,oai_token-act-pair,6.3,0.002628962198893229," strongest,  brightest,  virtues,  finest,  ways","ãģ£ãģŁ, olving, ÐµÐ»ÑĮ, omerase,  cortisol"
+2,21031, information related to legislative and legal matters,gpt-4o-mini,oai_token-act-pair,2.215,0.02888298034667969," might,  existed,  should,  ought,  cannot"," arena,  eds, quart,  Appendix, avir"
+2,21212, phrases relating to legal or commercial activities and obligations,gpt-4o-mini,oai_token-act-pair,1.002,0.0585028330485026," respectively, )):, iac,  agree,  divisions","ĨĴ, ĥ½, ľĵ, Ī, vim"
+2,21398, words related to actions and processes indicating completion or fulfillment,gpt-4o-mini,oai_token-act-pair,2.874,0.01017665863037109,"orce, ently,  same,  them, raise","¸, ħ, ĻĤ, ģ, ¹"
+2,21588, concepts related to scoring and performance metrics in games or competitions,gpt-4o-mini,oai_token-act-pair,2.337,0.01417382558186849," categories,  Participants, times,  charts, /(","Ĥ, į, İ, ptin, º"
+2,21661,"actions related to management, decision-making, and social engagement",gpt-4o-mini,oai_token-act-pair,3.371,0.009259541829427084,"ulate, pone, stitute,  them,  careers","§, Ŀ, ľ, Īĺ, ¨"
+2,21948,discussions around personal experiences and testimonies related to life events,gpt-4o-mini,oai_token-act-pair,4.77,0.2141440709431966,"¿½, ¦,  degrees, ļ, ©","Inflater, iph, ')), ')$, ugu"
+2,22072, key terms related to programming concepts and constructs,gpt-4o-mini,oai_token-act-pair,0.845,0.06854756673177083,"ships,  lately,  yours, offic,  outfits","³, Ĥ¬, », ·¸, ł"
+2,22157,themes related to spirituality and personal sacrifice,gpt-4o-mini,oai_token-act-pair,1.835,0.03583717346191406,"¼, Ļ, ¹, ı, ¿"," coupled, sequ, othal, phosph, coupled"
+2,22351,terms related to process management and error handling in programming,gpt-4o-mini,oai_token-act-pair,1.187,0.0347900390625,"ickets,  enough, ometry,  inductive,  morning","»¿, §, ī, Ĺ, ¿½"
+2,22556,references to specific organizations or names associated with education and institutional contributions,gpt-4o-mini,oai_token-act-pair,1.617,0.01055208841959635,"¦, «, ī, ¨, ĻĤ"," therein, purpose, ingle, here, equal"
+2,22783, phrases that indicate comparisons or evaluations,gpt-4o-mini,oai_token-act-pair,2.261,0.01548639933268229,"ĸ, ĨĴ, 
+                          ,  
+         ,                      ","cases,  whom,  Suite, acks, ystems"
+2,23001,words related to various forms of adjectives and participles,gpt-4o-mini,oai_token-act-pair,1.913,0.005823771158854167,"vity, »¿, urs, vel, mpty","hered, s, defined, lay, aday"
+2,23070,"the repetition of the word ""so"" in various contexts",gpt-4o-mini,oai_token-act-pair,7.322,0.00103918711344401,"aring, bject, 
+                                             , 
+               , 
+Č      ","ments, ings, urations, ees, ials"
+2,23126,phrases related to business management and organizational support,gpt-4o-mini,oai_token-act-pair,1.802,0.06199487050374349," âĢĺ,  efficiently, ola,  intellig, ship","ĻĤ, Ī, ·¸, «, Ļ"
+2,23252,"mentions of countries, their governance, and their economic agreements or activities",gpt-4o-mini,oai_token-act-pair,2.234,0.02665011088053386," coast,  national,  richest,  Islands, iest","msgstr,  yourself, unreadable,  attachments,  directed"
+2,24003,references to music or entertainment entities and events,gpt-4o-mini,oai_token-act-pair,2.617,0.01988283793131511," itself, game, 's,  themselves, maker","ĥ½, Ķ, ĳ, ľ, Ĥ¬"
+2,24034, phrases related to genetic traits and mutations,gpt-4o-mini,oai_token-act-pair,1.197,0.02310593922932943,"igraphy, à¯į, àµį, Inflater, àµ"," Dover,  Bet,  Sing,  Holland,  Freedom"
+2,24054,references to Italian identity and culture,gpt-4o-mini,oai_token-act-pair,5.31,0.00183868408203125,"nex,  Affairs, widgets, oslov, inch","lessly,  certain,  confocal, estinal, gged"
+2,24197,"questions or inquiries that start with ""What.""",gpt-4o-mini,oai_token-act-pair,6.745,0.0010223388671875," happened,  kind,  happens, soever, beth","ľ, ¸, ĸ, ´, ĥ"
+2,24293," punctuation marks, particularly periods",gpt-4o-mini,oai_token-act-pair,5.678,0.0008398691813151041,"ĥ½, ¸, Ķ, unnumbered, ½","ieri, nikov,  direction,  programme, grams"
+2,24318,phrases indicating independent actions or personal agency,gpt-4o-mini,oai_token-act-pair,2.379,0.0135189692179362,"rails,  behalf, InstanceState, ystems, top","Ń, Į, §, º, ¢"
+2,24531,elements and themes related to music and film production,gpt-4o-mini,oai_token-act-pair,2.364,0.02457936604817708," premiered,  scenes,  genre, fiction,  comedy","Ĺ, ĥ½, ¯, ĸ, ĭ"
+2,24742,"names of individuals or entities, particularly in the context of professional or academic settings",gpt-4o-mini,oai_token-act-pair,3.292,0.008155186971028646,"¿, °, ¾, ½, Ļ","erad, agma,  */,,  sake, pshire"
+2,24871, technical terms and values related to programming and data structures,gpt-4o-mini,oai_token-act-pair,1.958,0.03319422403971354,"nier,  Ãħ,  Hof, apine, amiento"," realise, ĨĴ, ľĵ, []), Į"
+2,24930, references to Johnathan Swift and his satirical work,gpt-4o-mini,oai_token-act-pair,2.465,0.04183197021484375,"¢, ³, °, ¦, ©","gon, lections, ligt, )"",, )[@"
+2,25000, keywords and parameters related to configuration settings in software,gpt-4o-mini,oai_token-act-pair,0.946,0.04201825459798177," Sys,  sua, mente, izes,  belts","ĻĤ, Ļ, Ĺ, ĵ, ³"
+2,25136, distinct entities and elements in technical contexts,gpt-4o-mini,oai_token-act-pair,1.098,0.05492591857910156,"ľĵ, 
+                  , 
+            ,    
+,                                                                            ","gage,  Ãħ,  Treaty, liness,  Draft"
+2,25194," instances of the preposition ""on""",gpt-4o-mini,oai_token-act-pair,4.848,0.004349708557128906," behalf, shore, stage, look, cology","ģ, ĳ, Ĺ, Ŀ, ī"
+2,25235," topics related to music, performance, and emotional experiences",gpt-4o-mini,oai_token-act-pair,1.273,0.02984396616617839,"helm, ystems, ICO, gel, iator","ĥ½, 
+  âĢĥ,  
+           , 
+  
+ ,            "
+2,26532,words that are associated with race and identity issues,gpt-4o-mini,oai_token-act-pair,2.045,0.01768430074055989," noun,  abbrev,  spoken,  surname,  prefix","sensors, adies,  simulations,  RTC, RESULTS"
+2,26594," references to individuals, particularly in discussions about statistics or outcomes related to them",gpt-4o-mini,oai_token-act-pair,1.036,0.05182965596516927,"¥, Ĺ, ľĵ, ĸ, odor"," Army,  universities,  Member, 
+ÂłÂł,  written"
+2,26885, instances of explicit adult content or graphic sexual descriptions,gpt-4o-mini,oai_token-act-pair,2.784,0.009406089782714844,"noreply, ii, cum,  fores, 
+
+ĉĉ","·¸, ""}](#, ±, Ł, Ģ"
+2,27118, specific references to technical terminology and identifiers,gpt-4o-mini,oai_token-act-pair,3.229,0.008106549580891928,"cdn, tech,  window, blogger, film","uity, iency,  '{, uities,  flavors"
+2,27860,"specific names or identifiers, particularly related to places or entities",gpt-4o-mini,oai_token-act-pair,1.826,0.02048174540201823,"Ĵ, ī, ², ³, «","ised, ights, izing, ising, night"
+2,27894,verbs related to significant actions or transformations,gpt-4o-mini,oai_token-act-pair,2.794,0.01505947113037109,"upon, ictor, itÃ©s, ĻĤ, ocs","bridge, nier, minded, hof, nement"
+2,28096,"the verb ""was"" in various contexts",gpt-4o-mini,oai_token-act-pair,3.623,0.004843076070149739," originally,  unsuccessful,  initially, hes, hers","»¿, ptions, Ħ, ģ, Ī"
+2,28185,"proper nouns, particularly names of people and locations",gpt-4o-mini,oai_token-act-pair,3.428,0.002239863077799479,"į, ĻĤ, º, ½, ETHOD"," otherwise,  worse,  late,  yet, agine"
+2,28479, terms associated with locations and geographical references,gpt-4o-mini,oai_token-act-pair,3.011,0.01128228505452474,"´, ī, Ļ, ®, ·","aliana, rapeut, ""));, msgstr,  ."""
+2,28539," various forms of the word ""from"" in relation to comparisons and origins",gpt-4o-mini,oai_token-act-pair,4.244,0.01556682586669922,"ĥ½, ŀ, ĨĴ, Ĳ, č
+                   "," interim, ium, Lett, *(, ered"
+2,28804,technical terms and configurations related to system processes and software,gpt-4o-mini,oai_token-act-pair,0.802,0.0439602533976237,"wordpress, ife, affe, inary,  Firstly"," fines, §,  weights,  verd, outs"
+2,28827,programming language identifiers and code structure elements,gpt-4o-mini,oai_token-act-pair,1.03,0.05422846476236979,"keit,  nights,  respectively,  outright, lord","Ã¨me, ""}](#,  thesis, journal,  argument"
+2,29051,"specific names and terms related to politics, social issues, and health care",gpt-4o-mini,oai_token-act-pair,1.817,0.01918570200602214,"ium, sson,  administration,  Republic, weather"," yours, >(, lickr, >(),  theirs"
+2,29052, references to governance and public institutions,gpt-4o-mini,oai_token-act-pair,2.297,0.01258563995361328,"iets, forum, eenth, ifice, emis","ľĵ, ľ, ĻĤ, ĥ, Īĺ"
+2,29121, structured data elements and parameters in technical contexts,gpt-4o-mini,oai_token-act-pair,0.85,0.04966831207275391,"+),  respectively, .|, +., $.[]{","Ń, ¶, µ, ³, ĨĴ"
+2,29397,conjunctions,gpt-4o-mini,oai_token-act-pair,4.495,0.00353844960530599," outright,  its,  other,  vice,  sexes","¢, ¸, isor, ior, head"
+2,29837, technical keywords and symbols related to coding instructions and structures,gpt-4o-mini,oai_token-act-pair,2.241,0.04153855641682943,"®, <|outofrange|>, 
+                ,                                           , č
+č
+           "," "">, amsfonts, :), ttp, gium"
+2,29870,"elements related to coding, configurations, and specific technical details about frameworks and libraries",gpt-4o-mini,oai_token-act-pair,2.53,0.0166168212890625," basis, done, shirts, rible, anked","zyk, ivities,  cytometry,  lent, ondo"
+2,30677," references to actions, techniques, or judgments related to education, guidance, or performance",gpt-4o-mini,oai_token-act-pair,1.416,0.03298536936442057," themselves,  together, adies, Conclusions,  respective","ŀ, ¿, ², ľĵ, ĨĴ"
+2,30763, references to significance and warnings in context,gpt-4o-mini,oai_token-act-pair,1.972,0.01837158203125,"cel, yne, indexOf, inar,  please"," concluding, Īĺ,  Year, ators, >("
+2,30932, punctuation marks and symbols,gpt-4o-mini,oai_token-act-pair,4.083,0.0015411376953125,"¸, ¼, ½, Ļ, unnumbered","ies,  Associates,  {#, wagen, ismic"
+2,31835,words related to athletic achievements and participation in sports,gpt-4o-mini,oai_token-act-pair,2.779,0.01413663228352865,"ship, who, chief, jee, geant","Ĵ, ī, 
+
+    ,                                                                           ,                  "
+2,31972,elements related to music and performance in a variety of settings,gpt-4o-mini,oai_token-act-pair,4.425,0.006282806396484375," music,  songs,  singing,  sung,  musical"," DOI,  NHS,  Privacy,  vaccine, amacare"
+2,32017, references to technical specifications and advancements in technology,gpt-4o-mini,oai_token-act-pair,1.278,0.08554999033610027," stakes, rive,  worthwhile, ())), .<","Į, ļ, ¯, Ĥ, ¢"
+2,32167, strings that represent country names and their associated identifiers,gpt-4o-mini,oai_token-act-pair,0.932,0.05177625020345052,"production, tering,  wherein,  HERE,  (`","ĥ½, ¤, quito, acer, Ĺ"
+2,32229,statistical and analytical terms related to research data,gpt-4o-mini,oai_token-act-pair,1.881,0.02589225769042969,"))^, !),, ),, ))/, ,)",""";, ."";, essential, .âĢĿ, 
+ĉ
+"
+2,32256,references to technical data and formal documentation,gpt-4o-mini,oai_token-act-pair,1.109,0.02508354187011719,"etine,  Ranch,  aid,  rub, iella","ľĵ,  instance,  feature, while, done"
+2,32349,references to familial relationships and personal connections,gpt-4o-mini,oai_token-act-pair,2.01,0.05136617024739584," baby,  caregiver,  mother,  married,  girl"," offline, imits, extend, ipeline, ITION"
+3,1812, complex legal terms and organizational identifiers,gpt-4o-mini,oai_token-act-pair,43.701,0.02046330769856771," fundament,  este,  polÃŃ, orph,  aboard","ĥ½, 
+
+                                         , <|outofrange|>, 
+ĉ     , 
+                                                                                                "
+3,2961, references to particular document formats or methodologies,gpt-4o-mini,oai_token-act-pair,2.372,0.01025581359863281,"ics, ists, arian, arians, al","istar,  %>,  %{,  _________,  msgid"
+3,3339, references to specific entities or terms related to planning and management contexts,gpt-4o-mini,oai_token-act-pair,2.292,0.01604461669921875,"ĨĴ, ·¸, ģ, ĭ, Ĥ","""}](#,  behalf, ETHOD,  controls, ""){"
+3,3637, key terms related to legal proceedings and opinions,gpt-4o-mini,oai_token-act-pair,31.547,0.02009963989257812," fundament,  polÃŃ,  este,  aboard, orph","ĥ½, ¿½, 
+
+                                         , 
+                                                                                                , 
+ĉ     "
+3,5355,legal terminology related to liability and warranties,gpt-4o-mini,oai_token-act-pair,59.604,0.02051417032877604," fundament,  polÃŃ,  este,  aboard, orph","ĥ½, 
+
+                                         , 
+ĉ     , 
+                                                                                                , <|outofrange|>"
+3,10037," instances of the word ""try"" and its variations in different contexts",gpt-4o-mini,oai_token-act-pair,6.407,0.001644134521484375,"outs,  unsuccess, ptic, out,  harder","Ļª, igned,  shall,  variance,  fringe"
+3,10912,phrases that emphasize empathy and understanding of human emotions,gpt-4o-mini,oai_token-act-pair,2.58,0.04181480407714844," himself,  his, himself,  beard,  he"," respectively, ){#, ^](#, ))/(-, :`"
+3,20209,references to programming and technical specifications,gpt-4o-mini,oai_token-act-pair,3.762,0.1638628641764323,"ictions, annels,  held,  alone,  const","ĥ½, =======================, ---------------------, 1451450014514500, ------------------------"
+3,20709,phrases and details related to specific quantities and financial implications,gpt-4o-mini,oai_token-act-pair,1.493,0.04264132181803385,".âĢĿ, .""), )"">, ."");, ."").","ĥ½, 
+
+                   ,                                           , 
+           ,                                        "
+3,21809, expressions of gratitude and friendship,gpt-4o-mini,oai_token-act-pair,67.904,0.01880296071370443," fundament,  polÃŃ,  este,  aboard, orph","ĥ½, ¿½, 
+
+                                         , 
+ĉ     , 
+                                                                                                "
+3,24638,specific words related to locations and geographical names,gpt-4o-mini,oai_token-act-pair,2.876,0.0102535883585612,"ŀ, ·¸, ´, »¿, ĸ","$/, ifies,  therapeutic, =>,  adult"
+3,25759, technical terms and classifications related to biochemical processes and methodologies,gpt-4o-mini,oai_token-act-pair,1.9,0.01858075459798177,"ª, ³, ·, Ļ, ©"," favor, adays,  behalf, abouts,  liking"
+3,26022,elements related to storytelling and plot development,gpt-4o-mini,oai_token-act-pair,2.467,0.02417882283528646," revenge,  kidnapped,  innocence,  mysterious,  kidn","[\#, rams, roup, Extensions, TeX"
+3,29565, references to emotional states and interpersonal relationships,gpt-4o-mini,oai_token-act-pair,14.651,0.02448399861653646," underlying,  este,  positively,  fact,  entire","ĥ½, 
+ĉ     ,                 , 
+
+                                         , 
+
+          "
+3,32520," verbs and actions related to reporting, describing, and responding to events",gpt-4o-mini,oai_token-act-pair,3.205,0.01112047831217448,"hift, creen, pace, chool, earch"," whom, pling, [\#, shire,  backs"
+4,0, email addresses or contact information within the document,gpt-4o-mini,oai_token-act-pair,4.136,0.01773770650227864,"@, \@, gmail,  dot, ibrary","ĥ½, <|outofrange|>,                                  ,                                                                          ,                            "
+4,14, code syntax elements related to programming and data structures,gpt-4o-mini,oai_token-act-pair,3.734,0.01974836985270182," words,  noun,  grammat,  grammar,  phrases","ĻĤ, ļ,                                                                          , 
+                                        ,                                                              "
+4,182,monetary values or financial figures,gpt-4o-mini,oai_token-act-pair,5.486,0.02159690856933594," B,  b, B,  BN,  BF","nez,  grandmother,  Virt, ento, urai"
+4,218, technical instructions or commands related to color and graphics settings,gpt-4o-mini,oai_token-act-pair,4.944,0.02193514506022136," color,  colors,  Color,  RGB, color"," sepsis,  hostage,  premises,  pept, openssl"
+4,408,phrases and terms related to high-ranking positions and notable achievements in organizations or government,gpt-4o-mini,oai_token-act-pair,4.418,0.01092751820882162," secretary,  chairman,  president,  Chief,  ambassador","collapse, tons, \), ighed,  similarities"
+4,478,"elements related to structured data, such as lists, arrays, or metadata formats",gpt-4o-mini,oai_token-act-pair,6.719,0.01524225870768229," W, W, º, », ĻĤ"," Armenian, atar,  ig,  Ped, ynthetic"
+4,820," references to ""walls"" or ""wallpapers"" in a context involving features or options for customization",gpt-4o-mini,oai_token-act-pair,4.412,0.01304181416829427," .,  ,,  ),,  ).,  .""","[@, )[@, --, ,[@, »"
+4,859, terms related to professions and professional roles,gpt-4o-mini,oai_token-act-pair,2.684,0.0100555419921875,"ally, al, ality, als, ary","
+
+               , 
+                                                                                                ,                        , <|outofrange|>,                                                                                                                                                                                                                                                                 "
+4,975,elements related to product details and identifiers,gpt-4o-mini,oai_token-act-pair,3.492,0.009542147318522135," Polish,  Poland,  Warsaw, ÅĤ,  Lithuan"," HT,  Hunter,  Henderson,  Hampton,  Hilton"
+4,1187, instances of political or social activism and conflict,gpt-4o-mini,oai_token-act-pair,2.967,0.03675746917724609," violence,  protesters,  massacre,  victims,  riot","ľĵ, Īĺ, İ, ¦, ĸ´"
+4,1402, discourse related to legal agreements and negotiations,gpt-4o-mini,oai_token-act-pair,2.789,0.02413749694824219," mutually,  mutual,  friendship,  together,  rivalry","ĨĴ, ¥, ½, Ń, ľĵ"
+4,1645, keywords and language related to legal or regulatory contexts,gpt-4o-mini,oai_token-act-pair,5.494,0.01136684417724609," (,  ((,  (-,  ("",  (.","¿½, _."", Ĥ¬, ı, Į"
+4,1894,expressions of frustration related to personal experiences and challenges,gpt-4o-mini,oai_token-act-pair,2.272,0.05857499440511068," etc,  dont,  didnt,  doesnt,  thats","Ŀ, ĸ, ·¸, ·, ĳ"
+4,2005, terminology and concepts related to molecular biology and pharmacology,gpt-4o-mini,oai_token-act-pair,3.59,0.00991217295328776,"Ī, ¦, ľ, ¹, ¿½","abbath, igion,  recept, oretic, ÃŃvel"
+4,2417, phrases indicating duration or time,gpt-4o-mini,oai_token-act-pair,7.942,0.009484608968098959," awhile,  years,  decades,  longer,  period","İ, ħ, §, ĨĴ, į"
+4,2836,code-related terminology and instructions,gpt-4o-mini,oai_token-act-pair,2.663,0.03155676523844401,"                                                                   , <|outofrange|>,                                                                     ,                                                         , 
+                                     "," theorem,  invariant,  developing,  candidate,  Results"
+4,3062, references to societal expectations and responses,gpt-4o-mini,oai_token-act-pair,3.386,0.01901690165201823," âĢĶ,  (@,  ÂĹ,  âĢķ,  plaintiffs","\"", ',', âĢī, Âł
+, *âĢĲ"
+4,3128,mentions of various county law enforcement or government offices,gpt-4o-mini,oai_token-act-pair,6.534,0.00155798594156901," Sheriff,  Clerk,  sheriff,  Jail,  Commission","·¸, į, », ¼, ĳ"
+4,3201, numerical information and data formats,gpt-4o-mini,oai_token-act-pair,4.196,0.08933099110921223," autres,  undercover, neath, AndroidRuntime,  spam"," breaks,  coming,  respect, verted,  followed"
+4,3331, references to online or digital communication mediums,gpt-4o-mini,oai_token-act-pair,6.256,0.009798049926757812," J, J,  j,  JD, JD"," Edmonton,  Calgary,  Strat,  Saskatchewan,  Alberta"
+4,3462,references to comparisons and relationships between concepts,gpt-4o-mini,oai_token-act-pair,1.351,0.02060286204020182," respective,  mutually,  different,  differing,  separately","áĢº, áĢ¯, áĢ¬, æģ¯, å¥³"
+4,3587, references to programming interfaces and documentation related to Linux,gpt-4o-mini,oai_token-act-pair,3.951,0.01121997833251953," :,  ;,  ?,  ?"",  !""","âĢĲ, ^[@, âĢĶ, âĢĳ, .^[@"
+4,3650,references to formal organizations and processes,gpt-4o-mini,oai_token-act-pair,1.974,0.01635265350341797,"ĻĤ, Ĥ¬, ¨, Ļª, ĵ"," cuisine, ilee,  flora, innati,  paintings"
+4,3707,specific brands or products related to home and garden items,gpt-4o-mini,oai_token-act-pair,2.384,0.02004273732503255,"aceae,  Records,  Productions,  Studios,  Laboratories","ģ, ¸, Ĥ¬, §, Ļ"
+4,3950, phrases related to events or actions that involve changes in state or condition,gpt-4o-mini,oai_token-act-pair,5.943,0.00611114501953125,"², ¬, ŀ, Ĵ, »","={, =âĢĿ, ements, =""#, =."
+4,4195," the presence of the word ""the"" in various contexts",gpt-4o-mini,oai_token-act-pair,8.284,0.007792154947916667," same,  easiest,  usual,  hardest, rapeut","ĥ½, ĻĤ, ¹, º, į"
+4,4232,questions about the responsibility and processes related to education and legal standards,gpt-4o-mini,oai_token-act-pair,2.791,0.04549121856689453," conjecture,  hypotheses,  assertions,  hypothesis,  reasoning","ĨĴ, Ļª, »¿, ĥ½, ¥"
+4,4365,mentions of personal belongings and their sentimental value,gpt-4o-mini,oai_token-act-pair,2.703,0.06036853790283203," hadn,  was,  had,  belonged,  lacked","Ļª, »¿, ª, ½, ľĵ"
+4,4427,symbols and characters that indicate structure in the text,gpt-4o-mini,oai_token-act-pair,3.773,0.009113629659016928,"  ,    ,     ,  č,  
+","ÂĴ,  \[[,  Âĵ,  [âĢ¦], .âĢľ"
+4,4451,words and phrases related to specific titles and roles within sectors like media and entertainment,gpt-4o-mini,oai_token-act-pair,2.602,0.01242574055989583,"hurst, starter, heads, head, horn"," interleukin,  slightest,  strept,  latitude,  PubMed"
+4,4464,terms related to the concept of permanence or ongoing status,gpt-4o-mini,oai_token-act-pair,7.17,0.002472241719563802," unchanged,  intact,  unaffected,  untouched,  undetect","Ħ, ķ, ĥ½, ĥ, ¥"
+4,4501,mentions of specific individuals and organizational roles related to legal or official contexts,gpt-4o-mini,oai_token-act-pair,3.849,0.009781201680501303," announced,  merged,  broke,  began,  approached"," depends, ureus,  isn,  recent,  doesn"
+4,4881, instances of positive performance and evaluation in relation to specific entities or subjects,gpt-4o-mini,oai_token-act-pair,3.828,0.009633064270019531," susceptible,  dominant,  relatively,  predominantly,  inherently","Ħ, Ŀ, »¿, ģ, ĻĤ"
+4,5403,"variations of the word ""drunk"" and related expressions",gpt-4o-mini,oai_token-act-pair,3.704,0.006737073262532552,"etts, iewicz, enzie, ovic, erville","naments, izations, ACP,  such, isations"
+4,5592,references to legal proceedings and characters involved in court cases,gpt-4o-mini,oai_token-act-pair,3.865,0.02033392588297526," questioned,  stated,  testified,  inquired,  informed","Ļª, »¿, Ĺ, ĻĤ, Ģ"
+4,5654, timestamps and numerical data associated with events,gpt-4o-mini,oai_token-act-pair,3.986,0.01230398813883463," Olympic,  athletes,  medal,  medals, Olympic"," debtors,  MRSA,  debtor,  tenants,  Tax"
+4,5670,legal terminology related to contracts and obligations,gpt-4o-mini,oai_token-act-pair,1.316,0.03139273325602213," itself, ³, ·, ļ,  its"," eds,  Posted, à«ĩ, Their,  They"
+4,5708,references to types of milling equipment and their applications,gpt-4o-mini,oai_token-act-pair,2.717,0.03107134501139323," manufacturing,  Manufacturing, manufact,  manufact,  industrial","obbsee,  sanctuary,  Facebook,  hippocampal, ľĵ"
+4,6073,terms related to health conditions and their implications,gpt-4o-mini,oai_token-act-pair,2.13,0.02110576629638672," thereof,  accordingly,  alike,  thereto,  therefrom","Ĥ¬, ĳ, Īĺ, ĥ½, İ"
+4,6097,physical and biological effects related to substances or conditions,gpt-4o-mini,oai_token-act-pair,2.835,0.01443322499593099," 3,  2,  4,  5,  6",",âĢĶ,  (âĢľ, âĢĶ', âĢĶ"",  ("""
+4,6185, phrases related to sports seasons and game statistics,gpt-4o-mini,oai_token-act-pair,4.965,0.001777331034342448," opener,  finale, ally,  premiere, ality","à°¿,  Circuit, fony, cpy, >()"
+4,6290, phrases indicating legal or ethical violations,gpt-4o-mini,oai_token-act-pair,4.929,0.01635424296061198,"ment, able, EMENT, atory, ability","""}](#, )|^,  averages,  prepares,  slow"
+4,6333, concepts related to documentation and classification,gpt-4o-mini,oai_token-act-pair,2.045,0.01359176635742188," football,  basketball,  soccer,  television,  telecommunications","&=, ringes, VALUE,  EXPECT, UTE"
+4,6662,names of geographical locations or entities,gpt-4o-mini,oai_token-act-pair,2.958,0.008998870849609375," Sweden,  Stockholm,  Swedish,  Norwegian,  Oslo","», <|outofrange|>, 
+                           ,  
+         ,              "
+4,6750, references related to geopolitical tensions and conflicts involving Iran and Israel,gpt-4o-mini,oai_token-act-pair,3.98,0.005956649780273438,"ians, istan, ian, 's,  itself","ĻĤ,  
+    , 
+                               , 
+
+                 ,                                                                              "
+4,6798,terms related to legal and compliance issues,gpt-4o-mini,oai_token-act-pair,3.637,0.02264690399169922," to,  thereto, to, To,  To","ĥ½,                                                               , 
+
+      ,                                                                  , 
+              "
+4,7118," names of individuals or entities, particularly those related to notable actions or events",gpt-4o-mini,oai_token-act-pair,2.473,0.01211738586425781,"croft, ford, lyn, lane, idge","ties, backs,  teeth,  feet, ted"
+4,7179,patterns of alphanumeric codes or identifiers,gpt-4o-mini,oai_token-act-pair,2.711,0.006380399068196614,"ORN, OV, KS, DE, UST","¿½, <|outofrange|>, 
+
+     , <|padding|>, 
+                                     "
+4,7232,"terms and references related to religious rituals and symbols associated with purity, particularly in the context of cultural ceremonies",gpt-4o-mini,oai_token-act-pair,1.613,0.01520983378092448," ritual,  Sanskrit,  rituals,  Greek,  goddess","atinib,  monitoring,  Funding,  NIH, illion"
+4,7466,references to legal proceedings and court rulings,gpt-4o-mini,oai_token-act-pair,3.972,0.01715024312337239," justices,  ruling,  rulings,  judges,  unanimously","medium, album,  medium, \#, nÃ©e"
+4,7633, expressions of advice and encouragement in relationships,gpt-4o-mini,oai_token-act-pair,2.51,0.02499739329020182," also,  furthermore,  additionally,  even,  moreover","į, Ļª, º, Ĵ, ĥ½"
+4,7872," references to events or actions connected to Mexico, particularly those with historical or political significance",gpt-4o-mini,oai_token-act-pair,2.873,0.004642168680826823," City, City,  Territory,  city, town","                               , 
+                                                 ,                           , č
+       ,                                                          "
+4,8019, phrases related to financial transactions and agreements,gpt-4o-mini,oai_token-act-pair,2.911,0.01682662963867188," for, for,  For, For,  FOR","·, Ł, °, », į"
+4,8272,technical terms and metrics related to performance analysis,gpt-4o-mini,oai_token-act-pair,6.875,0.01973565419514974," F, F,  f,  FS,  FF","rol,  Tibetan,  Nepal,  Nep, Äį"
+4,8291, terms related to administrative and organizational structures,gpt-4o-mini,oai_token-act-pair,1.984,0.07946268717447917,"hers, ounder, ancellor, rendum, omycin","¸, °, ĳ, ĩ, ¢"
+4,8328, phrases related to measurement and quantification in various contexts,gpt-4o-mini,oai_token-act-pair,0.972,0.0332940419514974," offence, >`, )',, )"",,  '')","
+    , 
+                                       , <|outofrange|>,                                                                                                                                                                                                                                 ,  
+         "
+4,8362,quoted dialogue or conversational exchanges,gpt-4o-mini,oai_token-act-pair,1.603,0.08916791280110677," 
+         , <|outofrange|>,                                           , 
+                                ,           
+ ","boarding, âĢĿ), âĢĿ),, Äĩ,  âĢĺ"
+4,8675,sentences conveying emotional or dramatic content related to violence or conflict,gpt-4o-mini,oai_token-act-pair,2.293,0.03650474548339844," pictures,  photographed,  footage,  pictured,  photograph","ģ, §, ŀ, ¯, ĥ"
+4,8781,specific geographic locations or landmarks,gpt-4o-mini,oai_token-act-pair,2.339,0.01405048370361328," Awards, ypse, ale,  Award,  Studios"," 
+       , 
+       , 
+                               , <|outofrange|>, 
+                             "
+4,9250,weather-related phenomena and their impacts,gpt-4o-mini,oai_token-act-pair,4.108,0.02531496683756511," storms,  hurricane,  weather,  meteor,  Weather"," oligonucleotide,  associative,  ethical,  privileges,  penis"
+4,9477, proper names and specific identifiers,gpt-4o-mini,oai_token-act-pair,4.345,0.008323351542154947,"ovic, udeau, iewicz, hof, owski","ģ, 
+  
+ ,                                              , <|padding|>,   
+   "
+4,9532, references to urban development and planning projects,gpt-4o-mini,oai_token-act-pair,1.752,0.02344576517740886," Township,  Interstate,  Arkansas,  downtown,  statewide"," tumour,  tumours,  haem,  recognise,  randomised"
+4,9649, references to directories and listings related to specific organizations or institutions,gpt-4o-mini,oai_token-act-pair,1.335,0.02386156717936198," lists,  listed,  listings, listed,  listing","ŀ, į, ¹,  paraly, µ"
+4,9723, present participles and gerunds related to various actions,gpt-4o-mini,oai_token-act-pair,3.084,0.008810043334960938," capacity,  techniques,  capacities,  habits,  abilities","
+          , 
+
+     ,                                                                       , 
+  Âł,                                         "
+4,9737,questions,gpt-4o-mini,oai_token-act-pair,2.903,0.0225222905476888," Lastly,  Finally,  Secondly,  There,  Also","bol, boarding, ligt, ,^[@, Å¾e"
+4,10010," themes related to family, love, and the human experience across generations",gpt-4o-mini,oai_token-act-pair,2.576,0.02740828196207682," epic,  narrative,  bleak,  backdrop,  realities","§, Īĺ, ĻĤ, ¡, Ħ"
+4,10067, specific terms related to cybersecurity discussions,gpt-4o-mini,oai_token-act-pair,3.477,0.08986600240071614,")$), imester, iston, forth, ))/((-","ĥ½, ĸ´, 
+
+      ,                                      ,                                                                                                                                                                                                                                 "
+4,10318," specific programming constructs, particularly those related to method definitions and properties in code",gpt-4o-mini,oai_token-act-pair,5.448,0.005235036214192708," @, @,  (@, (@, @{","ļ, ĸ´, »¿, ĨĴ, âĢĲ"
+4,10601,content related to criticism and personal attacks,gpt-4o-mini,oai_token-act-pair,3.855,0.01798343658447266,")."", )., !)., ?)., ),","¿½, ľĵ, ĥ, Ĥ¬, ĥ½"
+4,11065,"health-related symptoms and conditions, particularly those associated with breast health",gpt-4o-mini,oai_token-act-pair,2.213,0.03192933400472005,"
+, Ļª, 
+  ,                                                                                                                                                                                                                                 ,                                      ",".\[[@, .[^, >"",, _."", .""_"
+4,11163,the infinitive form of verbs,gpt-4o-mini,oai_token-act-pair,6.138,0.007728894551595052,"pless, pping, ppen, wered, ilers","hole, msgstr,  thereto,  to, antry"
+4,11357,references to technological terms and jargon,gpt-4o-mini,oai_token-act-pair,1.267,0.04878648122151693,"lining, anium,  ANN, verting, then","Ļª,  
+   , 
+
+    ,                                  , <|outofrange|>"
+4,11360,financial figures related to relief efforts and government actions,gpt-4o-mini,oai_token-act-pair,1.209,0.03298219045003255,"ĥ½, 
+
+                    , <|outofrange|>, <|outofrange|>, 
+  "," âĻª"", )âĢĶ, ÂĹ, âĢĶ, .^[@"
+4,11410,geographical locations and street names,gpt-4o-mini,oai_token-act-pair,1.278,0.05705420176188151,"č
+                   ,  
+           ,                                                                        ,  
+     ,                                   ","orld, izumab, 000001, interface, FTWARE"
+4,11540," the verb ""be"" and its variations in different contexts",gpt-4o-mini,oai_token-act-pair,6.3,0.009291966756184896," able, friend,  acquainted,  aware,  afraid","Ħ, Ī, Ŀ, ¥, ī"
+4,12234, phrases related to law and legal issues,gpt-4o-mini,oai_token-act-pair,5.038,0.02019755045572917," the, the,  THE,  The, The","į, ī, xymatrix, ,[, [,"
+4,12420,conversations about mental health and self-perception,gpt-4o-mini,oai_token-act-pair,4.909,0.07888730367024739," her,  she,  herself,  She,  hers"," */, */, \]-,  */,, \]\]."
+4,12440,numerical values and format specifications in a structured context,gpt-4o-mini,oai_token-act-pair,5.789,0.01066907246907552," [, [, [/,  [[,  *[","âĢ¢,  \', documentclass, --"",  âĢ¢"
+4,12501,elements related to location and spatial features,gpt-4o-mini,oai_token-act-pair,2.649,0.04524072011311849," rooms,  doors,  halls,  campus,  apartment","«, ¿½, Ĥ, į, ĩ"
+4,12648, events and activities related to social gatherings or performances,gpt-4o-mini,oai_token-act-pair,2.605,0.04248364766438802," attendees,  festival,  attendance,  organizers,  concerts","¢, ĩ, ģ, Ĩ, į"
+4,12695, references to people and their relationships,gpt-4o-mini,oai_token-act-pair,3.16,0.009633700052897135," allegedly,  resided, stood,  reside,  resides","Ļª, Ŀ, ľĵ,  
+        ,                                        "
+4,12941,numerical data and financial indicators,gpt-4o-mini,oai_token-act-pair,9.571,0.1454540888468424,"castle, iston, thereum, ermo,  crime","iors, itals, »¿,  respect, ĸ´"
+4,12964,phrases related to venues and event spaces,gpt-4o-mini,oai_token-act-pair,1.155,0.04523658752441406," etc,  ecology,  social,  respectively, ensory","ī, Ĥ¬, Ī, Į, ĥ½"
+4,13489,terms related to legal rulings or controversies,gpt-4o-mini,oai_token-act-pair,3.705,0.06610616048177083," Â£,  tumour,  tumours,  recognise,  realised","eanor,  <-,  Plaintiffs, ÂĹ, Īĺ"
+4,13547,terms related to legal definitions and statutes,gpt-4o-mini,oai_token-act-pair,3.378,0.0188751220703125," abbrev,  surname,  terminology,  meanings,  phrase","ľĵ, ļ, ĻĤ, Īĺ, µ"
+4,13675,references to ethical considerations regarding the influence of external authorities on children,gpt-4o-mini,oai_token-act-pair,3.603,0.04178333282470703," "",  ""[,  ""...,  ""`,  ""*",",âĢĻ, .âĢĻ, ?âĢĻ, .âĢĻâĢĿ, âĢĻ."
+4,13706,numeric values related to financial amounts and statistics,gpt-4o-mini,oai_token-act-pair,5.374,0.0173489252726237," 200,  400,  300,  250,  500","©, ¢, ·¸,                   ,                            "
+4,13839,information related to creative works and artistic expression,gpt-4o-mini,oai_token-act-pair,1.178,0.02238368988037109," respectively,  their,  theirs, thems, their","ĻĤ, Ģ, Ī, Ł, ĨĴ"
+4,13841,"references to military honors and awards, particularly those related to health and safety issues",gpt-4o-mini,oai_token-act-pair,4.442,0.01720205942789714,"ħ, Ľ, ĥ, ł, ľĵ","hip, pancy, fecture, culation, urity"
+4,14046,mentions of football clubs and player statistics,gpt-4o-mini,oai_token-act-pair,4.79,0.01831118265787761," footballers,  FIFA,  Arsenal,  Football,  footballer"," hemp,  $%,  fiber,  Plaintiffs,  vapor"
+4,15025,terms related to legal or regulatory contexts,gpt-4o-mini,oai_token-act-pair,1.382,0.03939056396484375,"
+, Âł
+, 
+Č, aped, 
+ĉĉ","idenote,  unpublished, rich, Ģ,  speculate"
+4,15313,references to male individuals or characters,gpt-4o-mini,oai_token-act-pair,5.184,0.01256402333577474," who,  whom,  whose,  named, who","
+                                      , 
+                            , 
+                       ,                                                                 , 
+
+         "
+4,15672,phrases related to accidents or collisions involving vehicles,gpt-4o-mini,oai_token-act-pair,1.152,0.04786459604899088,"burst,  exploded, ignon,  deton,  ignition","ĩ, ĥ, Ł, ĥ½, Ĥ"
+4,15831, technical terms related to medical equipment and procedures,gpt-4o-mini,oai_token-act-pair,2.768,0.007891337076822916,"illar, illance, ield, Y, illin","·, ĥ½, ½, ·¸, ±"
+4,16055,requests for help or guidance related to technical or operational issues,gpt-4o-mini,oai_token-act-pair,1.157,0.007141431172688802," my,  myself,  :(,  :),  ","ĥ, .âĢĻâĢĿ, âĢĿ)., 
+Č      , č
+        "
+4,16530,references to familial relationships and lineage,gpt-4o-mini,oai_token-act-pair,2.071,0.01247946421305338," William,  himself,  Charles,  Edward,  Henry"," offline, fony,  zone,  TeV,  hydration"
+4,16566,terms related to death or being dead,gpt-4o-mini,oai_token-act-pair,8.404,0.004557609558105469,"±, Ļ, », ¾, lift","ics, chaft, abilities, inib, atically"
+4,16990,"information related to systematic practices, management processes, and compliance standards",gpt-4o-mini,oai_token-act-pair,3.742,0.01825046539306641," alike,  respectively,  phases,  thereof,  Stre","ī, į, <|outofrange|>,           
+ ,                                 "
+4,17342," references to regulations, legal matters, and government actions",gpt-4o-mini,oai_token-act-pair,4.165,0.02140363057454427," governments,  regulators,  agencies,  policym,  Congress","rectomy, mia,  poems, naments, ÅĽÄĩ"
+4,17405,phrases related to personal feelings and introspection,gpt-4o-mini,oai_token-act-pair,3.052,0.08507855733235677,",âĢĶ, ,--, :--,  Mrs,  doubtless"," Netflix,  2020,  startup,  Android,  smartphone"
+4,17426, references to maritime disasters or incidents involving ships,gpt-4o-mini,oai_token-act-pair,3.299,0.0167697270711263," ship,  ships,  sailing,  sail,  sailed"," autism, ncbi,  periodontal,  Clinic,  psoriasis"
+4,17797,names of individuals and references to authorship or contributions,gpt-4o-mini,oai_token-act-pair,3.58,0.007320721944173177,"mann, hart, hurst, heimer, ley","ģ, į, 
+  
+ ,             , <|outofrange|>"
+4,17832,details about musical groups and their contributions to music,gpt-4o-mini,oai_token-act-pair,4.181,0.03324572245279948," songs,  album,  lyrics,  music,  song","ľĵ, ĸ, Ĩ, Ģ, Ĥ"
+4,17969,customer feedback and experiences related to service quality and expectations,gpt-4o-mini,oai_token-act-pair,1.252,0.03555742899576823,"., .âĢĭ, gered, ingly, .\[","ĵ, Ļ, ĩ, ©, Ĩ"
+4,18460," questions that begin with ""What""",gpt-4o-mini,oai_token-act-pair,10.403,0.001756668090820312,"soever,  else,  happens,  happened, ver","°, heets, OSS, Ĥ, İ"
+4,18565, awards and nominations in the entertainment industry,gpt-4o-mini,oai_token-act-pair,4.646,0.01725323994954427," awards,  Award,  Awards,  award,  nominations","¯, ""}](#, Ĥ, º, Ł"
+4,18573,conditional phrases and words indicating dependency or variability,gpt-4o-mini,oai_token-act-pair,5.506,0.01249821980794271," on,  upon,  thereon, upon,  On"," behalf, ĨĴ, ², ĵ, Ł"
+4,18649, references to financial transactions or payments,gpt-4o-mini,oai_token-act-pair,8.381,0.003598848978678385," tribute,  attention,  homage,  âĤ¬,  Â£","», ¨, ĳ, Īĺ, Ļª"
+4,19899, phrases related to classifications and evaluations of companies or structures,gpt-4o-mini,oai_token-act-pair,2.784,0.02118237813313802," respectively, sson,  thereof,  among,  thereafter","ĥ½, ı, Ĥ, ·¸, «"
+4,19913, references to family relationships and personal histories,gpt-4o-mini,oai_token-act-pair,3.28,0.0359045664469401," daughter,  marriage,  married,  divorce,  father","
+
+                   , 
+                , 
+                                               , 
+
+      , 
+       "
+4,19913,Text discussing family members,,human,3.28,0.0359045664469401," daughter,  marriage,  married,  divorce,  father","
+
+                   , 
+                , 
+                                               , 
+
+      , 
+       "
+4,20012, references to significant events or changes in context,gpt-4o-mini,oai_token-act-pair,1.116,0.02740414937337239,"ĥ½,                                                                                                                                                                                                                                 ,  
+        , 
+ĉĉĉ   , č
+č
+   "," thereof, \]., ?).,  respectively, )]."
+4,20259,descriptions and references to locations and activities in a travel or tourism context,gpt-4o-mini,oai_token-act-pair,1.9,0.05664253234863281,"Ļª, ħ, »¿, ¹, ľĵ"," Levels,  Functions,  Conditions,  Sections,  Controls"
+4,20375, references to minimum wage and employment-related statistics,gpt-4o-mini,oai_token-act-pair,3.63,0.03022956848144531," employers,  employer,  workers,  jobs,  employee","ī, ±, Ľ, Ĥ¬, ¡"
+4,20392,themes of emotional struggle and self-perception in challenging circumstances,gpt-4o-mini,oai_token-act-pair,2.795,0.06407229105631511," was,  were,  ranged, ground, grounds","<|outofrange|>,       
+ ,                                         , <|outofrange|>, 
+
+                   "
+4,20738, legal terminology and actions related to court proceedings and judgments,gpt-4o-mini,oai_token-act-pair,3.89,0.0226443608601888,"ing, ed, ingly, ings, ING","""}](#, /~, cribe, )|$(, ugh"
+4,20793,references to geographic locations and neighborhoods,gpt-4o-mini,oai_token-act-pair,4.209,0.01165072123209635," Of,  And,  To,  As,  From","zheimer, elson,  denominator, ody,  gradient"
+4,21212, references to themes of death and struggle against mortality,gpt-4o-mini,oai_token-act-pair,2.248,0.01455275217692057," of, liest,  thereof,  Palace,  Of","ľĵ, Ń, ľ, Ķ, ĵ"
+4,21253, keywords related to digital media and social networking,gpt-4o-mini,oai_token-act-pair,1.854,0.01561991373697917,"Ĵ, ľĵ,                                                                   ,                                                                            ,                                                                               ","lor, pace, istic, er, leman"
+4,21435,terms related to emotional distress and social commentary,gpt-4o-mini,oai_token-act-pair,1.971,0.02894496917724609,"fulness, ful, fully, lessness, less"," feet,  APPEALS, essions, ĵ,  hereto"
+4,21827,phrases indicating associations or connections with other entities,gpt-4o-mini,oai_token-act-pair,5.256,0.004116058349609375,"ĥ½, ľĵ, ĻĤ, ², Ń","arily, liness, cias, ary, ALLY"
+4,21843, phrases related to social issues and racial dynamics,gpt-4o-mini,oai_token-act-pair,3.925,0.01963424682617188," Black,  black, Black,  blacks,  Negro","ilib,  Miy,  FM,  Fun,  Fo"
+4,22119," specific identifiers and associated values in texts, particularly related to documentation and organization references",gpt-4o-mini,oai_token-act-pair,1.638,0.01933352152506511,"ribe, illus, atinib, mina, coma"," politic,  physically,  topics,  topic,  publication"
+4,22404,elements related to body image and societal expectations,gpt-4o-mini,oai_token-act-pair,4.018,0.01680310567220052," replaced,  removed,  gone,  withdrawn,  suspended","ĥ, ı, İ, Ħ, ģ"
+4,22621, references to children's education and parenting concerns,gpt-4o-mini,oai_token-act-pair,4.775,0.03682359059651693," children,  child,  parents,  Parents,  Children","""}](#, stanbul, \]](, ignon,  eluted"
+4,22780, keywords related to military aid and support,gpt-4o-mini,oai_token-act-pair,7.401,0.02152156829833984," Effects,  Relations,  Experience,  Politics,  Injury","Ł, £,  franc, ©,  novo"
+4,22795,expressions of project or organizational management in various contexts,gpt-4o-mini,oai_token-act-pair,6.969,0.1741199493408203,"<|outofrange|>, 
+
+                   , 
+
+    , 
+                                     , <|outofrange|>"," impression,  crime,  caliber,  Scientists,  plex"
+4,23329,references to financial planning and time management in relation to work tasks,gpt-4o-mini,oai_token-act-pair,1.682,0.04783058166503906," resources,  infrastructure,  spare,  budgets,  supplies","Ļª, Ī, ĻĤ, Ģ, į"
+4,23640,possessive pronouns or references to female characters,gpt-4o-mini,oai_token-act-pair,4.874,0.003280957539876302," husband,  own,  daughter,  herself,  boyfriend","ĸ,                                                                      , 
+
+                               , 
+  , 
+  ÂłÂłÂł"
+4,23781,references to membership or leadership within church organizations,gpt-4o-mini,oai_token-act-pair,4.859,0.01831658681233724," church,  Church,  Catholics,  Catholic,  churches"," Leaf,  AMD, atinib,  surfactant,  MX"
+4,24155,words related to celebration or events,gpt-4o-mini,oai_token-act-pair,2.708,0.01172478993733724,"ity, ially, ial, ials, ulous","htra, ĥ½, 
+                        ,                                                             , 
+                                                                "
+4,24179, references to legal statutes and provisions,gpt-4o-mini,oai_token-act-pair,2.546,0.007079760233561198,"âĢ²,, cke, xa, --[, ienne","
+
+                   ,  
+       , <|outofrange|>, 
+  
+ , 
+                                                "
+4,24485,elements related to legal and financial contexts,gpt-4o-mini,oai_token-act-pair,3.507,0.04570452372233073,"lay, unreadable,  conception, forth,  thereof","                                                                             , 
+    ,  
+         , 
+                                                                , 
+                                "
+4,25710,historical references and discussions about societal structures,gpt-4o-mini,oai_token-act-pair,3.376,0.03117815653483073," centuries,  settlers,  century,  invented,  ancestors","Ļª, ľĵ, ĻĤ, Ļ, «"
+4,26056, references to health information and medical conditions,gpt-4o-mini,oai_token-act-pair,0.979,0.04265244801839193,"ĨĴ, ¿½, ±,  
+        ,                                                                        ","uego, ()[, ustain,  LLP, ---|"
+4,26150, phrases related to artistic representation and critique,gpt-4o-mini,oai_token-act-pair,3.578,0.02435811360677083," artists,  paintings,  artist,  painting,  Artists","ľĵ, Ī, ĩ, Īĺ, »"
+4,26186,words or names related to nationalities or ethnic groups,gpt-4o-mini,oai_token-act-pair,5.293,0.002246538798014323," authorities, oslov,  nationals,  Embassy,  counterpart","ĨĴ, Īĺ, İ, į, Ļª"
+4,26275, mentions of military personnel and operations,gpt-4o-mini,oai_token-act-pair,4.5,0.04011281331380209," infantry,  troops,  military,  soldiers,  Army"," Bitcoin,  microarray,  blockchain,  copyright,  cookies"
+4,26500,terms related to critique or undermining established concepts or norms,gpt-4o-mini,oai_token-act-pair,6.872,0.01129468282063802,"ifies, ¼, », izes, Ģ"," Institutional,  Progress,  Terms,  Enterprises,  accession"
+4,26588,specific technical specifications and measurements related to equipment and installations,gpt-4o-mini,oai_token-act-pair,1.506,0.02036444346110026,"                                                             , 
+              , 
+                                            ,                          ,                       ","oddsidemargin, upgreek, blockList, è±¡, Reviewer"
+4,26854,specific names and entities related to trades and contracts,gpt-4o-mini,oai_token-act-pair,4.547,0.01150004069010417,"<|outofrange|>,                                                              ,               ,                                  , č
+               ","})}{, }})$, )}{, ))=, }})$."
+4,27251,references to conflicts or struggles involving characters or groups,gpt-4o-mini,oai_token-act-pair,2.459,0.04639848073323568," enemy,  assass,  killing,  vengeance,  weapons","widget, blogger, datepicker,  Transcript,  presentations"
+4,27283,references to significant or notable locations or entities,gpt-4o-mini,oai_token-act-pair,8.688,0.002472559611002604," strongest,  oldest,  few,  greatest,  biggest","Ĩ, «, ģ, ®, »"
+4,27792, references to historical events involving television broadcasts,gpt-4o-mini,oai_token-act-pair,4.642,0.02131493886311849," broadcast,  Broadcasting,  television,  TV,  broadcasting","ĻĤ,  stones, ĸ,  stone, Ĳ"
+4,28400,elements related to gaming experiences and social interactions,gpt-4o-mini,oai_token-act-pair,2.924,0.06865278879801433,"., .âĢĭ, .[@, .)., .(","
+                                     , <|outofrange|>, 
+  , 
+
+                   ,                                         "
+4,28655, references to usability or user experience improvements in design contexts,gpt-4o-mini,oai_token-act-pair,1.666,0.01825745900472005,"Ĵ, 
+
+        , <|outofrange|>,                                                                ,                                                                                                                                                                                                                                 ","est, ony, ifically, ely, its"
+4,28725,terms related to partnership and collaboration in product development,gpt-4o-mini,oai_token-act-pair,1.026,0.02152474721272786," typically,  usually,  often,  end,  ranging","ĻĤ, .)., $)., )))., )]."
+4,29062, phrases related to sports performance and statistics,gpt-4o-mini,oai_token-act-pair,4.041,0.04138787587483724," teammate,  midfield,  opponent,  scoring,  teammates"," ontology,  repositories, idopsis,  catalog,  permissions"
+4,29290, terms and definitions related to legal and educational language,gpt-4o-mini,oai_token-act-pair,5.868,0.003071149190266927,"inator, inally, inates, inations,  coined","""}**).,  circumstances, iances, %=,  vivo"
+4,29467, programming and code syntax elements,gpt-4o-mini,oai_token-act-pair,6.425,0.04150835673014323,"""]., '])), áĢ¯, áĢº, ').","idden,  Briefly, fections,  annually, Ļª"
+4,29521,"elements related to performance, emotional states, and social dynamics in various contexts",gpt-4o-mini,oai_token-act-pair,1.99,0.03423722585042318," situations,  ones,  versions,  shots,  things","
+                       , 
+                               , <|outofrange|>,                                                             ,          
+ "
+4,29663,mentions of musical performances and violin-related topics,gpt-4o-mini,oai_token-act-pair,3.56,0.02671368916829427," musical,  orchestra,  pian,  composers,  Orchestra"," malware,  vulnerabilities,  insurer, policy,  ISIS"
+4,29679,terms related to secretive organizations and their operations,gpt-4o-mini,oai_token-act-pair,3.852,0.01145394643147787," Moscow,  Kremlin,  Russian,  Ukraine,  Russia"," Cowboys,  Texans,  CRC, <|outofrange|>, 
+                                      "
+4,29780," terms related to conditions, situations, and causes of actions",gpt-4o-mini,oai_token-act-pair,2.422,0.128814697265625," Himself, >;, ielder, Affirmed, mmHg","
+
+                   , <|outofrange|>, <|outofrange|>,                                                              , 
+                                     "
+4,29999,key financial and economic concepts,gpt-4o-mini,oai_token-act-pair,2.498,0.02823575337727864," tends,  is,  refers,  dominates,  comes","__.,  whom,  backdrop, .).,  living"
+4,30152, references to measurement and statistical data,gpt-4o-mini,oai_token-act-pair,3.442,0.01655228932698568," 34,  33,  37,  31,  41","¸, ±, ĩ, ·¸, ´"
+4,30220,sentences expressing personal experiences and emotions,gpt-4o-mini,oai_token-act-pair,3.827,0.0883165995279948," his,  he,  himself,  him,  He","`), ."""""", `,, `,`, `."
+4,30323, references to monetary transactions or financial agreements,gpt-4o-mini,oai_token-act-pair,6.24,0.02336502075195312," P, §, Ľ, ·, P","ettes,  Somal, escence, swick,  Hur"
+4,30498, references to historical figures and events related to the American West,gpt-4o-mini,oai_token-act-pair,3.25,0.005054791768391927," father,  eldest,  born,  married,  daughter","Ĥ¬, Ļ, », Ģ, metrics"
+4,30561,terms related to music and its structure,gpt-4o-mini,oai_token-act-pair,2.214,0.01411692301432292,"ity, alam, ification, ale, charg","                                       ,             
+ ,        
+ ,                                                          , 
+            
+           "
+4,31208," the word ""so"" in varying contexts and frequencies",gpt-4o-mini,oai_token-act-pair,8.343,0.001566569010416667,"aking, aring, aps, bject, jour","down, ible, ership, noreply, less"
+4,31384, phrases related to actions or requests,gpt-4o-mini,oai_token-act-pair,5.375,0.007388432820638021," in, in,  therein, In,  In","³, ¸, «, ĥ½, ·¸"
+4,31474, references to book covers and their design elements,gpt-4o-mini,oai_token-act-pair,4.771,0.03583558400472005," books,  Books,  book,  novels,  publishers","Ĺ, ĸ, ĨĴ, ¿½, Ĥ¬"
+4,31822, instances of citizenship and immigration issues,gpt-4o-mini,oai_token-act-pair,3.465,0.0150305430094401," Immigration,  immigration,  deportation,  asylum,  deport","·, ī, ĭ, Ĭ, 
+                                                                "
+4,31945, dialogue containing expressions of personal feelings or experiences,gpt-4o-mini,oai_token-act-pair,3.489,0.02164077758789062," ', .', ?', ...',  ',","âĢĿâĢĶ,  âĢľ, ^\[[@, âĢĿ;,  âĢľ["
+4,32141, contexts related to client communication and service solutions,gpt-4o-mini,oai_token-act-pair,4.467,0.0229949951171875," Tamil,  India,  Delhi,  Mumbai,  Bengal"," Otto,  Pittsburgh,  fluor,  NFL,  Michigan"
+4,32145,words related to personal opinions and evaluations of others,gpt-4o-mini,oai_token-act-pair,2.106,0.04787000020345052," women,  journalism,  people,  âĢĺ,  religion"," thereof,  accordingly,  therefrom,  thereafter,  thereto"
+4,32483,elements related to navigation and directional instructions,gpt-4o-mini,oai_token-act-pair,3.222,0.02926445007324219," roads,  route,  highways, Route,  Route","·¸, », °, ¿½, Ī"
+4,32691, references to nuclear power and military capability,gpt-4o-mini,oai_token-act-pair,3.068,0.03253428141276041," Europe,  countries,  EU,  Britain,  Germany","ľĵ, 
+                 ,                                                                                                 ,              , <|outofrange|>"
+5,7541, references to legal and government proceedings,gpt-4o-mini,oai_token-act-pair,11.768,0.5503053665161133,"
+,  ,                         , 
+
+, he","
+ĉ     , 
+
+
+   , č
+                       , 
+          ,                   "
+5,7556, references to legal proceedings and government actions,gpt-4o-mini,oai_token-act-pair,11.434,0.5341679255167643," ',  R,  ':,  He, 
+","
+ĉ     , č
+                       , 
+
+
+   , <|outofrange|>, 
+  âĢĥ"
+5,12173, references to specific data or factual information,gpt-4o-mini,oai_token-act-pair,15.988,0.552209218343099,"
+, 
+
+, S,                         ,  ","č
+                       , 
+ĉ     , 
+
+
+   , 
+          , 
+  âĢĥ"
+5,16160,references to limitations and constraints in the context of governance or regulations,gpt-4o-mini,oai_token-act-pair,13.055,0.5457178751627604," ', 
+,  ':, s, l","
+ĉ     , č
+                       , 
+          , 
+
+
+   , <|outofrange|>"
+5,23666,legal terms and phrases related to governmental or administrative processes,gpt-4o-mini,oai_token-act-pair,17.668,0.5511900583902994,"
+,  , S, ', 
+
+","
+ĉ     , č
+                       , 
+
+
+   , 
+          , <|outofrange|>"
+5,26129, various forms of punctuation and formatting in the text,gpt-4o-mini,oai_token-act-pair,15.494,0.002056121826171875," strength,  char, ctions,  tolerated,  collect","              , 
+
+      ,                                                                   ,                         ,                                      "
+5,26770, programming or coding-related keywords and syntax,gpt-4o-mini,oai_token-act-pair,10.491,0.004039128621419271,"
+ĉ     , <|outofrange|>, 
+
+                                         , 
+                                       , 
+          "," spirits,  ears,  operating,  pie,  together"

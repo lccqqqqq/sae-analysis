@@ -1,0 +1,30 @@
+{
+  "preset": "qwen2-0.5b",
+  "model_id": "Qwen/Qwen2-0.5B",
+  "sae_loader": "sae_lens",
+  "sae_arch": "jumprelu",
+  "layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "threshold": 0.0,
+  "num_batches": 50,
+  "batch_size": 64,
+  "random_batches": true,
+  "random_seed": 0,
+  "timestamp": "20260415_192049",
+  "host": "gpu01",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.7.0+cu126"
+}

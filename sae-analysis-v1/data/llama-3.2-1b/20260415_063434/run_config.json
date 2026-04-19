@@ -1,0 +1,21 @@
+{
+  "preset": "llama-3.2-1b",
+  "model_id": "unsloth/Llama-3.2-1B",
+  "sae_loader": "sae_lens",
+  "sae_arch": "jumprelu",
+  "layers": [
+    0,
+    4,
+    8
+  ],
+  "threshold": 0.0,
+  "num_batches": 3,
+  "batch_size": 64,
+  "random_batches": true,
+  "random_seed": 0,
+  "timestamp": "20260415_063434",
+  "host": "gpu02",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.7.0+cu126"
+}

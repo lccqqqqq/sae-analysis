@@ -1,0 +1,29 @@
+{
+  "preset": "llama-3-8b",
+  "model_id": "meta-llama/Meta-Llama-3-8B",
+  "sae_loader": "sparsify",
+  "sae_arch": "topk",
+  "layers": [
+    0,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27,
+    30
+  ],
+  "threshold": 0.0,
+  "num_batches": 50,
+  "batch_size": 64,
+  "random_batches": true,
+  "random_seed": null,
+  "timestamp": "20260415_231602",
+  "host": "sondhigpu",
+  "device": "cuda",
+  "gpu_name": "NVIDIA H200 NVL",
+  "torch_version": "2.7.0+cu126"
+}

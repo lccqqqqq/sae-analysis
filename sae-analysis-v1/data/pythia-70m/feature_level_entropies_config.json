@@ -1,0 +1,18 @@
+{
+  "preset": "pythia-70m",
+  "model_id": "EleutherAI/pythia-70m-deduped",
+  "layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "threshold": 1.0,
+  "batch_size": 64,
+  "min_count": 20,
+  "timestamp": "20260415_062947",
+  "vocab_size": 50304,
+  "corpus_tokens": 2408076
+}

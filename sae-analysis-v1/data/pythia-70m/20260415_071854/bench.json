@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260415_071854",
+  "host": "gpu03",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+  "torch_version": "2.7.0+cu126",
+  "cuda_available": true,
+  "preset": "pythia-70m",
+  "layers": [
+    0,
+    3,
+    5
+  ],
+  "num_batches": 3,
+  "batch_size": 64,
+  "threshold": 0.2,
+  "random_batches": true,
+  "random_seed": 0,
+  "total_elapsed_s": 32.92054605484009,
+  "mean_batch_s": 10.972997983296713,
+  "std_batch_s": 3.330357933577623,
+  "peak_gpu_mem_gib": 0.9094905853271484,
+  "output_files": {
+    "0": "entropy_comparison_resid_out_layer0.pt",
+    "3": "entropy_comparison_resid_out_layer3.pt",
+    "5": "entropy_comparison_resid_out_layer5.pt"
+  }
+}

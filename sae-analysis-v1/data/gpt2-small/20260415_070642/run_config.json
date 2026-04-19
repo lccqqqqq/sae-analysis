@@ -1,0 +1,21 @@
+{
+  "preset": "gpt2-small",
+  "model_id": "openai-community/gpt2",
+  "sae_loader": "sae_lens",
+  "sae_arch": "relu",
+  "layers": [
+    0,
+    5,
+    11
+  ],
+  "threshold": 0.2,
+  "num_batches": 3,
+  "batch_size": 64,
+  "random_batches": true,
+  "random_seed": 0,
+  "timestamp": "20260415_070642",
+  "host": "gpu03",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+  "torch_version": "2.7.0+cu126"
+}
