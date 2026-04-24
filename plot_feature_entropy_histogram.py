@@ -8,7 +8,7 @@ from scipy import stats
 
 # Input parameters - change these as needed
 SITE = "resid_out_layer3"  # Change this to desired site/layer
-FEATURE_IDX = 100  # Change this to desired feature index
+FEATURE_IDX = None  # None = auto-pick the most frequently active feature
 
 # Load the data
 print(f"Loading data for {SITE}...")
@@ -17,6 +17,12 @@ data = torch.load(data_file, map_location='cpu', weights_only=False)
 
 feature_influences = data['feature_influences']
 config = data.get('config', {})
+
+# Auto-pick top feature if not specified
+if FEATURE_IDX is None:
+    FEATURE_IDX = max(feature_influences.keys(),
+                      key=lambda f: feature_influences[f].get('num_samples', 0))
+    print(f"[auto] FEATURE_IDX={FEATURE_IDX} (most batches)")
 
 # Check if feature exists
 if FEATURE_IDX not in feature_influences:

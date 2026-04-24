@@ -8,10 +8,15 @@ import matplotlib.pyplot as plt
 from transformers import AutoTokenizer
 from pathlib import Path
 import random
+import glob
 from collections import defaultdict
 
 # Configuration - change these as needed
-ENTROPY_FILE = "entropy_comparison_resid_out_layer3_20260110_194042.pt"  # Input file from compare_entropies.py
+_candidates = glob.glob("entropy_comparison_resid_out_layer3_*.pt")
+if not _candidates:
+    raise FileNotFoundError("No entropy_comparison_resid_out_layer3_*.pt found at repo root")
+ENTROPY_FILE = max(_candidates, key=lambda f: Path(f).stat().st_mtime)
+print(f"[plot] ENTROPY_FILE = {ENTROPY_FILE}")
 FEATURE_IDX = None  # Set to None to auto-pick top feature, or specify a feature index
 NUM_BATCHES_TO_ANALYZE = 3  # Number of random batches to analyze
 TOP_K_TOKENS = 10  # Number of top influential tokens to show per batch

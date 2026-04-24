@@ -187,5 +187,14 @@ token_vector_influence*.pt
 # Cluster job logs
 out/
 
+# addqueue-generated SLURM wrapper (regenerated on every submission)
+python3.sh
+
+# Claude Code session state
+.claude/
+
+# Cluster-run reproduction artefacts (pipeline outputs, figures, SLURM logs)
+reproduction/
+
 # Local reference copy of v1 cleanup tree (not part of the cleaned-up repo)
 scripts-v1/

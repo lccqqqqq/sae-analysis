@@ -28,7 +28,7 @@ layer_data = {}
 for layer in LAYERS:
     file_path = find_latest_entropy_file(layer)
     print(f"  Layer {layer}: {Path(file_path).name}")
-    data = torch.load(file_path, map_location='cpu')
+    data = torch.load(file_path, map_location='cpu', weights_only=False)
     layer_data[layer] = data
 
 # Extract feature entropies and activations across all layers

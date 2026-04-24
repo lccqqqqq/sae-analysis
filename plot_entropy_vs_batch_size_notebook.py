@@ -6,9 +6,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 import math
+import glob
 
-# Load data from the saved file
-data_file = "entropy_vs_batch_size_resid_out_layer3_20260111_155223.pt"
+# Load data from the most recent matching file
+candidates = glob.glob("entropy_vs_batch_size_resid_out_layer*_*.pt")
+if not candidates:
+    raise FileNotFoundError("No entropy_vs_batch_size_*.pt found at repo root")
+data_file = max(candidates, key=lambda f: Path(f).stat().st_mtime)
+print(f"[plot] Loading {data_file}")
 data = torch.load(data_file, map_location="cpu")
 
 # Extract data

@@ -9,7 +9,7 @@ import random
 
 # Configuration - change these as needed
 SITE = "resid_out_layer3"  # Change this to desired site/layer
-FEATURE_IDX = 100  # Change this to desired feature index
+FEATURE_IDX = None  # None = auto-pick the most frequently active feature
 NUM_BATCHES_TO_ANALYZE = 3  # Number of random batches to analyze
 TOP_K_TOKENS = 10  # Number of top influential tokens to show per batch
 INFLUENCE_THRESHOLD = None  # Show tokens above this threshold (None = use top K)
@@ -22,6 +22,11 @@ data = torch.load(data_file, map_location='cpu', weights_only=False)
 feature_influences = data['feature_influences']
 config = data.get('config', {})
 BATCH_SIZE = config.get('batch_size', 64)
+
+if FEATURE_IDX is None:
+    FEATURE_IDX = max(feature_influences.keys(),
+                      key=lambda f: feature_influences[f].get('num_samples', 0))
+    print(f"[auto] FEATURE_IDX={FEATURE_IDX} (most batches)")
 
 # Check if feature exists
 if FEATURE_IDX not in feature_influences:
