@@ -8,7 +8,9 @@ import numpy as np
 
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+DEVICE = "cuda" if torch.cuda.is_available() else (
+    "mps" if torch.backends.mps.is_available() else "cpu"
+)
 THRESHOLD = 1.0
 BATCH_SIZE = 64  # Smaller batch size for gradient computation
 MAX_BATCHES = 5000  # Limit number of batches to process

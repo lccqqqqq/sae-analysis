@@ -9,7 +9,9 @@ import scipy.stats
 
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+DEVICE = "cuda" if torch.cuda.is_available() else (
+    "mps" if torch.backends.mps.is_available() else "cpu"
+)
 BATCH_SIZE = 64  # Batch size for processing
 MAX_BATCHES = 5000  # Limit number of batches to process
 CHECKPOINT_INTERVAL = 100  # Save checkpoint every N batches

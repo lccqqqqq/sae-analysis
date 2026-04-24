@@ -51,7 +51,9 @@ from compare_entropies import (
 
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+DEVICE = "cuda" if torch.cuda.is_available() else (
+    "mps" if torch.backends.mps.is_available() else "cpu"
+)
 BATCH_SIZE = 64
 NUM_BATCHES = 10  # Default number of batches for comparison
 

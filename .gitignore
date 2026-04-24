@@ -183,3 +183,9 @@ feature_token_influence*.pt
 token_vector_influence*.pt
 *_histogram*.png
 *position*.png
+
+# Cluster job logs
+out/
+
+# Local reference copy of v1 cleanup tree (not part of the cleaned-up repo)
+scripts-v1/

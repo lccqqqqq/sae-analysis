@@ -9,7 +9,9 @@ import csv
 
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+DEVICE = "cuda" if torch.cuda.is_available() else (
+    "mps" if torch.backends.mps.is_available() else "cpu"
+)
 THRESHOLD = 1.0
 SAMPLE_TEXT_LEN = 2000 # Number of tokens to process
 
