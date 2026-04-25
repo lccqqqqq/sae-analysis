@@ -196,5 +196,6 @@ python3.sh
 # Cluster-run reproduction artefacts (pipeline outputs, figures, SLURM logs)
 reproduction/
 
-# Local reference copy of v1 cleanup tree (not part of the cleaned-up repo)
-scripts-v1/
+# Common output-dir conventions when DATA_DIR is overridden
+data/
+paper/figures/
