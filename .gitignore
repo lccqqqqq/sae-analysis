@@ -199,3 +199,6 @@ reproduction/
 # Common output-dir conventions when DATA_DIR is overridden
 data/
 paper/figures/
+
+# Local reference trees / scratch dirs (not part of the cleaned-up repo)
+scripts-v1/
