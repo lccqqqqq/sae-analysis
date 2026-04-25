@@ -183,3 +183,22 @@ feature_token_influence*.pt
 token_vector_influence*.pt
 *_histogram*.png
 *position*.png
+
+# Cluster job logs
+out/
+
+# addqueue-generated SLURM wrapper (regenerated on every submission)
+python3.sh
+
+# Claude Code session state
+.claude/
+
+# Cluster-run reproduction artefacts (pipeline outputs, figures, SLURM logs)
+reproduction/
+
+# Common output-dir conventions when DATA_DIR is overridden
+data/
+paper/figures/
+
+# Local reference trees / scratch dirs (not part of the cleaned-up repo)
+scripts-v1/
