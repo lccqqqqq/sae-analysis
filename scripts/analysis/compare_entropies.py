@@ -35,6 +35,8 @@ import json
 from datetime import datetime
 matplotlib.use('Agg')  # Use non-interactive backend for saving figures
 
+from data_loader import load_wikitext_train_text
+
 # Import functions from existing modules
 from feature_token_influence import (
     load_sae, get_sae_weights, get_feature_activations,
@@ -431,15 +433,8 @@ def main(site=None, num_batches=None, random_batches=True, random_seed=None):
     print(f"[INFO] Will process all {n_latent} features (filtered by activation threshold per batch)")
     
     # 3. Load data
-    DATA_FILE = Path("wikitext-2-train.txt")
-    if not DATA_FILE.exists():
-        print("[ERROR] wikitext-2-train.txt not found.")
-        sys.exit(1)
-    
-    print(f"[INFO] Loading data from {DATA_FILE}...")
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        text = f.read()
-    
+    text = load_wikitext_train_text()
+
     print(f"[INFO] Tokenizing text...")
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]
     total_tokens = tokens.shape[0]

@@ -6,6 +6,8 @@ import sys
 from collections import defaultdict
 import numpy as np
 
+from data_loader import load_wikitext_train_text
+
 # Configuration
 MODEL_NAME = "EleutherAI/pythia-70m-deduped"
 DEVICE = "cuda" if torch.cuda.is_available() else (
@@ -324,14 +326,7 @@ def main(site=None, sparsity_file=None, output_file=None, checkpoint_file=None, 
     print(f"[INFO] Selected {len(leading_features)} leading features (freq > {MIN_FREQ:.1%})")
     
     # 3. Prepare Data
-    DATA_FILE = Path("wikitext-2-train.txt")
-    if DATA_FILE.exists():
-        print(f"[INFO] Loading data from {DATA_FILE}...")
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            text = f.read()
-    else:
-        print("[ERROR] wikitext-2-train.txt not found.")
-        sys.exit(1)
+    text = load_wikitext_train_text()
 
     print(f"[INFO] Tokenizing text...")
     tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]  # [Seq]
