@@ -160,8 +160,8 @@ cython_debug/
 #.idea/
 dictionaries
 wandb
-experiment*
-run_experiment.sh
+# experiment*
+# run_experiment.sh
 nohup.out
 *.zip
 
