@@ -36,7 +36,7 @@ from sae_adapters import SAEBundle, load_sae
 DEVICE = "cuda" if torch.cuda.is_available() else (
     "mps" if torch.backends.mps.is_available() else "cpu"
 )
-BATCH_SIZE = 64
+CONTEXT_LEN = 64
 
 
 # --- Progress / heartbeat helpers ------------------------------------------
@@ -145,7 +145,7 @@ def main(
         "layers": list(layers),
         "threshold": threshold,
         "num_batches": num_batches,
-        "batch_size": BATCH_SIZE,
+        "context_len": CONTEXT_LEN,
         "random_batches": random_batches,
         "random_seed": random_seed,
         "timestamp": timestamp,
@@ -170,16 +170,16 @@ def main(
     total_tokens = tokens.shape[0]
     print(f"[INFO] Total tokens: {total_tokens}", flush=True)
 
-    print(f"[INFO] Processing {num_batches} batches of size {BATCH_SIZE}...", flush=True)
+    print(f"[INFO] Processing {num_batches} windows of context length {CONTEXT_LEN}...", flush=True)
     if random_batches and random_seed is not None:
         random.seed(random_seed); np.random.seed(random_seed)
         print(f"[INFO] Random seed: {random_seed}", flush=True)
 
-    max_start = total_tokens - BATCH_SIZE
+    max_start = total_tokens - CONTEXT_LEN
     if max_start <= 0:
-        print("[ERROR] Not enough tokens for batch size"); return
+        print("[ERROR] Not enough tokens for context length"); return
     if random_batches:
-        starts = list(range(0, max_start + 1, BATCH_SIZE))
+        starts = list(range(0, max_start + 1, CONTEXT_LEN))
         if len(starts) < num_batches:
             starts = list(range(max_start + 1))
         batch_start_indices = random.sample(starts, min(num_batches, len(starts)))
@@ -206,7 +206,7 @@ def main(
     total_start_time = time.time()
     for batch_idx in range(num_batches):
         start_idx = batch_start_indices[batch_idx]
-        chunk = tokens[start_idx: start_idx + BATCH_SIZE].to(DEVICE)
+        chunk = tokens[start_idx: start_idx + CONTEXT_LEN].to(DEVICE)
 
         hb_state["batch"] = batch_idx + 1
         hb_state["phase"] = "process_all_layers"
@@ -272,7 +272,7 @@ def main(
 
         batch_index = {
             "site": site, "preset": preset.name, "timestamp": timestamp,
-            "num_batches": len(batch_results), "batch_size": BATCH_SIZE,
+            "num_batches": len(batch_results), "context_len": CONTEXT_LEN,
             "random_batches": random_batches, "random_seed": random_seed,
             "batches": [
                 {
@@ -309,7 +309,7 @@ def main(
             },
             "config": {
                 "preset": preset.name, "threshold": threshold,
-                "batch_size": BATCH_SIZE,
+                "context_len": CONTEXT_LEN,
                 "total_features": saes[L].n_latent,
                 "random_batches": random_batches, "random_seed": random_seed,
                 "sae_source": saes[L].source, "sae_arch": saes[L].arch,
@@ -327,7 +327,7 @@ def main(
             "gpu_name": gpu_name, "torch_version": torch.__version__,
             "cuda_available": torch.cuda.is_available(),
             "preset": preset.name, "layers": list(layers),
-            "num_batches": num_batches, "batch_size": BATCH_SIZE,
+            "num_batches": num_batches, "context_len": CONTEXT_LEN,
             "threshold": threshold, "random_batches": random_batches,
             "random_seed": random_seed,
             "total_elapsed_s": total_elapsed,

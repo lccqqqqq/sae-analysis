@@ -18,7 +18,7 @@ from presets import Preset, get_preset, site_for
 DEVICE = "cuda" if torch.cuda.is_available() else (
     "mps" if torch.backends.mps.is_available() else "cpu"
 )
-BATCH_SIZE = 64
+CONTEXT_LEN = 64
 MAX_BATCHES = 5000
 CHECKPOINT_INTERVAL = 100
 
@@ -160,10 +160,10 @@ def main(preset_name="pythia-70m", layer_idx=3, output_file=None,
         print(f"[INFO] Resuming: batch={batch_count}")
 
     t0 = time.time()
-    for i in range(start_idx, total_tokens - BATCH_SIZE, BATCH_SIZE):
+    for i in range(start_idx, total_tokens - CONTEXT_LEN, CONTEXT_LEN):
         if batch_count >= max_batches:
             break
-        chunk = tokens[i: i + BATCH_SIZE].to(DEVICE)
+        chunk = tokens[i: i + CONTEXT_LEN].to(DEVICE)
         try:
             R_values, entropy = process_batch_with_token_influence(
                 model, chunk, layer_idx, preset
@@ -181,9 +181,9 @@ def main(preset_name="pythia-70m", layer_idx=3, output_file=None,
             torch.save({
                 "influence_distributions": influence_distributions,
                 "entropies": entropies, "batch_count": batch_count,
-                "start_idx": i + BATCH_SIZE,
+                "start_idx": i + CONTEXT_LEN,
                 "config": {"layer": layer_idx, "site": site,
-                           "batch_size": BATCH_SIZE, "preset": preset.name},
+                           "context_len": CONTEXT_LEN, "preset": preset.name},
             }, checkpoint_file)
 
     print(f"\nProcessed {batch_count} batches in {time.time()-t0:.1f}s.")
@@ -203,7 +203,7 @@ def main(preset_name="pythia-70m", layer_idx=3, output_file=None,
         "mean_entropy": float(entropies_array.mean()),
         "std_entropy": float(entropies_array.std()),
         "config": {"preset": preset.name, "layer": layer_idx, "site": site,
-                   "total_batches": batch_count, "batch_size": BATCH_SIZE},
+                   "total_batches": batch_count, "context_len": CONTEXT_LEN},
     }
     if output_file is None:
         output_file = Path(f"token_vector_influence_{site}.pt")

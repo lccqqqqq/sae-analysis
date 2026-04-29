@@ -38,8 +38,8 @@ Recommended order for the data-producing scripts:
    It does not depend on `scripts/analysis/feature_sparsity.py`, and writes `token_vector_influence_<site>.pt`.
 5. Run `scripts/analysis/compare_entropies.py` or `scripts/analysis/compare_entropies_multi_layer.py` when you want feature-vs-token entropy comparisons.
    These scripts recompute the needed feature and token-vector influences internally and write `entropy_comparison_<site>_<timestamp>.pt`.
-6. Run `scripts/analysis/entropy_vs_batch_size.py` after that if you want batch-size sensitivity plots for a site.
-   It writes `entropy_vs_batch_size_<site>_<timestamp>.pt` plus a plot directory.
+6. Run `scripts/analysis/entropy_vs_context_len.py` after that if you want context-length sensitivity plots for a site.
+   It writes `entropy_vs_context_len_<site>_<timestamp>.pt` plus a plot directory.
 7. Open the notebook helpers and plotting snippets after the corresponding data files exist.
    Most of them read the saved `.pt` outputs above rather than generating data from scratch.
 
@@ -60,12 +60,12 @@ Recommended order for the data-producing scripts:
   - `scripts/analysis/token_vector_influence.py`: independent baseline analysis. Computes influence norms for the raw residual/token vector and writes `token_vector_influence_<site>.pt`.
   - `scripts/analysis/compare_entropies.py`: combined analysis for one layer. Recomputes both feature and token-vector influence quantities internally and writes `entropy_comparison_<site>_<timestamp>.pt`.
   - `scripts/analysis/compare_entropies_multi_layer.py`: multi-layer version of `scripts/analysis/compare_entropies.py`; writes one `entropy_comparison_<site>_<timestamp>.pt` file per layer.
-  - `scripts/analysis/entropy_vs_batch_size.py`: studies how feature entropy changes as the batch/window size changes and writes `entropy_vs_batch_size_<site>_<timestamp>.pt` plus plots.
+  - `scripts/analysis/entropy_vs_context_len.py`: studies how feature entropy changes as the context length (window size) changes and writes `entropy_vs_context_len_<site>_<timestamp>.pt` plus plots.
 
 - **Notebook helpers and plotting snippets**
   - `notebooks/feature_analysis.ipynb`, `notebooks/feature_analysis_backup.ipynb`, `notebooks/feature_analysis_cleaned.ipynb`, `notebooks/feature_analysis_v4.ipynb`: notebooks for exploratory analysis of saved outputs, primarily the files from `scripts/analysis/feature_sparsity.py`.
   - `scripts/plot/plot_entropy_vs_depth.py`, `scripts/plot/notebook_entropy_vs_depth.py`: read saved `entropy_comparison_<site>_<timestamp>.pt` files across layers.
-  - `scripts/plot/plot_entropy_vs_batch_size_notebook.py`: reads `entropy_vs_batch_size_<site>_<timestamp>.pt`.
+  - `scripts/plot/plot_entropy_vs_context_len_notebook.py`: reads `entropy_vs_context_len_<site>_<timestamp>.pt`.
   - `scripts/plot/plot_entropy_vs_activation.py`: reads both `feature_token_influence_<site>.pt` and `feature_sparsity_data_<site>.pt`.
   - `scripts/plot/plot_feature_entropy_histogram.py`, `scripts/plot/plot_all_features_entropy_histogram.py`: read `feature_token_influence_<site>.pt`.
   - `deprecated/analyze_feature_token_influence.py`, `deprecated/analyze_feature_token_influence_simple.py`, `deprecated/analyze_feature_token_influence_notebook.py`, `deprecated/analyze_feature_token_influence_final.py`: read `feature_token_influence_<site>.pt`.

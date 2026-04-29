@@ -25,7 +25,7 @@ DEVICE = "cuda" if torch.cuda.is_available() else (
     "mps" if torch.backends.mps.is_available() else "cpu"
 )
 THRESHOLD = 1.0
-BATCH_SIZE = 64
+CONTEXT_LEN = 64
 MAX_BATCHES = 5000
 MIN_FEATURE_ACTIVATIONS = 10
 CHECKPOINT_INTERVAL = 100
@@ -216,10 +216,10 @@ def main(preset_name="pythia-70m", layer_idx=3, sparsity_file=None,
 
     print(f"[INFO] Computing influence (threshold > {threshold})...")
     t0 = time.time()
-    for i in range(start_idx, total_tokens - BATCH_SIZE, BATCH_SIZE):
+    for i in range(start_idx, total_tokens - CONTEXT_LEN, CONTEXT_LEN):
         if batch_count >= max_batches:
             break
-        chunk = tokens[i: i + BATCH_SIZE].to(DEVICE)
+        chunk = tokens[i: i + CONTEXT_LEN].to(DEVICE)
         try:
             batch_influences = process_batch_with_influence(
                 model, sae, chunk, layer_idx, leading_features, threshold, preset
@@ -235,9 +235,9 @@ def main(preset_name="pythia-70m", layer_idx=3, sparsity_file=None,
             print(f"Processed {batch_count}/{max_batches} batches...", end="\r")
         if batch_count % CHECKPOINT_INTERVAL == 0:
             save_checkpoint(
-                checkpoint_file, influence_data, batch_count, i + BATCH_SIZE,
+                checkpoint_file, influence_data, batch_count, i + CONTEXT_LEN,
                 {"threshold": threshold, "layer": layer_idx, "site": site,
-                 "batch_size": BATCH_SIZE, "min_freq": MIN_FREQ,
+                 "context_len": CONTEXT_LEN, "min_freq": MIN_FREQ,
                  "preset": preset.name},
             )
 
@@ -259,7 +259,7 @@ def main(preset_name="pythia-70m", layer_idx=3, sparsity_file=None,
         "feature_influences": aggregated,
         "config": {
             "preset": preset.name, "threshold": threshold, "layer": layer_idx,
-            "site": site, "total_batches": batch_count, "batch_size": BATCH_SIZE,
+            "site": site, "total_batches": batch_count, "context_len": CONTEXT_LEN,
             "min_freq": MIN_FREQ,
         },
     }

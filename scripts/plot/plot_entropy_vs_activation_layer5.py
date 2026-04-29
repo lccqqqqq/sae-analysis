@@ -13,7 +13,7 @@ print(f"Loading data for {SITE}...")
 influence_data = torch.load(f'feature_token_influence_{SITE}.pt', map_location='cpu', weights_only=False)
 feature_influences = influence_data['feature_influences']
 config = influence_data.get('config', {})
-BATCH_SIZE = config.get('batch_size', 64)
+CONTEXT_LEN = config.get('context_len', 64)
 
 sparsity_data = torch.load(f'feature_sparsity_data_{SITE}.pt', map_location='cpu', weights_only=False)
 frequencies = sparsity_data['frequencies']

@@ -33,7 +33,7 @@ from token_vector_influence import process_batch_with_token_influence
 DEVICE = "cuda" if torch.cuda.is_available() else (
     "mps" if torch.backends.mps.is_available() else "cpu"
 )
-BATCH_SIZE = 64
+CONTEXT_LEN = 64
 NUM_BATCHES = 10
 
 
@@ -237,9 +237,9 @@ def main(preset_name="pythia-70m", layer_idx=3, num_batches=None,
     if random_batches and random_seed is not None:
         random.seed(random_seed); np.random.seed(random_seed)
 
-    max_start = total_tokens - BATCH_SIZE
+    max_start = total_tokens - CONTEXT_LEN
     if random_batches:
-        starts = list(range(0, max_start + 1, BATCH_SIZE))
+        starts = list(range(0, max_start + 1, CONTEXT_LEN))
         starts = random.sample(starts, min(num_batches, len(starts)))
         starts.sort()
     else:
@@ -247,7 +247,7 @@ def main(preset_name="pythia-70m", layer_idx=3, num_batches=None,
 
     batch_results = []
     for batch_idx, start_idx in enumerate(starts):
-        chunk = tokens[start_idx: start_idx + BATCH_SIZE].to(DEVICE)
+        chunk = tokens[start_idx: start_idx + CONTEXT_LEN].to(DEVICE)
         try:
             r = compare_entropies_for_batch(
                 model, sae, chunk, layer_idx, all_features, site, preset, threshold,
@@ -283,7 +283,7 @@ def main(preset_name="pythia-70m", layer_idx=3, num_batches=None,
         },
         "config": {
             "preset": preset.name, "threshold": threshold,
-            "batch_size": BATCH_SIZE, "total_features": sae.n_latent,
+            "context_len": CONTEXT_LEN, "total_features": sae.n_latent,
             "random_batches": random_batches, "random_seed": random_seed,
             "sae_source": sae.source, "sae_arch": sae.arch,
         },

@@ -113,8 +113,8 @@ def main(site=None):
         total_tokens = MAX_TOKENS
     
     
-    # 3. Process in Batches
-    BATCH_SIZE = 128
+    # 3. Process in fixed-length context windows
+    CONTEXT_LEN = 128
     
     feature_counts = torch.zeros(n_latent, device=DEVICE)
     feature_token_counts = [Counter() for _ in range(n_latent)] # List of Counters
@@ -133,8 +133,8 @@ def main(site=None):
     import time
     start_time = time.time()
     
-    for i in range(0, total_tokens, BATCH_SIZE):
-        chunk = tokens[i : i + BATCH_SIZE].unsqueeze(0).to(DEVICE) # [1, Chunk]
+    for i in range(0, total_tokens, CONTEXT_LEN):
+        chunk = tokens[i : i + CONTEXT_LEN].unsqueeze(0).to(DEVICE) # [1, Chunk]
         
         # Clear previous activations
         activations = []
@@ -172,7 +172,7 @@ def main(site=None):
                 feature_token_counts[f_idx][t_id] += 1
 
         # Progress
-        if (i // BATCH_SIZE) % 50 == 0:
+        if (i // CONTEXT_LEN) % 50 == 0:
             print(f"Processed {i}/{total_tokens} tokens...", end="\r")
             
     print(f"Processed {total_tokens}/{total_tokens} tokens. Done.")

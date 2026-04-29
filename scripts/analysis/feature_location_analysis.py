@@ -99,8 +99,8 @@ def main():
         total_tokens = MAX_TOKENS
     
     
-    # 3. Process in Batches
-    BATCH_SIZE = 128
+    # 3. Process in fixed-length context windows
+    CONTEXT_LEN = 128
     
     feature_counts = torch.zeros(n_latent, device=DEVICE)
     # NEW: Store activation records with position information
@@ -123,8 +123,8 @@ def main():
     import time
     start_time = time.time()
     
-    for batch_idx, i in enumerate(range(0, total_tokens, BATCH_SIZE)):
-        chunk = tokens[i : i + BATCH_SIZE].unsqueeze(0).to(DEVICE) # [1, Chunk]
+    for batch_idx, i in enumerate(range(0, total_tokens, CONTEXT_LEN)):
+        chunk = tokens[i : i + CONTEXT_LEN].unsqueeze(0).to(DEVICE) # [1, Chunk]
         batch_start_pos = i  # Absolute position where this batch starts
         
         # Clear previous activations
