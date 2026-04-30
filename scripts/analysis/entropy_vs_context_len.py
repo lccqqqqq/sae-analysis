@@ -95,31 +95,103 @@ def compute_entropy_for_sub_batch(
 
 # --- Plotting ---------------------------------------------------------------
 
-def plot_entropy_vs_context_len(results_by_context_len, site, output_dir):
+def plot_entropy_vs_context_len(results_by_context_len, site, output_dir,
+                                 top_n=10, prompt_token_strs=None,
+                                 grey_cap=200):
+    """Plot per-feature entropy curves.
+
+    Top-N features (by ∑ last-position activation across context lengths)
+    are drawn in distinct colours; all other active features are drawn
+    behind them in light grey at low alpha so the population context is
+    visible without overwhelming the plot. To keep matplotlib responsive
+    when many features are active, the grey background is subsampled to
+    `grey_cap` features (default 200). Active feature counts and the
+    sub-sampling are reported in the title.
+
+    If `prompt_token_strs` is provided (list of decoded tokens, oldest→
+    query), a panel below the entropy axis displays them with boundary
+    markers and the query token highlighted.
+    """
     all_feature_indices = set()
     for result in results_by_context_len.values():
         all_feature_indices.update(result["feature_entropies"].keys())
     all_feature_indices = sorted(all_feature_indices)
     context_lens = sorted(results_by_context_len.keys())
+    n_total = len(all_feature_indices)
 
-    n_features = len(all_feature_indices)
-    if n_features > 0:
-        if n_features <= 20:
-            colors = plt.cm.tab20(np.linspace(0, 1, n_features))
-        else:
-            colors = plt.cm.tab20(np.linspace(0, 1, 20))
-            while len(colors) < n_features:
-                colors = np.vstack([colors, plt.cm.tab20(np.linspace(0, 1, 20))])
-            colors = colors[:n_features]
-        feature_color_map = {f: colors[i] for i, f in enumerate(all_feature_indices)}
+    # Rank features by total activation (summed over all context lengths)
+    # BEFORE plotting, so we only draw the top N.
+    feature_total_act = {
+        f: sum(results_by_context_len[bs]["feature_activations"].get(f, 0.0)
+               for bs in context_lens)
+        for f in all_feature_indices
+    }
+    top_features = [f for f, _ in sorted(feature_total_act.items(),
+                                         key=lambda x: x[1], reverse=True)[:top_n]]
+    n_top = len(top_features)
+    palette = plt.cm.tab10(np.linspace(0, 1, max(n_top, 1)))[:n_top]
+    feature_color_map = {f: palette[i] for i, f in enumerate(top_features)}
+
+    if prompt_token_strs:
+        # Pre-wrap the token string into lines so we can size the figure
+        # height to accommodate them. Tokens are rendered with │ boundary
+        # markers (one cell = "│tok"); we greedy-pack cells onto a line
+        # until a target character width is reached.
+        def _show(s):
+            return s.replace("Ġ", "·").replace("▁", "·").replace("\n", "↵")
+        TARGET_LINE_CHARS = 110
+        cells = [f"│{_show(t)}" for t in prompt_token_strs] + ["│"]
+        wrapped_lines = []
+        cur = ""
+        for cell in cells:
+            if cur and len(cur) + len(cell) > TARGET_LINE_CHARS:
+                wrapped_lines.append(cur)
+                cur = cell
+            else:
+                cur += cell
+        if cur:
+            wrapped_lines.append(cur)
+        n_lines = len(wrapped_lines)
+        # ~0.22 inches per text line + ~1 inch for headers/query line.
+        tok_panel_in = 1.0 + 0.22 * n_lines
+        plot_in = 8.0
+        fig = plt.figure(figsize=(12, plot_in + tok_panel_in))
+        gs = fig.add_gridspec(2, 1,
+                              height_ratios=[plot_in, tok_panel_in],
+                              hspace=0.30)
+        ax = fig.add_subplot(gs[0])
+        ax_tok = fig.add_subplot(gs[1])
     else:
-        feature_color_map = {}
+        fig, ax = plt.subplots(1, 1, figsize=(12, 8))
+        ax_tok = None
+        wrapped_lines = None
 
-    fig, ax = plt.subplots(1, 1, figsize=(12, 8))
+    # Grey background: every active feature that's NOT in top-N. Subsample
+    # if there are more than grey_cap of them so matplotlib doesn't choke
+    # on thousands of low-alpha lines (layer 5 of pythia-70m can have ~700+
+    # active features at one context length).
+    top_set = set(top_features)
+    grey_pool = [f for f in all_feature_indices if f not in top_set]
+    grey_subsampled = False
+    if len(grey_pool) > grey_cap:
+        step = len(grey_pool) // grey_cap + 1
+        grey_pool = grey_pool[::step][:grey_cap]
+        grey_subsampled = True
 
-    for feat_idx in all_feature_indices:
-        entropies = []
-        sizes = []
+    for feat_idx in grey_pool:
+        entropies, sizes = [], []
+        for bs in context_lens:
+            r = results_by_context_len[bs]
+            if feat_idx in r["feature_entropies"]:
+                entropies.append(r["feature_entropies"][feat_idx])
+                sizes.append(bs)
+        if entropies:
+            ax.plot(sizes, entropies, "-", color="lightgrey",
+                    linewidth=1.0, alpha=0.6, zorder=1)
+
+    # Top-N features on top, in colour with markers.
+    for feat_idx in top_features:
+        entropies, sizes = [], []
         for bs in context_lens:
             r = results_by_context_len[bs]
             if feat_idx in r["feature_entropies"]:
@@ -127,40 +199,64 @@ def plot_entropy_vs_context_len(results_by_context_len, site, output_dir):
                 sizes.append(bs)
         if entropies:
             ax.plot(sizes, entropies, "o-", color=feature_color_map[feat_idx],
-                    linewidth=2, markersize=6, alpha=0.7)
+                    linewidth=2, markersize=6, alpha=0.85, zorder=3)
 
     # Maximal-entropy reference: log2(n) for a uniform distribution.
     ref_x = np.array(context_lens)
-    ax.plot(ref_x, np.log2(ref_x), "k--", linewidth=2,
-            label="Maximal Entropy (log₂(n))", alpha=0.8)
+    ax.plot(ref_x, np.log2(ref_x), "k--", linewidth=2, alpha=0.8, zorder=2)
 
     ax.set_xlabel("Context length", fontsize=12)
     ax.set_ylabel("Entropy (bits)", fontsize=12)
-    ax.set_title(f"{site} - Feature Entropy vs Context length",
-                 fontsize=14, fontweight="bold")
+    grey_note = (f"; grey: {len(grey_pool)} of {n_total - n_top} others"
+                 + (" (subsampled)" if grey_subsampled else ""))
+    ax.set_title(f"{site} — coloured: top {n_top} of {n_total} active features"
+                 f"{grey_note}",
+                 fontsize=13, fontweight="bold")
     ax.grid(True, alpha=0.3)
 
-    if all_feature_indices:
-        feature_total_act = {
-            f: sum(results_by_context_len[bs]["feature_activations"].get(f, 0.0)
-                   for bs in context_lens)
-            for f in all_feature_indices
-        }
-        top10 = {f for f, _ in sorted(feature_total_act.items(),
-                                      key=lambda x: x[1], reverse=True)[:10]}
-        legend_elems = [
-            plt.Line2D([0], [0], marker="o", color="w",
-                       markerfacecolor=feature_color_map[f], markersize=8,
-                       markeredgecolor="black", markeredgewidth=0.5,
-                       linewidth=2, label=f"Feature {f}")
-            for f in all_feature_indices if f in top10
-        ]
-        legend_elems.append(plt.Line2D([0], [0], color="black", linestyle="--",
-                                       linewidth=2, label="Maximal Entropy (log₂(n))"))
-        if legend_elems:
-            ax.legend(handles=legend_elems, fontsize=9, loc="best", ncol=2)
+    legend_elems = [
+        plt.Line2D([0], [0], marker="o", color="w",
+                   markerfacecolor=feature_color_map[f], markersize=8,
+                   markeredgecolor="black", markeredgewidth=0.5,
+                   linewidth=2, label=f"Feature {f}")
+        for f in top_features
+    ]
+    legend_elems.append(plt.Line2D([0], [0], color="black", linestyle="--",
+                                   linewidth=2, label="Maximal Entropy (log₂(n))"))
+    if legend_elems:
+        ax.legend(handles=legend_elems, fontsize=9, loc="best", ncol=2)
 
-    plt.tight_layout()
+    # Token panel: pre-wrapped lines (computed above) + a separate
+    # bold red "query →" line for the last token.
+    if ax_tok is not None and prompt_token_strs:
+        ax_tok.axis("off")
+        n_tok = len(prompt_token_strs)
+        last = _show(prompt_token_strs[-1]) if prompt_token_strs else ""
+        # Header (bold), then wrapped token block (monospace), then query
+        # token highlight on its own line at the bottom.
+        ax_tok.text(
+            0.0, 1.0,
+            f"Prompt window — {n_tok} tokens "
+            f"(oldest left → query right; · = leading space, ↵ = newline)",
+            ha="left", va="top", fontsize=10, fontweight="bold",
+            transform=ax_tok.transAxes,
+        )
+        # Place the wrapped tokens just under the header; matplotlib handles
+        # line spacing inside a multi-line string.
+        ax_tok.text(
+            0.0, 0.90, "\n".join(wrapped_lines),
+            ha="left", va="top", fontsize=8, family="monospace",
+            linespacing=1.4, transform=ax_tok.transAxes,
+        )
+        ax_tok.text(
+            0.0, -0.02, f"query → │{last}│",
+            ha="left", va="top", fontsize=9, family="monospace",
+            fontweight="bold", color="#b22222",
+            transform=ax_tok.transAxes,
+        )
+
+    if ax_tok is None:
+        plt.tight_layout()
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "entropy_vs_context_len.png"
     plt.savefig(output_path, dpi=150, bbox_inches="tight")
@@ -193,23 +289,42 @@ def main(preset_name="pythia-70m", layer_idx=3, max_context_len=None,
     print(f"[INFO] SAE: arch={sae.arch} n_latent={sae.n_latent}")
     all_features = set(range(sae.n_latent))
 
+    # Sample in CHARACTER space, not token space, so the same --random-seed
+    # gives the same source-text window across models with different
+    # tokenizers. Each preset tokenizes the shared window with its own
+    # tokenizer and we take the LAST max_context_len tokens.
     text = load_wikitext_train_text()
-    tokens = tokenizer(text, return_tensors="pt")["input_ids"][0]
-    total_tokens = tokens.shape[0]
-    print(f"[INFO] Total tokens: {total_tokens}")
-
-    max_start = total_tokens - max_context_len
-    if max_start <= 0:
-        print(f"[ERROR] Not enough tokens for context length {max_context_len}")
+    total_chars = len(text)
+    # Generous upper bound on chars-per-token for English text. WikiText with
+    # BPE / SentencePiece typically yields ~3-5 chars/token; 12x is
+    # comfortably safe across all six presets.
+    char_budget = max_context_len * 12
+    if total_chars < char_budget:
+        print(f"[ERROR] Corpus has {total_chars} chars; need {char_budget}")
         return
 
     if random_seed is not None:
         random.seed(random_seed); np.random.seed(random_seed)
         print(f"[INFO] Random seed: {random_seed}")
 
-    start_idx = random.randint(0, max_start)
-    large_batch = tokens[start_idx: start_idx + max_context_len].to(DEVICE)
-    print(f"[INFO] Large batch: start_idx={start_idx} size={max_context_len}")
+    char_start = random.randint(0, total_chars - char_budget)
+    source_text = text[char_start: char_start + char_budget]
+    print(f"[INFO] Char window: [{char_start}, {char_start + char_budget})  "
+          f"({char_budget} chars)")
+
+    tokens = tokenizer(source_text, return_tensors="pt")["input_ids"][0]
+    n_tokens = tokens.shape[0]
+    if n_tokens < max_context_len:
+        print(f"[ERROR] Tokenizer produced {n_tokens} tokens from {char_budget} "
+              f"chars; need >= {max_context_len}. Increase char_budget multiplier.")
+        return
+    large_batch = tokens[-max_context_len:].to(DEVICE)
+    # Capture the actual prompt-window tokens (IDs + decoded strings) for
+    # later persistence and for the figure's token panel.
+    prompt_token_ids = large_batch.cpu().tolist()
+    prompt_token_strs = tokenizer.convert_ids_to_tokens(prompt_token_ids)
+    print(f"[INFO] Tokenized {n_tokens} tokens; using last {max_context_len}")
+    print(f"[INFO] Query token: {prompt_token_strs[-1]!r}")
 
     sub_context_lens = list(range(min_context_len, max_context_len + 1, step))
     if max_context_len not in sub_context_lens:
@@ -242,7 +357,10 @@ def main(preset_name="pythia-70m", layer_idx=3, max_context_len=None,
         print("[ERROR] No sub-context lengths processed."); return
 
     plots_dir = out_root / f"entropy_vs_context_len_{site}_{timestamp}"
-    plot_path = plot_entropy_vs_context_len(results_by_context_len, site, plots_dir)
+    plot_path = plot_entropy_vs_context_len(
+        results_by_context_len, site, plots_dir,
+        prompt_token_strs=prompt_token_strs,
+    )
     print(f"[INFO] Plot: {plot_path}")
 
     # Serialize
@@ -267,7 +385,10 @@ def main(preset_name="pythia-70m", layer_idx=3, max_context_len=None,
             "timestamp": timestamp,
             "max_context_len": max_context_len, "min_context_len": min_context_len,
             "step": step, "sub_context_lens": sub_context_lens,
-            "start_idx": start_idx,
+            "char_start": char_start, "char_budget": char_budget,
+            "n_tokens_total": n_tokens,
+            "prompt_token_ids": prompt_token_ids,
+            "prompt_token_strs": prompt_token_strs,
         },
         "config": {
             "preset": preset.name, "threshold": threshold,
