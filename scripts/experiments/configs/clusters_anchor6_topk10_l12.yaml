@@ -1,0 +1,249 @@
+preset: gemma-2-2b
+layer: 12
+sae_id: 12-gemmascope-res-16k
+features:
+- feature_id: 35
+  tier: concept
+  description: '[neighbour of anchor 6900] statements expressing opinions or thoughts
+    related to experiences and observations'
+- feature_id: 125
+  tier: concept
+  description: '[neighbour of anchor 4248] descriptors related to quality and precision'
+- feature_id: 161
+  tier: concept
+  description: '[neighbour of anchor 6240] phrases related to the concept of time
+    and its various expressions'
+- feature_id: 411
+  tier: concept
+  description: '[neighbour of anchor 4248] references to the concept of "best" or
+    "optimal" in various contexts'
+- feature_id: 447
+  tier: concept
+  description: '[neighbour of anchor 13603] expressions of personal emotions and concerns'
+- feature_id: 608
+  tier: concept
+  description: '[anchor of anchor 608] references to individuals named Robert'
+- feature_id: 796
+  tier: concept
+  description: '[neighbour of anchor 13603] phrases related to medical procedures
+    and their effectiveness'
+- feature_id: 851
+  tier: concept
+  description: '[neighbour of anchor 608] references to quantum concepts and terminology'
+- feature_id: 925
+  tier: concept
+  description: '[neighbour of anchor 6240] mentions of time intervals, particularly
+    those indicating the past'
+- feature_id: 1290
+  tier: concept
+  description: '[neighbour of anchor 13603] terms related to medical and healthcare
+    treatments'
+- feature_id: 1587
+  tier: concept
+  description: '[neighbour of anchor 6240] descriptor adjectives that convey a sense
+    of intensity or magnitude'
+- feature_id: 1608
+  tier: concept
+  description: '[neighbour of anchor 13603] phrases related to affirmation, recommendations,
+    and positive evaluations'
+- feature_id: 1611
+  tier: concept
+  description: '[neighbour of anchor 13603] emotional expressions and reactions related
+    to disappointment and frustration'
+- feature_id: 1637
+  tier: concept
+  description: '[neighbour of anchor 608] references to music and its various forms
+    or contexts'
+- feature_id: 1678
+  tier: concept
+  description: '[neighbour of anchor 6900] elements related to innovation and entrepreneurship'
+- feature_id: 2054
+  tier: concept
+  description: '[neighbour of anchor 4248] positive affirmations and expressions of
+    approval'
+- feature_id: 2213
+  tier: concept
+  description: '[neighbour of anchor 13603] phrases indicating events or developments
+    related to significant changes or actions in a context'
+- feature_id: 2829
+  tier: concept
+  description: '[neighbour of anchor 4248] contexts where improvement, enhancement,
+    or optimization is being discussed'
+- feature_id: 3425
+  tier: concept
+  description: '[neighbour of anchor 13603] events involving medical emergencies or
+    significant physical distress'
+- feature_id: 4228
+  tier: concept
+  description: '[neighbour of anchor 10360] technical terms and concepts related to
+    scientific studies and research findings'
+- feature_id: 4248
+  tier: concept
+  description: '[anchor of anchor 4248] phrases that signify quality, reliability,
+    or suitability'
+- feature_id: 4270
+  tier: concept
+  description: '[neighbour of anchor 6240] terms related to time duration or intervals'
+- feature_id: 4931
+  tier: concept
+  description: '[neighbour of anchor 4248] instances of the word "far" and its variations,
+    indicating distance'
+- feature_id: 5113
+  tier: concept
+  description: '[neighbour of anchor 6900] references to molecular and biochemical
+    components and processes'
+- feature_id: 5430
+  tier: concept
+  description: '[neighbour of anchor 608] mentions of the name "Robert."'
+- feature_id: 6240
+  tier: concept
+  description: '[anchor of anchor 6240] temporal references indicating events relative
+    to each other'
+- feature_id: 6389
+  tier: concept
+  description: '[neighbour of anchor 6240] references to distance and location'
+- feature_id: 6857
+  tier: concept
+  description: '[neighbour of anchor 13603] the concept of "none" or the absence of
+    something'
+- feature_id: 6900
+  tier: concept
+  description: '[anchor of anchor 6900] mentions of competition and achievements'
+- feature_id: 7763
+  tier: concept
+  description: '[neighbour of anchor 608] instances of the word "beat" in various
+    contexts'
+- feature_id: 8925
+  tier: concept
+  description: '[neighbour of anchor 10360] demonstrative pronouns and phrases indicating
+    reference'
+- feature_id: 8928
+  tier: concept
+  description: '[neighbour of anchor 10360] phrases expressing personal feelings and
+    experiences'
+- feature_id: 8958
+  tier: concept
+  description: '[neighbour of anchor 6900] occurrences of vehicle-related crashes
+    and their contexts'
+- feature_id: 9105
+  tier: concept
+  description: '[neighbour of anchor 4248] references to extended periods of time
+    or duration'
+- feature_id: 9107
+  tier: concept
+  description: '[neighbour of anchor 10360] the verb "is" in various contexts'
+- feature_id: 9171
+  tier: concept
+  description: '[neighbour of anchor 6900] references to serum levels and indicators
+    of medical conditions'
+- feature_id: 9228
+  tier: concept
+  description: '[neighbour of anchor 4248] dialogue or conversational expressions
+    indicating agreement or response'
+- feature_id: 9363
+  tier: concept
+  description: '[neighbour of anchor 10360] words that refer to or describe individuals,
+    particularly in the context of actions and relationships'
+- feature_id: 9513
+  tier: concept
+  description: '[neighbour of anchor 6900] actions and roles related to individuals
+    in a professional or organizational context'
+- feature_id: 9543
+  tier: concept
+  description: '[neighbour of anchor 6900] keywords related to configuration and competitive
+    events'
+- feature_id: 9688
+  tier: concept
+  description: '[neighbour of anchor 10360] statements that express opinions or subjective
+    views'
+- feature_id: 9727
+  tier: concept
+  description: '[neighbour of anchor 608] variables related to viscosity and molecular
+    properties in a scientific context'
+- feature_id: 10360
+  tier: concept
+  description: '[anchor of anchor 10360] clauses that introduce relative clauses or
+    provide additional information'
+- feature_id: 10380
+  tier: concept
+  description: '[neighbour of anchor 4248] descriptors indicating high quality or
+    status'
+- feature_id: 10409
+  tier: concept
+  description: '[neighbour of anchor 4248] phrases emphasizing the extent or quantity
+    of something'
+- feature_id: 11410
+  tier: concept
+  description: '[neighbour of anchor 608] instances of the word "once"'
+- feature_id: 11437
+  tier: concept
+  description: '[neighbour of anchor 10360] the word ''which'' in varying contexts'
+- feature_id: 11741
+  tier: concept
+  description: '[neighbour of anchor 13603] inclusive language and sentiments inviting
+    participation or collective experience'
+- feature_id: 11809
+  tier: concept
+  description: '[neighbour of anchor 6900] names of educational institutions and their
+    locations'
+- feature_id: 11813
+  tier: concept
+  description: '[neighbour of anchor 6900] structured data representations and definitions'
+- feature_id: 11887
+  tier: concept
+  description: '[neighbour of anchor 4248] intensifiers or words expressing high degree
+    or emphasis'
+- feature_id: 12599
+  tier: concept
+  description: '[neighbour of anchor 608] instances of cheese in the text'
+- feature_id: 12904
+  tier: concept
+  description: '[neighbour of anchor 6240] month and date mentions in a text'
+- feature_id: 13017
+  tier: concept
+  description: '[neighbour of anchor 608] food items and their related ingredients,
+    particularly those involving nuts and plant-based products'
+- feature_id: 13603
+  tier: concept
+  description: '[anchor of anchor 13603] conditional language and uncertainty expressions'
+- feature_id: 13637
+  tier: concept
+  description: '[neighbour of anchor 13603] specific keywords or indicators related
+    to biological processes or conditions'
+- feature_id: 13694
+  tier: concept
+  description: '[neighbour of anchor 6900] phrases related to business operations
+    and providing services'
+- feature_id: 13965
+  tier: concept
+  description: '[neighbour of anchor 10360] possessive forms and statements of ownership
+    or existence'
+- feature_id: 14078
+  tier: concept
+  description: '[neighbour of anchor 10360] references to specific claims or statements
+    about the nature of things'
+- feature_id: 14927
+  tier: concept
+  description: '[neighbour of anchor 6240] key numerical values and their significance
+    within a context'
+- feature_id: 15176
+  tier: concept
+  description: '[neighbour of anchor 608] terms and phrases related to smoking and
+    its impact on health'
+- feature_id: 15180
+  tier: concept
+  description: '[neighbour of anchor 608] references to sorting and related terms'
+- feature_id: 15504
+  tier: concept
+  description: '[neighbour of anchor 6240] verbs that indicate development or progress
+    in various contexts'
+- feature_id: 15820
+  tier: concept
+  description: '[neighbour of anchor 6240] prepositions and their associated phrases'
+- feature_id: 16245
+  tier: concept
+  description: '[neighbour of anchor 6240] phrases indicating location or positioning'
+- feature_id: 16303
+  tier: concept
+  description: '[neighbour of anchor 10360] sentences containing special punctuation
+    marks or expressions'
