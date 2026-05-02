@@ -97,7 +97,7 @@ def compute_entropy_for_sub_batch(
 
 def plot_entropy_vs_context_len(results_by_context_len, site, output_dir,
                                  top_n=10, prompt_token_strs=None,
-                                 grey_cap=200):
+                                 grey_cap=200, tokens_to_show=64):
     """Plot per-feature entropy curves.
 
     Top-N features (by ∑ last-position activation across context lengths)
@@ -136,11 +136,13 @@ def plot_entropy_vs_context_len(results_by_context_len, site, output_dir,
         # Pre-wrap the token string into lines so we can size the figure
         # height to accommodate them. Tokens are rendered with │ boundary
         # markers (one cell = "│tok"); we greedy-pack cells onto a line
-        # until a target character width is reached.
+        # until a target character width is reached. Only the last
+        # `tokens_to_show` tokens (ending at the query) are displayed.
         def _show(s):
             return s.replace("Ġ", "·").replace("▁", "·").replace("\n", "↵")
         TARGET_LINE_CHARS = 110
-        cells = [f"│{_show(t)}" for t in prompt_token_strs] + ["│"]
+        display_tokens = prompt_token_strs[-tokens_to_show:]
+        cells = [f"│{_show(t)}" for t in display_tokens] + ["│"]
         wrapped_lines = []
         cur = ""
         for cell in cells:
@@ -231,26 +233,27 @@ def plot_entropy_vs_context_len(results_by_context_len, site, output_dir,
     if ax_tok is not None and prompt_token_strs:
         ax_tok.axis("off")
         n_tok = len(prompt_token_strs)
+        n_shown = len(display_tokens)
         last = _show(prompt_token_strs[-1]) if prompt_token_strs else ""
         # Header (bold), then wrapped token block (monospace), then query
         # token highlight on its own line at the bottom.
         ax_tok.text(
             0.0, 1.0,
-            f"Prompt window — {n_tok} tokens "
+            f"Prompt window — last {n_shown} of {n_tok} tokens "
             f"(oldest left → query right; · = leading space, ↵ = newline)",
-            ha="left", va="top", fontsize=10, fontweight="bold",
+            ha="left", va="top", fontsize=9, fontweight="bold",
             transform=ax_tok.transAxes,
         )
         # Place the wrapped tokens just under the header; matplotlib handles
         # line spacing inside a multi-line string.
         ax_tok.text(
             0.0, 0.90, "\n".join(wrapped_lines),
-            ha="left", va="top", fontsize=8, family="monospace",
+            ha="left", va="top", fontsize=6, family="monospace",
             linespacing=1.4, transform=ax_tok.transAxes,
         )
         ax_tok.text(
             0.0, -0.02, f"query → │{last}│",
-            ha="left", va="top", fontsize=9, family="monospace",
+            ha="left", va="top", fontsize=7, family="monospace",
             fontweight="bold", color="#b22222",
             transform=ax_tok.transAxes,
         )
