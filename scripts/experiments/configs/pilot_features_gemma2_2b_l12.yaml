@@ -1,0 +1,44 @@
+# Cherry-picked feature pilot — Gemma-2-2B residual-stream layer 12,
+# Gemma Scope 16k-width SAE.
+#
+# 20 features, 5 per tier, hand-picked from
+# data/gemma-2-2b/candidate_features_l12.md.
+# Tier criterion (after the L18/L22 layer comparison):
+#   token    — all 3 top peaks are the same word / morphological family
+#   phrase   — same multi-token construction; peaks at consistent slot
+#   concept  — different surface tokens, one semantic class of *things*
+#   abstract — different surface tokens, one *function* (discourse,
+#              attitude, grammatical role)
+
+preset: gemma-2-2b
+layer: 12
+sae_id: 12-gemmascope-res-16k
+
+features:
+  # ----- token tier -----
+  - {feature_id:  2735, tier: token,    description: "legal profession (lawyer/law)"}
+  - {feature_id:  4267, tier: token,    description: "positive admiration adjective (amazing)  [recall=1.00]"}
+  - {feature_id: 11372, tier: token,    description: "country / adjective Iran(ian)"}
+  - {feature_id: 10312, tier: token,    description: "beauty / beautiful / Beauty (lexical family)"}
+  - {feature_id:  5306, tier: token,    description: "summary / summarize (text-overview verbs)"}
+
+  # ----- phrase tier -----
+  - {feature_id:  2000, tier: phrase,   description: "conjunctive contrast: however / though  [recall=0.88]"}
+  - {feature_id:  4795, tier: phrase,   description: "superlative excellence: most / best / great"}
+  - {feature_id: 12022, tier: phrase,   description: "citation/retrieval phrase: Retrieved / accessed"}
+  - {feature_id:  9203, tier: phrase,   description: "similarity comparison: 'similar to those'"}
+  - {feature_id:  9425, tier: phrase,   description: "scientific finding: tested positive / were isolated"}
+
+  # ----- concept tier -----
+  - {feature_id:  2040, tier: concept,  description: "dialogue attribution after a quoted name (added/said)"}
+  - {feature_id: 15922, tier: concept,  description: "prominence-marking adjective (leading/foremost)"}
+  - {feature_id: 10627, tier: concept,  description: "subtle-communication verb (hints/whispered)"}
+  - {feature_id: 11826, tier: concept,  description: "spatial-position noun (bottom/base) after 'at the'"}
+  - {feature_id: 13166, tier: concept,  description: "entertainment-franchise / celebrity proper noun (Fancy / Torchwood)"}
+
+  # ----- abstract tier -----
+  - {feature_id: 13603, tier: abstract, description: "epistemic uncertainty marker (maybe/'ll/hoping)"}
+  - {feature_id: 16173, tier: abstract, description: "first-person emotional state (interested/pissed/stoked)"}
+  - {feature_id:  6532, tier: abstract, description: "organisational-structure noun (program/system/group)"}
+  - {feature_id: 10360, tier: abstract, description: "relative-clause connector (which / 'Which is why')"}
+  - {feature_id: 12735, tier: abstract, description: "progression / onset of a state (increasing/getting/toll)"}

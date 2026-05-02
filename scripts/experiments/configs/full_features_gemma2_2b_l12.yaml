@@ -1,0 +1,313 @@
+# Auto-generated from candidates markdown by scripts/utils/candidates_md_to_yaml.py.
+# Tier classifications come from the heuristic in scripts/utils/neuronpedia_browse.py.
+
+preset: gemma-2-2b
+layer: 12
+sae_id: 12-gemmascope-res-16k
+
+features:
+  # ----- token tier (169) -----
+  - {feature_id:  2424, tier: token   , description: "phrases indicating disagreement or contestation"}
+  - {feature_id:  8524, tier: token   , description: "specific formatting and mathematical notation elements in textual data"}
+  - {feature_id:  7963, tier: token   , description: "references to diseases and medical conditions, particularly in the context of research"}
+  - {feature_id:  6700, tier: token   , description: "symbols and mathematical expressions within scientific or technical content"}
+  - {feature_id:  5027, tier: token   , description: "information related to networking and communications protocols"}
+  - {feature_id:  6489, tier: token   , description: "concepts related to neurodevelopment and mechanisms in scientific discussions"}
+  - {feature_id:  4669, tier: token   , description: "references and citations in scientific documents"}
+  - {feature_id: 16203, tier: token   , description: "references to legal terminology and procedural elements"}
+  - {feature_id: 15614, tier: token   , description: "geographical locations and place names"}
+  - {feature_id:  2358, tier: token   , description: "references to clinical trials and studies"}
+  - {feature_id:  6025, tier: token   , description: "document citations and references to academic sources"}
+  - {feature_id: 10916, tier: token   , description: "terms related to antenna arrays and their operational characteristics in communication"}
+  - {feature_id: 13068, tier: token   , description: "connections between medical conditions, physiological processes, and their impacts on h"}
+  - {feature_id: 12819, tier: token   , description: "phrases indicating a relationship or connection"}
+  - {feature_id:   708, tier: token   , description: "symbols and markup related to code structure and syntax"}
+  - {feature_id:  3296, tier: token   , description: "mentions of locations and jurisdictions, particularly related to Colorado"}
+  - {feature_id:  9487, tier: token   , description: "lines of code and programming-related syntax"}
+  - {feature_id:  2735, tier: token   , description: "legal terms and references to the legal profession"}
+  - {feature_id:   746, tier: token   , description: "terms related to material economy and production processes"}
+  - {feature_id: 14626, tier: token   , description: "discussions related to communication processes and methods"}
+  - {feature_id:  7224, tier: token   , description: "phrases or concepts related to companies, firms, or organizations and their activities"}
+  - {feature_id:  5306, tier: token   , description: "summary statements and references to information"}
+  - {feature_id:  3299, tier: token   , description: "technical terms and acronyms related to research and data analysis"}
+  - {feature_id: 11372, tier: token   , description: "references to Iran and associated political dynamics"}
+  - {feature_id: 11710, tier: token   , description: "sports-related actions and outcomes"}
+  - {feature_id: 14764, tier: token   , description: "references to numerical values and measurements"}
+  - {feature_id:   482, tier: token   , description: "programming related to data structures and manipulation"}
+  - {feature_id: 11007, tier: token   , description: "terms related to statistical distributions and their implementations"}
+  - {feature_id:  7992, tier: token   , description: "key terms related to data and analytics in various contexts"}
+  - {feature_id:  2037, tier: token   , description: "phrases related to timeframes and events in a narrative context"}
+  - {feature_id: 13431, tier: token   , description: "references to slavery and its historical context"}
+  - {feature_id: 13680, tier: token   , description: "references to a specific numerical value or mathematical concept"}
+  - {feature_id:  1376, tier: token   , description: "proper nouns, particularly names of individuals and places"}
+  - {feature_id: 13268, tier: token   , description: "phrases related to genetic sequencing and encryption"}
+  - {feature_id:  5167, tier: token   , description: "expressions related to testing and assertions in code"}
+  - {feature_id: 15584, tier: token   , description: "terms related to academic or professional processes and documentation"}
+  - {feature_id: 10764, tier: token   , description: "mathematical symbols and notations related to set theory and sequences"}
+  - {feature_id:  4900, tier: token   , description: "patterns of numbers and alphanumeric sequences"}
+  - {feature_id:  9877, tier: token   , description: "expressions of speculation, hypothesis, or conjecture"}
+  - {feature_id:  9001, tier: token   , description: "elements and properties related to color specifications in code"}
+  - {feature_id: 15306, tier: token   , description: "terms related to statistical analysis and significance"}
+  - {feature_id: 15966, tier: token   , description: "references to statistical data and results, particularly related to survival statistics"}
+  - {feature_id:  7818, tier: token   , description: "references to specific individuals, particularly focusing on names and their roles or t"}
+  - {feature_id: 14581, tier: token   , description: "references to images, examples, or attached documents within texts"}
+  - {feature_id:  3779, tier: token   , description: "information related to electric charge and atomic structure"}
+  - {feature_id: 10979, tier: token   , description: "actions related to deleting or removing items, particularly in programming or database"}
+  - {feature_id:  1326, tier: token   , description: "the beginning of new documents or sections"}
+  - {feature_id:  8508, tier: token   , description: "criteria related to medical study inclusion and exclusion based on patient conditions a"}
+  - {feature_id:  4073, tier: token   , description: "expressions of certainty or affirmation"}
+  - {feature_id: 14593, tier: token   , description: "references to existing entities or systems"}
+  - {feature_id:  6900, tier: token   , description: "mentions of competition and achievements"}
+  - {feature_id:  3802, tier: token   , description: "mathematical expressions and equations"}
+  - {feature_id: 11083, tier: token   , description: "phrases related to financial evaluations and comparisons"}
+  - {feature_id: 14493, tier: token   , description: "variations and characteristics of materials and their applications"}
+  - {feature_id:  4077, tier: token   , description: "conjunctions and logical operators in the text"}
+  - {feature_id: 12623, tier: token   , description: "mathematical or technical terms related to equations and functions"}
+  - {feature_id: 11045, tier: token   , description: "phrases that express percentages and ratios in various contexts"}
+  - {feature_id:  3306, tier: token   , description: "references to leadership and management in various contexts"}
+  - {feature_id:  9174, tier: token   , description: "locations related to schools and educational buildings"}
+  - {feature_id: 12128, tier: token   , description: "names of individuals and organizations involved in financial or legal contexts"}
+  - {feature_id: 11216, tier: token   , description: "programming constructs and structures related to method definitions and argument lists"}
+  - {feature_id:   608, tier: token   , description: "references to individuals named Robert"}
+  - {feature_id: 16309, tier: token   , description: "XML-related syntax elements and attributes"}
+  - {feature_id: 11770, tier: token   , description: "code-related elements focusing on cases and conditions within programming logic"}
+  - {feature_id:  4089, tier: token   , description: "nested parentheses and structural elements in code"}
+  - {feature_id:  7933, tier: token   , description: "phrases related to electrical or technical specifications and measurements"}
+  - {feature_id:  4896, tier: token   , description: "terms related to positions and roles in football, particularly wide receivers and tight"}
+  - {feature_id:  6301, tier: token   , description: "numeric values and their representations"}
+  - {feature_id: 12407, tier: token   , description: "statements revealing surprising outcomes or realizations"}
+  - {feature_id:  6061, tier: token   , description: "patterns of curly braces or brackets"}
+  - {feature_id: 10680, tier: token   , description: "conditional statements and questions about verification or assumptions"}
+  - {feature_id: 12936, tier: token   , description: "instructions related to a task or process"}
+  - {feature_id:  4336, tier: token   , description: "references to villages or communities"}
+  - {feature_id:  9938, tier: token   , description: "variables and functions related to mathematical operations and libraries"}
+  - {feature_id: 11541, tier: token   , description: "coding elements related to data parsing and storage operations"}
+  - {feature_id:  8535, tier: token   , description: "references to significant historical buildings and their characteristics"}
+  - {feature_id: 15698, tier: token   , description: "expressions of anticipation and longing"}
+  - {feature_id:   432, tier: token   , description: "references to clinical research and studies involving specific compounds or medical eva"}
+  - {feature_id:   407, tier: token   , description: "notes and important annotations in the text"}
+  - {feature_id:  1275, tier: token   , description: "biographical details about individuals"}
+  - {feature_id:  3107, tier: token   , description: "elements related to data types and database structure"}
+  - {feature_id:  4267, tier: token   , description: "positive adjectives and expressions of admiration"}
+  - {feature_id:  5586, tier: token   , description: "terms related to video game mechanics and player interactions"}
+  - {feature_id:  7264, tier: token   , description: "phrases related to choice and decision-making"}
+  - {feature_id:  2665, tier: token   , description: "occurrences of the word \"in\" in various contexts"}
+  - {feature_id: 11059, tier: token   , description: "financial advice related to debt management"}
+  - {feature_id:  3002, tier: token   , description: "phrases related to decision-making and choices"}
+  - {feature_id: 11732, tier: token   , description: "references to figures or illustrations in the text"}
+  - {feature_id:  1497, tier: token   , description: "trademarks and registered symbols associated with products"}
+  - {feature_id:  9865, tier: token   , description: "instances of the word \"with\" in various contexts"}
+  - {feature_id: 15029, tier: token   , description: "concepts related to cosmetic procedures and their effects, particularly focusing on agi"}
+  - {feature_id:  7051, tier: token   , description: "terms and concepts associated with programming, particularly relating to compilation an"}
+  - {feature_id: 15408, tier: token   , description: "references to specific types of fruits and vegetables, particularly those not commonly"}
+  - {feature_id: 10388, tier: token   , description: "references or citations related to scientific theories or frameworks"}
+  - {feature_id:   715, tier: token   , description: "URLs and references to YouTube videos"}
+  - {feature_id:  9536, tier: token   , description: "references to discussions or actions regarding laws or regulations"}
+  - {feature_id:  6504, tier: token   , description: "phrases and contexts related to time and temporal references"}
+  - {feature_id: 12204, tier: token   , description: "special characters or symbols in text"}
+  - {feature_id:  2591, tier: token   , description: "phrases related to design and aesthetics in objects, especially cars and watches"}
+  - {feature_id:  5369, tier: token   , description: "the verb \"go\" in various contexts"}
+  - {feature_id:  7236, tier: token   , description: "names of individuals and their associated roles or titles"}
+  - {feature_id: 12714, tier: token   , description: "profanity and vulgar expressions"}
+  - {feature_id: 10903, tier: token   , description: "instances of the word \"found\" and its variations, indicating discovery or realization"}
+  - {feature_id: 10205, tier: token   , description: "phrases related to organizational missions and core values"}
+  - {feature_id:  9614, tier: token   , description: "terms related to crafting"}
+  - {feature_id:  2988, tier: token   , description: "verbs and phrases related to following or tracking"}
+  - {feature_id:  6240, tier: token   , description: "temporal references indicating events relative to each other"}
+  - {feature_id: 14226, tier: token   , description: "syntax related to server configuration in code, especially regarding environmental vari"}
+  - {feature_id:  2645, tier: token   , description: "text related to the process and guidelines for composing documents or articles"}
+  - {feature_id:  5551, tier: token   , description: "references to effects and their measurement"}
+  - {feature_id: 14679, tier: token   , description: "references to academic journals"}
+  - {feature_id: 16143, tier: token   , description: "references to manual processes or controls"}
+  - {feature_id:  2416, tier: token   , description: "references to lines or formatting instructions in a document"}
+  - {feature_id:  2943, tier: token   , description: "references to factors or elements that influence various outcomes or behaviors"}
+  - {feature_id:  9909, tier: token   , description: "the word \"to\""}
+  - {feature_id:  4579, tier: token   , description: "references to divine concepts or introductory phrases in text"}
+  - {feature_id: 10986, tier: token   , description: "sequences or patterns in numerical or alphanumeric values"}
+  - {feature_id: 13704, tier: token   , description: "the word \"there\""}
+  - {feature_id:  3764, tier: token   , description: "references to database repositories and their operations in programming contexts"}
+  - {feature_id:  4563, tier: token   , description: "actions related to placing or positioning objects"}
+  - {feature_id:  1332, tier: token   , description: "database-related terms and definitions, particularly for field attributes and data types"}
+  - {feature_id:  1266, tier: token   , description: "technical specifications related to automotive performance"}
+  - {feature_id:  7168, tier: token   , description: "variable declarations in programming, specifically identifying keywords used for defini"}
+  - {feature_id:     2, tier: token   , description: "terms related to health and healthy living"}
+  - {feature_id:   291, tier: token   , description: "code related to web server routing, particularly in Express.js and related frameworks"}
+  - {feature_id: 15006, tier: token   , description: "references or citations in a bibliography format"}
+  - {feature_id:  4248, tier: token   , description: "phrases that signify quality, reliability, or suitability"}
+  - {feature_id:  3840, tier: token   , description: "commands and functions related to file and directory operations in programming"}
+  - {feature_id:  2699, tier: token   , description: "financial performance metrics and forecasts"}
+  - {feature_id:  6658, tier: token   , description: "references to involvement or participation in various contexts"}
+  - {feature_id:  7716, tier: token   , description: "references to sports venues and events"}
+  - {feature_id:  4418, tier: token   , description: "references to fishing activities and experiences"}
+  - {feature_id: 10088, tier: token   , description: "terms related to routers and networking devices"}
+  - {feature_id:  3922, tier: token   , description: "HTML tags and structure"}
+  - {feature_id: 15665, tier: token   , description: "terms related to operations and their management"}
+  - {feature_id:  6160, tier: token   , description: "sections of text with no notable content or activations"}
+  - {feature_id: 13181, tier: token   , description: "phrases that refer to taking or maintaining control or responsibility"}
+  - {feature_id:  8208, tier: token   , description: "references to dates and locations"}
+  - {feature_id:  5971, tier: token   , description: "components related to data validation and integrity checks in code"}
+  - {feature_id:  2322, tier: token   , description: "references to people and their actions or characteristics"}
+  - {feature_id: 15454, tier: token   , description: "content related to governance, policy, and ethical considerations in research and techn"}
+  - {feature_id:  7310, tier: token   , description: "closures and exception handling structures in programming code"}
+  - {feature_id:  3560, tier: token   , description: "URLs, particularly those related to Microsoft documentation and resources"}
+  - {feature_id:  9018, tier: token   , description: "references to HTTP and related protocols"}
+  - {feature_id: 12191, tier: token   , description: "terms related to financial contributions and support"}
+  - {feature_id: 15532, tier: token   , description: "mentions of interviews and related contexts"}
+  - {feature_id:  6665, tier: token   , description: "the recurring presence of the word \"et,\" indicating a focus on citations or references"}
+  - {feature_id: 10312, tier: token   , description: "concepts and descriptions related to beauty"}
+  - {feature_id: 11749, tier: token   , description: "concepts related to the mind and mental processes"}
+  - {feature_id: 11478, tier: token   , description: "terms related to mobile devices and their functionalities"}
+  - {feature_id:  5728, tier: token   , description: "setters and getters in code"}
+  - {feature_id:  5060, tier: token   , description: "programming-related constructs involving dates and data sources"}
+  - {feature_id: 15630, tier: token   , description: "references to specific time markers or temporal events"}
+  - {feature_id: 16206, tier: token   , description: "mathematical or technical notation related to equations"}
+  - {feature_id: 10819, tier: token   , description: "terms related to status updates or conditions in a programming context"}
+  - {feature_id: 11260, tier: token   , description: "references to JavaScript and its libraries, particularly related to AJAX and zip functions"}
+  - {feature_id:  5184, tier: token   , description: "patterns in communication frequency and methods"}
+  - {feature_id: 13579, tier: token   , description: "parentheses in code or program structures"}
+  - {feature_id:  1482, tier: token   , description: "declarations of access modifiers in programming code"}
+  - {feature_id:  2063, tier: token   , description: "HTML opening and closing tags, indicating its focus on markup elements"}
+  - {feature_id:  5908, tier: token   , description: "concepts and terminology related to data serialization and programming structures"}
+  - {feature_id:  8494, tier: token   , description: "code related to HTTP responses and error handling"}
+  - {feature_id:  2093, tier: token   , description: "references to children and hierarchical structures in code or data"}
+  - {feature_id: 15471, tier: token   , description: "lines associated with import statements in code"}
+  - {feature_id:  2001, tier: token   , description: "keywords related to variable access modifiers and their attributes in programming"}
+  - {feature_id:  3204, tier: token   , description: "function definitions and initialization methods in code"}
+  - {feature_id:  9235, tier: token   , description: "the beginning of a new section or block of text"}
+  - {feature_id:  3325, tier: token   , description: "copyright-related terms and conditions"}
+  - {feature_id:  6741, tier: token   , description: "symbols or specific formatting elements in the text"}
+
+  # ----- phrase tier (25) -----
+  - {feature_id:  9917, tier: phrase  , description: "phrases related to legal ownership and liability"}
+  - {feature_id: 15767, tier: phrase  , description: "language and phrases related to explanations and justifications, particularly in formal"}
+  - {feature_id:  3771, tier: phrase  , description: "technical terms and phrases related to engineering and scientific processes"}
+  - {feature_id:  6996, tier: phrase  , description: "instances of \"of\" and related phrases in various contexts"}
+  - {feature_id: 13211, tier: phrase  , description: "connections and relationships between concepts or elements in various contexts"}
+  - {feature_id:  7157, tier: phrase  , description: "phrases related to feelings of uncertainty and emotional responses"}
+  - {feature_id:  1532, tier: phrase  , description: "words and phrases related to states of being and conditions"}
+  - {feature_id:  9425, tier: phrase  , description: "phrases related to scientific observations and findings"}
+  - {feature_id:    49, tier: phrase  , description: "phrases related to societal or environmental impacts, particularly in the context of le"}
+  - {feature_id:   531, tier: phrase  , description: "phrases indicating changes or modifications"}
+  - {feature_id:    37, tier: phrase  , description: "phrases related to consumer goods and gift-giving"}
+  - {feature_id:  9203, tier: phrase  , description: "comparative phrases indicating similarity or difference between items or concepts"}
+  - {feature_id:  3896, tier: phrase  , description: "phrases indicating personal belief and emotional connection"}
+  - {feature_id:  2000, tier: phrase  , description: "conjunctive phrases and transitional words indicating relationships or contrasts in arg"}
+  - {feature_id: 11593, tier: phrase  , description: "references to social interactions or engagements"}
+  - {feature_id: 12612, tier: phrase  , description: "phrases related to claims and skepticism"}
+  - {feature_id:  7243, tier: phrase  , description: "sequences of underscore characters or specific structured formats"}
+  - {feature_id:  3056, tier: phrase  , description: "dialogue and the presence of characters in conversational contexts"}
+  - {feature_id: 12032, tier: phrase  , description: "visual representations and figures in scientific texts"}
+  - {feature_id:  3793, tier: phrase  , description: "terms related to interventions and comparisons between wild-type and mutant varieties"}
+  - {feature_id:  4795, tier: phrase  , description: "phrases indicating high status or excellence in various contexts"}
+  - {feature_id:  1192, tier: phrase  , description: "key information related to legal documents and processes, particularly in the context o"}
+  - {feature_id:  8892, tier: phrase  , description: "references to numerical data or quantitative information"}
+  - {feature_id: 12022, tier: phrase  , description: "phrases and terms related to access dates and citations"}
+  - {feature_id:  8214, tier: phrase  , description: "references to modification and versioning in software documentation"}
+
+  # ----- concept tier (83) -----
+  - {feature_id: 13946, tier: concept , description: "elements related to mathematical expressions and parameters"}
+  - {feature_id:  8517, tier: concept , description: "numerical patterns or symbols related to lists or sequences"}
+  - {feature_id:  5842, tier: concept , description: "function definitions and keyword-related syntax in programming"}
+  - {feature_id:  5884, tier: concept , description: "terms related to biological assays and experiments"}
+  - {feature_id: 13976, tier: concept , description: "references to health conditions and biological studies related to animals and humans"}
+  - {feature_id:  3070, tier: concept , description: "concepts related to reputation and its effects"}
+  - {feature_id:  2157, tier: concept , description: "statistical terms related to probability density functions"}
+  - {feature_id:  1290, tier: concept , description: "terms related to medical and healthcare treatments"}
+  - {feature_id: 10896, tier: concept , description: "concepts related to collaboration and networks in research studies"}
+  - {feature_id:  6118, tier: concept , description: "structural elements and identifiers in data or documents"}
+  - {feature_id: 12306, tier: concept , description: "terms related to development and creation processes"}
+  - {feature_id:  5100, tier: concept , description: "references to societal norms and opinions"}
+  - {feature_id:  2999, tier: concept , description: "terms related to statistical analysis and data representation"}
+  - {feature_id:  4276, tier: concept , description: "legal terminologies and conditions related to interest awards"}
+  - {feature_id:  1581, tier: concept , description: "specific dates and events related to various topics"}
+  - {feature_id: 10957, tier: concept , description: "indications of gratitude and acknowledgment within the text"}
+  - {feature_id:  2774, tier: concept , description: "technical terms and equations related to scientific calculations and measurements"}
+  - {feature_id: 10925, tier: concept , description: "elements related to anatomical or structural descriptions"}
+  - {feature_id:  2263, tier: concept , description: "terms related to scientific measurements and statistical analysis"}
+  - {feature_id: 15617, tier: concept , description: "terms related to statistical analysis and evaluation methods"}
+  - {feature_id:  1080, tier: concept , description: "terms associated with business and corporate activities"}
+  - {feature_id:    77, tier: concept , description: "specific programming or scripting syntax and keywords"}
+  - {feature_id:  4371, tier: concept , description: "concepts related to ideas, particularly those that are challenging or require considera"}
+  - {feature_id: 10162, tier: concept , description: "scientific terms related to biological classifications and groups"}
+  - {feature_id: 11703, tier: concept , description: "content related to complex relationships and classifications"}
+  - {feature_id:  2636, tier: concept , description: "specific scientific terminology related to biology and statistics"}
+  - {feature_id: 10225, tier: concept , description: "terms related to economic growth and market dynamics"}
+  - {feature_id:  1239, tier: concept , description: "scientific processes and methodologies related to research"}
+  - {feature_id:  8484, tier: concept , description: "terms related to health, diseases, and medical conditions"}
+  - {feature_id:  3801, tier: concept , description: "terms related to the analysis of data and modeling"}
+  - {feature_id:  1168, tier: concept , description: "mathematical expressions and equations involving derivatives and powers"}
+  - {feature_id: 13589, tier: concept , description: "technical terms and functions related to programming and data processing"}
+  - {feature_id:  1386, tier: concept , description: "references to personal possessions and familial relationships"}
+  - {feature_id:  7868, tier: concept , description: "terms related to medical and laboratory equipment, processes, and measurements"}
+  - {feature_id:  2293, tier: concept , description: "specific patterns in alphanumeric codes or identifiers"}
+  - {feature_id:  3838, tier: concept , description: "technical terminology related to materials and their properties"}
+  - {feature_id:  4815, tier: concept , description: "terms related to biological processes and interactions at the cellular level"}
+  - {feature_id: 11826, tier: concept , description: "references to physical locations or structures in relation to an environment"}
+  - {feature_id:  6376, tier: concept , description: "items related to clothing and accessories"}
+  - {feature_id:  1350, tier: concept , description: "comparative features of eCommerce platforms"}
+  - {feature_id:  6205, tier: concept , description: "constructs and elements in programming or markup languages"}
+  - {feature_id:  2629, tier: concept , description: "mathematical symbols and expressions"}
+  - {feature_id: 13963, tier: concept , description: "mention of locations and geographical entities associated with events or individuals"}
+  - {feature_id:   111, tier: concept , description: "words related to charitable actions among celebrities"}
+  - {feature_id:  6238, tier: concept , description: "special characters and symbols commonly used in mathematical expressions"}
+  - {feature_id:   460, tier: concept , description: "references to physical objects or quantities"}
+  - {feature_id:  5428, tier: concept , description: "terms related to medical conditions and diagnoses"}
+  - {feature_id: 10167, tier: concept , description: "numerical values and their occurrences within the document"}
+  - {feature_id:  5457, tier: concept , description: "references to notable historical events and entities"}
+  - {feature_id:   874, tier: concept , description: "research studies focused on medical conditions and their analysis"}
+  - {feature_id:  8222, tier: concept , description: "statements about claims and opinions made by individuals in a discussion or testimony"}
+  - {feature_id:  5245, tier: concept , description: "terms related to computational processes and programming constructs"}
+  - {feature_id: 15703, tier: concept , description: "discourse on societal critiques and beliefs about morality"}
+  - {feature_id:  4536, tier: concept , description: "specific programming keywords and technical terminology"}
+  - {feature_id:  9538, tier: concept , description: "abbreviations and acronyms related to various scientific and technical fields"}
+  - {feature_id: 10627, tier: concept , description: "subtlety and hints in language, particularly regarding suggestions and implications"}
+  - {feature_id:  6260, tier: concept , description: "legal terminology related to citizenship and parentage"}
+  - {feature_id: 10360, tier: concept , description: "clauses that introduce relative clauses or provide additional information"}
+  - {feature_id: 16032, tier: concept , description: "sections of licenses, copyrights, and class definitions in programming code"}
+  - {feature_id:  9805, tier: concept , description: "details about authorship and literary contributions"}
+  - {feature_id: 10656, tier: concept , description: "terms related to property management and retail experiences"}
+  - {feature_id: 13603, tier: concept , description: "conditional language and uncertainty expressions"}
+  - {feature_id: 15922, tier: concept , description: "references to leading or prominent entities and individuals across various fields"}
+  - {feature_id: 13166, tier: concept , description: "entities and individuals related to entertainment and media"}
+  - {feature_id: 12735, tier: concept , description: "actions related to progression or advancement"}
+  - {feature_id:  2040, tier: concept , description: "names and titles of people"}
+  - {feature_id:  9892, tier: concept , description: "mentions of legal and official actions or implications"}
+  - {feature_id:  3236, tier: concept , description: "instructions or prompts for user interaction, particularly related to clicking on links"}
+  - {feature_id: 12998, tier: concept , description: "references to academic publications and locations"}
+  - {feature_id:  8834, tier: concept , description: "dates and birth information"}
+  - {feature_id:  1633, tier: concept , description: "financial terms related to economic conditions"}
+  - {feature_id:  1902, tier: concept , description: "references to specific types of trailers and coupling mechanisms"}
+  - {feature_id: 14843, tier: concept , description: "words related to medical conditions and health impacts"}
+  - {feature_id:  3282, tier: concept , description: "indicators of code execution or completion"}
+  - {feature_id:  9433, tier: concept , description: "references to legal citations and formatting elements in a document"}
+  - {feature_id: 14268, tier: concept , description: "preprocessor directives in code"}
+  - {feature_id:  8521, tier: concept , description: "references to popular media or characters, particularly those related to music and ente"}
+  - {feature_id:  9122, tier: concept , description: "structured data or specific formatting elements within the text"}
+  - {feature_id: 15299, tier: concept , description: "programming terminology, particularly related to data types and structure"}
+  - {feature_id: 13743, tier: concept , description: "numerical expressions and values, particularly within parentheses"}
+  - {feature_id:  2848, tier: concept , description: "conditional expressions in code"}
+  - {feature_id:   468, tier: concept , description: "structured data elements and their associated attributes"}
+  - {feature_id:  7854, tier: concept , description: "complex mathematical or scientific expressions and terminologies"}
+
+  # ----- abstract tier (21) -----
+  - {feature_id: 15939, tier: abstract, description: "code snippets related to data handling and structures in programming contexts"}
+  - {feature_id: 10361, tier: abstract, description: "technical terms related to structural integrity and measurement in various contexts"}
+  - {feature_id:  4948, tier: abstract, description: "various types of quantitative attributes and metrics related to environmental or biolog"}
+  - {feature_id:  6532, tier: abstract, description: "concepts related to systems, structures, and organizations, particularly in a healthcar"}
+  - {feature_id: 12821, tier: abstract, description: "keywords and terms related to variable definitions and statistical results within a sci"}
+  - {feature_id: 14289, tier: abstract, description: "specific numerical and scientific data points related to comparisons and effects"}
+  - {feature_id:  9031, tier: abstract, description: "text related to evaluations or comparisons of efficacy and performance metrics"}
+  - {feature_id:  8404, tier: abstract, description: "terms related to control circuits and generators in technical contexts"}
+  - {feature_id: 14684, tier: abstract, description: "numerical data related to statistics and comparisons"}
+  - {feature_id:  8881, tier: abstract, description: "terms related to medical treatments and studies, particularly in clinical contexts"}
+  - {feature_id: 13781, tier: abstract, description: "references to roles and relationships within professional or formal contexts"}
+  - {feature_id: 14506, tier: abstract, description: "key names and references within various contexts"}
+  - {feature_id: 10487, tier: abstract, description: "actions and processes related to planning, establishing, and performing tasks across va"}
+  - {feature_id:  9513, tier: abstract, description: "actions and roles related to individuals in a professional or organizational context"}
+  - {feature_id:  7845, tier: abstract, description: "elements that relate to user roles and data structures in programming contexts"}
+  - {feature_id: 16173, tier: abstract, description: "expressions of emotional concern and interest"}
+  - {feature_id: 15788, tier: abstract, description: "names of authors and contributors in a scholarly context"}
+  - {feature_id:  3573, tier: abstract, description: "specific player transfers or movements in a football context"}
+  - {feature_id:  6177, tier: abstract, description: "instances of positional language or references to locations in context"}
+  - {feature_id:  3257, tier: abstract, description: "function and method calls related to adding elements or lighting in a programming context"}
+  - {feature_id:  4059, tier: abstract, description: "instances of negation or denial"}
